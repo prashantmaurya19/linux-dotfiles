@@ -12,6 +12,8 @@
 set $mod Mod1
 
 exec --no-startup-id picom
+# exec_always redshift -l 37.7749:-122.4194 -m randr -t 6500:2800 -g 0.8 &
+exec xrandr --output eDP-1 --brightness 1.2
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id killall polybar 
 exec_always --no-startup-id ~/.config/scripts/polybar.sh
@@ -211,9 +213,13 @@ set $statussig SIGUSR1
 # Amount to increase/decrease volume as a percentage
 set $volumestep 5
 
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+
 # pulseaudio-utils settings
 #
 # Symbolic name for sink (numeric index not supported)
 #   Recommended: comment out this setting and omit the -s option to use default sink
 #   List sink names: pacmd list-sinks | awk -F "[<>]" '/^\s+name: <.*>/{print $2}'
 #set $sinkname alsa_output.pci-0000_00_1b.0.analog-stereo
+new_window none
