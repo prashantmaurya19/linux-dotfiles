@@ -121,29 +121,30 @@ config.colors = {
     },
   },
 }
---keys
-config.leader = { key = "phys:Space", mods = "ALT", timeout_milliseconds = 1000 }
+-- keys
+-- config.leader = { key = "phys:Space", mods = "ALT", timeout_milliseconds = 1000 }
+-- config.leader = { key = "WIN"}
 config.keys = {
-  -- { key = "a", mods = "LEADER|CTRL", action = act.SendKey({ key = "a", mods = "CTRL" }) },
-  { key = "c", mods = "LEADER", action = act.ActivateCopyMode },
-  { key = "phys:Space", mods = "LEADER", action = act.ActivateCommandPalette },
-  { key = "x", mods = "LEADER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
-  { key = "v", mods = "LEADER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-  { key = "h", mods = "LEADER", action = act.ActivatePaneDirection("Left") },
-  { key = "j", mods = "LEADER", action = act.ActivatePaneDirection("Down") },
-  { key = "k", mods = "LEADER", action = act.ActivatePaneDirection("Up") },
-  { key = "l", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
-  { key = "q", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
-  { key = "z", mods = "LEADER", action = act.TogglePaneZoomState },
-  { key = "o", mods = "LEADER", action = act.RotatePanes("Clockwise") },
+  -- { key = "a", mods = "WIN|CTRL", action = act.SendKey({ key = "a", mods = "CTRL" }) },
+  { key = "c", mods = "WIN", action = act.ActivateCopyMode },
+  { key = "phys:Space", mods = "WIN", action = act.ActivateCommandPalette },
+  { key = "x", mods = "WIN", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+  { key = "v", mods = "WIN", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+  { key = "h", mods = "WIN", action = act.ActivatePaneDirection("Left") },
+  { key = "j", mods = "WIN", action = act.ActivatePaneDirection("Down") },
+  { key = "k", mods = "WIN", action = act.ActivatePaneDirection("Up") },
+  { key = "l", mods = "WIN", action = act.ActivatePaneDirection("Right") },
+  { key = "q", mods = "WIN", action = act.CloseCurrentPane({ confirm = true }) },
+  { key = "z", mods = "WIN", action = act.TogglePaneZoomState },
+  { key = "o", mods = "WIN", action = act.RotatePanes("Clockwise") },
   -- Tab keybindings
-  { key = "n", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
-  { key = "a", mods = "LEADER", action = act.ActivateTabRelative(-1) },
-  { key = "s", mods = "LEADER", action = act.ActivateTabRelative(1) },
-  { key = "f", mods = "LEADER", action = act.ShowTabNavigator },
+  { key = "n", mods = "WIN", action = act.SpawnTab("CurrentPaneDomain") },
+  { key = "a", mods = "WIN", action = act.ActivateTabRelative(-1) },
+  { key = "s", mods = "WIN", action = act.ActivateTabRelative(1) },
+  { key = "f", mods = "WIN", action = act.ShowTabNavigator },
   {
     key = "e",
-    mods = "LEADER",
+    mods = "WIN",
     action = act.PromptInputLine({
       description = wezterm.format({
         { Attribute = { Intensity = "Bold" } },
@@ -157,14 +158,14 @@ config.keys = {
       end),
     }),
   },
-  { key = "r", mods = "LEADER", action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }) },
-  { key = "m", mods = "LEADER", action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
-  { key = "t", mods = "LEADER", action = act.ActivateKeyTable({ name = "text_zoom_in_out", one_shot = false }) },
+  { key = "r", mods = "WIN", action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }) },
+  { key = "m", mods = "WIN", action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
+  { key = "t", mods = "WIN", action = act.ActivateKeyTable({ name = "text_zoom_in_out", one_shot = false }) },
 }
 for i = 1, 9 do
   table.insert(config.keys, {
     key = tostring(i),
-    mods = "LEADER",
+    mods = "WIN",
     action = act.ActivateTab(i - 1),
   })
 end

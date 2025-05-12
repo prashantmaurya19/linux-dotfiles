@@ -12,7 +12,7 @@
 set $mod Mod1
 
 exec --no-startup-id picom
-# exec_always redshift -l 37.7749:-122.4194 -m randr -t 6500:2800 -g 0.8 &
+exec_always redshift -P -O 3000
 exec xrandr --output eDP-1 --brightness 1.2
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id killall polybar 
