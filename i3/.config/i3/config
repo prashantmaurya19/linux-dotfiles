@@ -12,8 +12,8 @@
 set $mod Mod1
 
 exec --no-startup-id picom
-exec_always redshift -P -O 3000
-exec xrandr --output eDP-1 --brightness 1.2
+exec --no-startup-id redshift -P -O 3000
+exec --no-startup-id xrandr --output eDP-1 --brightness 1.2
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id killall polybar 
 exec_always --no-startup-id ~/.config/scripts/polybar.sh
@@ -55,7 +55,8 @@ floating_modifier $mod
 #tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+#bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec wezterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -173,16 +174,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 5 px or 5 ppt
+        bindsym k resize grow height 5 px or 5 ppt
+        bindsym j resize shrink height 5 px or 5 ppt
+        bindsym l resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -223,3 +224,5 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 #   List sink names: pacmd list-sinks | awk -F "[<>]" '/^\s+name: <.*>/{print $2}'
 #set $sinkname alsa_output.pci-0000_00_1b.0.analog-stereo
 new_window none
+default_border pixel 2
+default_floating_border pixel 2
