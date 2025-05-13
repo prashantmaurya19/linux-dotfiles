@@ -3,7 +3,7 @@ return {
 		"nvim-telescope/telescope.nvim",
 	},
 	name = "pm_user",
-	dir = vim.fn.expand("~\\AppData\\Local\\nvim\\pm_user\\"),
+	dir = vim.fn.expand("~/.config/nvim/pm_user/"),
 	priority = 10000,
 	config = function()
 		require("pm_user.clr").setup({
