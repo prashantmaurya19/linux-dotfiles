@@ -44,7 +44,7 @@ return {
       local lspconfig = require("lspconfig")
       local cmp_nvim_lsp = require("cmp_nvim_lsp")
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "pyright" },
+        ensure_installed = { "lua_ls", },
         -- automatic_installation = {
         --   exclude = {
         --     "jdtls",
