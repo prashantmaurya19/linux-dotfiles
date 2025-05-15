@@ -18,15 +18,15 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 36,
+    "height": 20,
     "spacing": 4,
     "margin-top": 0,
     "margin-bottom": 0,
 
     // Choose the order of the modules
-    "modules-center": ["sway/workspaces", "tray"],
-    "modules-left": ["custom/hostname"],
-    "modules-right": [ "custom/audio","network","battery","clock"],
+    "modules-center": ["clock"],
+    "modules-left": ["sway/workspaces"],
+    "modules-right": [ "custom/audio","network","battery","tray"],
 
     // Configuration for individual modules
      "sway/workspaces": {
@@ -41,9 +41,9 @@
     },
 
     "clock": {
-        "timezone": "America/Detroit",
+        "timezone": "Asia/Kolkata",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}",
+        "format": "{:%A %H:%M - %d %h %Y}",
     },
 
     "battery": {
@@ -69,14 +69,13 @@
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "on-click-right": "bash ~/.config/rofi/wifi_menu/rofi_wifi_menu",
     },
 
     "custom/audio": {
         "format": "{}",
         "signal": 8,
         "interval": "once",
-        "exec": "/home/jay/.config/sway/audio.sh",
+        "exec": "~/.config/sway/audio.sh",
         "on-click": "pavucontrol",
     },
 

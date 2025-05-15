@@ -1,21 +1,22 @@
 * {
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family: FiraMono Nerd Font Mono,Roboto, Helvetica, Arial, sans-serif;
     font-size: 14px;
     min-height: 0;
-    padding-bottom: 2px;
-    padding-top: 2px;
+    padding:0;
+    /* padding-bottom: 2px; */
+    /* padding-top: 2px; */
 }
 
 #battery {
     background: transparent;
     color: #ffffff;
     opacity: 0.7;
-    padding: 2px 8px;
+    padding: 4px;
 }
 
 #battery.charging, #battery.plugged {
     color: #ffffff;
-    padding: 2px 8px;
+    padding: 4px;
 }
 
 #battery.critical:not(.charging) {
@@ -29,17 +30,15 @@
 }
 
 #clock {
-    background: #1f1f1f;
+    background: transparent;
     color: #ffffff;
-    margin-right: 4px;
-    padding: 2px 8px;
 }
 
 #network {
     background: transparent;
     color: #ffffff;
     opacity: 0.7;
-    padding: 2px 8px;
+    padding:1px 4px;
 }
 
 #network.disconnected {
@@ -48,9 +47,8 @@
 }
 
 #tray {
-    background: #1f1f1f;
     color: #ffffff;
-    margin-left: 18px;
+    margin-right: 4px;
 }
 
 #tray > .passive {
@@ -66,15 +64,13 @@
 }
 
 window#waybar {
-    background: transparent;
-    border-bottom: 1px solid #332b2b;
+    background: rgba(0,0,0,0.75);
     transition-duration: .2s;
     transition-property: background-color;
 }
 
 #workspaces button:hover {
-    /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-    background: @background;
+    background: rgba(100,200,150,1);
     border-bottom: 1px solid #ffffff;
     box-shadow: inherit;
     color: #ffffff;
@@ -85,13 +81,14 @@ window#waybar {
     color: #ffffff;
     margin-left: 2px;
     margin-right: 2px;
+    border-radius: 0px;
     opacity: 0.7;
 }
 
 #workspaces button.focused {
-    background: #453e3d;
+    background: rgb(155,150,235);
     color: #ffffff;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 #workspaces button.urgent {
@@ -104,12 +101,12 @@ window#waybar {
     background: transparent;
     color: #ffffff;
     opacity: 0.7;
-    padding: 2px 8px;
+    padding:1px 4px;
 }
 
 #custom-hostname {
     background: transparent;
     color: #ffffff;
-    padding: 2px 8px;
+    padding:1px 4px;
     opacity: 0.7;
 }
