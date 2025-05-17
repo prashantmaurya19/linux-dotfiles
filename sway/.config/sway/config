@@ -20,7 +20,7 @@ exec_always --no-startup-id redshift -P -O 4000
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 bindsym $mod+Shift+e exec $HOME/.config/sway/exit.sh
-output * bg $HOME/.config/sway/wallpaper.jpg fill
+output * bg /mnt/hp_second/Documents/wellpapers/Nature/sunset-silhouettes-trees-mountains-generative-ai.jpg fill
 
 
 # exec swayidle -w \
@@ -29,7 +29,7 @@ output * bg $HOME/.config/sway/wallpaper.jpg fill
 #     resume 'swaymsg "output * dpms on"' \
 #     before-sleep $lock
 
-font pango:FiraCodeNerdFontRegular 8
+font pango:FiraCodeNerdFont 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -94,6 +94,7 @@ input type:touchpad {
     natural_scroll enabled
     accel_profile flat
     pointer_accel 0.2
+    scroll_factor 0.4
 }
 
 # Open the application launcher (alternate version):
@@ -110,10 +111,10 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# bindsym $mod+Left focus left
+# bindsym $mod+Down focus down
+# bindsym $mod+Up focus up
+# bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left

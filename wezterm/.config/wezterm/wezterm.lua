@@ -207,19 +207,11 @@ config.key_tables = {
 config.use_fancy_tab_bar = false
 config.status_update_interval = 1000
 config.tab_bar_at_bottom = true
-local function tab_title(tab_info)
-	local title = tab_info.tab_title
-	-- if the tab title is explicitly set, take that
-	if title and #title > 0 then
-		return title
-	end
-	-- Otherwise, use the title from the active pane
-	-- in that tab
-	return tab_info.active_pane.title
-end
+
 local function basename(s)
 	return string.gsub(s, "(.*[/\\])(.*)", "%2")
 end
+
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
 	local edge_background = "#0b0022"
 	local background = "#1b1032"
@@ -234,10 +226,8 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 	end
 
 	local edge_foreground = background
-	local title = tab_title(tab)
+	local title = tab.tab_title
 
-	-- ensure that the titles fit in the available space,
-	-- and that we have room for the edges.
 	title = wezterm.truncate_right(title, max_width - 4)
 
 	return {
@@ -266,15 +256,19 @@ wezterm.on("update-status", function(window, pane)
 		stat_color = "#bb9af7"
 	end
 
+	local tab = pane:window():active_tab()
+	local title = tab:get_title()
 	local cmd = pane:get_foreground_process_name()
 	cmd = cmd and basename(cmd) or "<!>"
-
-	pane:window():active_tab():set_title(cmd)
-
+	if title and #title > 0 then
+		tab:set_title(title)
+	else
+		tab:set_title(cmd)
+	end
 	window:set_right_status(wezterm.format({
 		{ Text = " | " },
 		{ Foreground = { Color = "#e0af68" } },
-		{ Text = wezterm.nerdfonts.fa_code .. " " .. cmd },
+		{ Text = wezterm.nerdfonts.fa_code .. "  " .. cmd .." "},
 	}))
 
 	window:set_left_status(wezterm.format({

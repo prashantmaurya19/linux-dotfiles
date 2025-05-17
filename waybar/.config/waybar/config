@@ -43,7 +43,7 @@
     "clock": {
         "timezone": "Asia/Kolkata",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%A %H:%M - %d %h %Y}",
+        "format": "{:%A %I:%M %p - %d %h %Y}",
     },
 
     "battery": {
