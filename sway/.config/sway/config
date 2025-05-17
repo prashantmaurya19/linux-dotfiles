@@ -14,7 +14,7 @@ set $mod Mod1
 # exec --no-startup-id picom
 exec_always --no-startup-id redshift -P -O 4000
 # exec --no-startup-id xrandr --output eDP-1 --brightness 1.3
-exec_always --no-startup-id killall waybar
+# exec_always --no-startup-id killall waybar
 # exec_always --no-startup-id killall polybar 
 # exec_always --no-startup-id ~/.config/scripts/polybar.sh
 # Font for window titles. Will also be used by the bar unless a different font
@@ -29,7 +29,7 @@ output * bg $HOME/.config/sway/wallpaper.jpg fill
 #     resume 'swaymsg "output * dpms on"' \
 #     before-sleep $lock
 
-font pango:FiraMono Nerd Font Mono  8
+font pango:FiraCodeNerdFontRegular 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).

@@ -26,7 +26,7 @@
     // Choose the order of the modules
     "modules-center": ["clock"],
     "modules-left": ["sway/workspaces"],
-    "modules-right": [ "custom/audio","network","battery","tray"],
+    "modules-right": ["custom/audio","backlight","network","battery","custom/logout"],
 
     // Configuration for individual modules
      "sway/workspaces": {
@@ -61,14 +61,25 @@
         "format-icons": ["", "", "", "", ""],
     },
 
+    "custom/logout": {
+      "on-click": "wlogout",
+      "format": "󰕈 ",
+    },
+
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": " {signalStrength}%",
+        "format-wifi": "  {signalStrength}%",
         "format-ethernet": "Connected  ",
         "tooltip-format": "{ifname}: {gwaddr}",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    },
+
+    "backlight": {
+        //"device": "intel_backlight",
+        "format": " {percent}%",
+        "format-icons": ["", ""]
     },
 
     "custom/audio": {
@@ -77,12 +88,5 @@
         "interval": "once",
         "exec": "~/.config/sway/audio.sh",
         "on-click": "pavucontrol",
-    },
-
-    "custom/hostname": {
-        "format": "🖳  {}",
-        "exec": "/usr/bin/hostname -f",
-        "interval": "once",
-        "on-click": "/usr/bin/rxvt -e /usr/bin/htop",
     },
 }

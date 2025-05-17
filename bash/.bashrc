@@ -4,6 +4,13 @@
 
 eval "$(starship init bash)"
 
+# fnm
+FNM_PATH="/home/prashant/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -119,7 +126,10 @@ if ! shopt -oq posix; then
 fi
 
 alias git-dev='git add . && git commit -m "dev : changes"'
-alias fcd='cd "$(find ~/.config/ ~/Documents/ ~/Downloads/ -type d -print | fzf)"'
+alias fcd='cd "$(find /mnt/hp_second/Documents/ ~/.config/ ~/Documents/ ~/Downloads/ -type d -print | fzf)"'
+alias fv='nvim "$(find ~ -type f -print | fzf)"'
+alias v='nvim'
+alias y='yazi'
 
 export EDITOR="nvim"
 export PATH=$PATH:/usr/bin/zig/
@@ -128,3 +138,10 @@ export PATH=$PATH:~/xodopdfreader/
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/flatpak/exports/share
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:/home/prashant/.local/share/flatpak/exports/share
 
+
+# fnm
+FNM_PATH="/home/prashant/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi

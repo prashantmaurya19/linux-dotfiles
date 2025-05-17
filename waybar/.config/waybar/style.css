@@ -1,5 +1,5 @@
 * {
-    font-family: FiraMono Nerd Font Mono,Roboto, Helvetica, Arial, sans-serif;
+    font-family: FiraCodeNerdFont,Roboto, Helvetica, Arial, sans-serif;
     font-size: 14px;
     min-height: 0;
     padding:0;
@@ -11,12 +11,11 @@
     background: transparent;
     color: #ffffff;
     opacity: 0.7;
-    padding: 4px;
+  margin-right:4px;
 }
 
 #battery.charging, #battery.plugged {
     color: #ffffff;
-    padding: 4px;
 }
 
 #battery.critical:not(.charging) {
@@ -32,13 +31,21 @@
 #clock {
     background: transparent;
     color: #ffffff;
+  margin-right:4px;
+}
+
+
+#backlight {
+    background: transparent;
+    color: #ffffff;
+  margin-right:4px;
 }
 
 #network {
     background: transparent;
     color: #ffffff;
     opacity: 0.7;
-    padding:1px 4px;
+  margin-right:4px;
 }
 
 #network.disconnected {
@@ -48,7 +55,6 @@
 
 #tray {
     color: #ffffff;
-    margin-right: 4px;
 }
 
 #tray > .passive {
@@ -101,12 +107,18 @@ window#waybar {
     background: transparent;
     color: #ffffff;
     opacity: 0.7;
-    padding:1px 4px;
+  margin-right:4px;
+}
+
+#custom-logout {
+    background: transparent;
+    color: #ffffff;
+    opacity: 0.7;
+  margin-right:4px;
 }
 
 #custom-hostname {
     background: transparent;
     color: #ffffff;
-    padding:1px 4px;
     opacity: 0.7;
 }
