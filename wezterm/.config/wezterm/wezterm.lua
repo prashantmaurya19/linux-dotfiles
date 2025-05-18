@@ -257,18 +257,19 @@ wezterm.on("update-status", function(window, pane)
 	end
 
 	local tab = pane:window():active_tab()
-	local title = tab:get_title()
+	-- local title = tab:get_title()
 	local cmd = pane:get_foreground_process_name()
 	cmd = cmd and basename(cmd) or "<!>"
-	if title and #title > 0 then
-		tab:set_title(title)
-	else
-		tab:set_title(cmd)
-	end
+	-- if title and #title > 0 then
+	-- 	tab:set_title(title)
+	-- else
+	-- 	tab:set_title(cmd)
+	-- end
+	tab:set_title(cmd)
 	window:set_right_status(wezterm.format({
 		{ Text = " | " },
 		{ Foreground = { Color = "#e0af68" } },
-		{ Text = wezterm.nerdfonts.fa_code .. "  " .. cmd .." "},
+		{ Text = wezterm.nerdfonts.fa_code .. "  " .. cmd .. " " },
 	}))
 
 	window:set_left_status(wezterm.format({
