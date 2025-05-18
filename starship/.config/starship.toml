@@ -16,12 +16,12 @@ truncation_symbol = ".../"
 truncate_to_repo = false
 use_os_path_sep = true
 
-[directory.substitutions]
-"Documents" = " 󰈙 "
-"Downloads" = "  "
-"Music" = "  "
-"Desktop" = "  "
-"Pictures" = "  "
+# [directory.substitutions]
+# "Documents" = " 󰈙 "
+# "Downloads" = "  "
+# "Music" = "  "
+# "Desktop" = "  "
+# "Pictures" = "  "
 
 [git_branch]
 format = "[$symbol$branch(:$remote_branch)]($style) "

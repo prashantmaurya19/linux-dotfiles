@@ -20,7 +20,7 @@ exec_always --no-startup-id redshift -P -O 4000
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 bindsym $mod+Shift+e exec $HOME/.config/sway/exit.sh
-output * bg /mnt/hp_second/Documents/wellpapers/Nature/sunset-silhouettes-trees-mountains-generative-ai.jpg fill
+output * bg /mnt/hp_second/Documents/wellpapers/Nature/misty-mountains-blue-hue-macos-wallpaper-4k.jpg fill
 
 
 # exec swayidle -w \

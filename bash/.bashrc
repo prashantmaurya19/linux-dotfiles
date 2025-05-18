@@ -128,6 +128,7 @@ fi
 alias git-dev='git add . && git commit -m "dev : changes"'
 alias fcd='cd "$(find /mnt/hp_second/Documents/ ~/.config/ ~/Documents/ ~/Downloads/ -type d -print | fzf)"'
 alias fv='nvim "$(find ~ -type f -print | fzf)"'
+alias dir='lsd -a -1'
 alias v='nvim'
 alias y='yazi'
 

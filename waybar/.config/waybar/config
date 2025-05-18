@@ -62,7 +62,7 @@
     },
 
     "custom/logout": {
-      "on-click": "wlogout",
+      "on-click": "wlogout -p layer-shell",
       "format": "󰕈 ",
     },
 
