@@ -44,12 +44,7 @@ return {
       local lspconfig = require("lspconfig")
       local cmp_nvim_lsp = require("cmp_nvim_lsp")
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", },
-        -- automatic_installation = {
-        --   exclude = {
-        --     "jdtls",
-        --   },
-        -- },
+        ensure_installed = { "lua_ls" },
         handlers = {
           function(server_name) -- default handler (optional)
             lspconfig[server_name].setup({

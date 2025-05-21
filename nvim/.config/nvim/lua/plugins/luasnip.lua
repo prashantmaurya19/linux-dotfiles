@@ -23,12 +23,12 @@ return {
     -- local conds = require("luasnip.extras.conditions")
     -- local conds_expand = require("luasnip.extras.conditions.expand")
     --keybinding
-    vim.keymap.set({ "i", "s" }, "<C-k>", function()
+    vim.keymap.set({ "s" }, "<Tab>", function()
       if ls.expand_or_jumpable() then
         ls.expand_or_jump()
       end
     end, { silent = true })
-    vim.keymap.set({ "i", "s" }, "<C-j>", function()
+    vim.keymap.set({ "s" }, "<S-Tab>", function()
       if ls.jumpable(-1) then
         ls.jump(-1)
       end
