@@ -34,7 +34,7 @@ config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 config.adjust_window_size_when_changing_font_size = false
 
 -- config.window_background_image_stretch = "Cover"
-config.window_background_opacity = .9
+config.window_background_opacity = .95
 -- config.window_background_opacity = 0
 -- config.win32_system_backdrop = 'Tabbed'
 config.window_background_image_hsb = {
