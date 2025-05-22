@@ -28,7 +28,7 @@ config.font_size = 12.4
 -- For example, changing the color scheme:
 config.color_scheme = "Campbell (Gogh)"
 -- config.color_scheme = "Catch Me If You Can (terminal.sexy)"
-config.font = wezterm.font("FiraCodeNerdFont")
+config.font = wezterm.font("FiraCode Nerd Font")
 -- config.default_prog = { "pwsh.exe" }
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 config.adjust_window_size_when_changing_font_size = false

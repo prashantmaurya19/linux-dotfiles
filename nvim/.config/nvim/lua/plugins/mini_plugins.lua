@@ -36,6 +36,11 @@ return {
   {
     "alvarosevilla95/luatab.nvim",
     requires = "kyazdani42/nvim-web-devicons",
+    opts = {
+      options = {
+        always_show_bufferline = true, -- This will show the tabline even with one buffer
+      },
+    },
     config = function()
       require("luatab").setup({
         title = function(bufnr)

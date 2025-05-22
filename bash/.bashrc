@@ -136,6 +136,7 @@ alias fcdv='. ~/Documents/linux-dotfiles/scripts/cd_and_open_dir_in_nvim.sh'
 alias fv='nvim "$(find ~ -type f -print | fzf)"'
 alias dir='lsd -a -1'
 alias v='nvim'
+alias vs='nvim -S s.vim'
 alias y='yazi'
 
 export EDITOR="nvim"
@@ -152,3 +153,20 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
 fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/prashant/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/prashant/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/prashant/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/prashant/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+conda activate

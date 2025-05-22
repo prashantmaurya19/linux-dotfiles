@@ -29,5 +29,5 @@ symbol = " "
 style = "bold purple"
 
 [conda]
-format = '[$symbol$environment ](dimmed green) '
+format = '[\($symbol$environment\)](dimmed green) '
 symbol = ' '
