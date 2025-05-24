@@ -1,5 +1,5 @@
 * {
-  font-family: FiraCodeNerdFont, Roboto, Helvetica, Arial, sans-serif;
+  font-family: FiraCode Nerd Font, Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
   min-height: 0;
   padding: 0;
@@ -47,6 +47,11 @@
   margin-right: 7px;
 }
 
+#network.disconnected {
+  background: transparent;
+  color: red;
+}
+
 #keyboard-state {
   background: transparent;
   color: #ffffff;
@@ -62,10 +67,6 @@
   color: #60ff40;
 }
 
-#network.disconnected {
-  background: #1f1f1f;
-  color: red;
-}
 
 #tray {
   color: #ffffff;
