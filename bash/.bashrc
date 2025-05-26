@@ -131,7 +131,7 @@ alias git-fix='git add . && git commit -m "add : some fixes"'
 alias git-dev-push='git add . && git commit -m "dev : some changes" && git push origin main'
 alias git-add-push='git add . && git commit -m "add : some addition" && git push origin main'
 alias git-fix-push='git add . && git commit -m "add : some fixes" && git push origin main'
-alias fcd='cd "$(find /mnt/hp_second/Documents/ ~/.config/ ~/Documents/ ~/Downloads/ -type d -print | fzf)"'
+alias fcd='cd "$(find ~/.config/ ~/Documents/ ~/Downloads/ -type d -print | fzf)"'
 alias fcdv='. ~/Documents/linux-dotfiles/scripts/cd_and_open_dir_in_nvim.sh'
 alias fv='nvim "$(find ~ -type f -print | fzf)"'
 alias dir='lsd -a -1'
@@ -145,6 +145,7 @@ export PATH=$PATH:~/nvim/bin/
 export PATH=$PATH:~/xodopdfreader/
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/flatpak/exports/share
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:/home/prashant/.local/share/flatpak/exports/share
+export XAUTHORITY=$HOME/.Xauthority
 
 
 # fnm
