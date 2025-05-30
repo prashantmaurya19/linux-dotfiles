@@ -25,3 +25,8 @@ nmcli connection show
 ```
 nmcli device wifi show
 ```
+
+## turn off/on wifi
+```
+nmcli radio wifi off/on
+```

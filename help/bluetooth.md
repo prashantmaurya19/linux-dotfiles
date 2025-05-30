@@ -6,19 +6,21 @@
 ```
 systemctl start bluetooth.service
 ```
+
 ## stop Bluetooth in system
 ```
 systemctl stop bluetooth.service
 ```
+
 ## restart Bluetooth in system
 ```
 systemctl restart bluetooth.service
 ```
+
 ## for power on bluetoothctl
 ```
 bluetoothctl power on
 ```
-
 ## for unblocking bluetoothctl
 ```
 rfkill unblock bluetooth

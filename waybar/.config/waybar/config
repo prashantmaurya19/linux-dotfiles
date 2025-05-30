@@ -74,8 +74,8 @@
         	    "capslock": "{icon} Caps "
             },
             "format-icons": {
-        	    "unlocked": "",
-        	    "locked": ""
+        	    "unlocked": "",
+        	    "locked": ""
             }
     },
 
@@ -86,7 +86,7 @@
         "tooltip-format": "{ifname}: {gwaddr}",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "󰤮 No Wifi",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "format-alt": "{ifname}:{essid}@{ipaddr}/{cidr}",
     },
 
     "backlight": {
