@@ -126,7 +126,7 @@ config.colors = {
 -- config.leader = { key = "phys:Space", mods = "ALT", timeout_milliseconds = 1000 }
 config.keys = {
   -- { key = "a", mods = "WIN|CTRL", action = act.SendKey({ key = "a", mods = "CTRL" }) },
-  { key = "c", mods = "WIN", action = act.ActivateCopyMode },
+  { key = "c", mods = "ALT", action = act.ActivateCopyMode },
   { key = "phys:Space", mods = "WIN", action = act.ActivateCommandPalette },
   { key = "x", mods = "WIN", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
   { key = "v", mods = "WIN", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
@@ -207,7 +207,7 @@ config.key_tables = {
 }
 config.use_fancy_tab_bar = false
 config.status_update_interval = 1000
-config.tab_bar_at_bottom = true
+config.tab_bar_at_bottom = false
 
 local function basename(s)
   return string.gsub(s, "(.*[/\\])(.*)", "%2")
