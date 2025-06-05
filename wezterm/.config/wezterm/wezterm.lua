@@ -124,37 +124,33 @@ config.colors = {
 
 --keys
 -- config.leader = { key = "phys:Space", mods = "ALT", timeout_milliseconds = 1000 }
+local mod_key = "WIN"
 config.keys = {
   -- { key = "a", mods = "WIN|CTRL", action = act.SendKey({ key = "a", mods = "CTRL" }) },
-  { key = "c", mods = "ALT", action = act.ActivateCopyMode },
-  { key = "phys:Space", mods = "WIN", action = act.ActivateCommandPalette },
-  { key = "x", mods = "WIN", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
-  { key = "v", mods = "WIN", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-  { key = "h", mods = "WIN", action = act.ActivatePaneDirection("Left") },
-  { key = "j", mods = "WIN", action = act.ActivatePaneDirection("Down") },
-  { key = "k", mods = "WIN", action = act.ActivatePaneDirection("Up") },
-  { key = "l", mods = "WIN", action = act.ActivatePaneDirection("Right") },
-  { key = "q", mods = "WIN", action = act.CloseCurrentPane({ confirm = true }) },
-  -- { key = "f", mods = "WIN", action = act.TogglePaneZoomState },
-  { key = "o", mods = "WIN", action = act.RotatePanes("Clockwise") },
-  { key = "+", mods = "WIN", action = act.IncreaseFontSize },
-  { key = "-", mods = "WIN", action = act.DecreaseFontSize },
-  { key = "k", mods = "WIN", action = act.ScrollByLine(-2) },
-  { key = "j", mods = "WIN", action = act.ScrollByLine(2) },
+  { key = "c", mods = mod_key, action = act.ActivateCopyMode },
+  { key = "phys:Space", mods = mod_key, action = act.ActivateCommandPalette },
+  { key = "x", mods = mod_key, action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+  { key = "v", mods = mod_key, action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+  { key = "h", mods = mod_key, action = act.ActivatePaneDirection("Left") },
+  { key = "j", mods = mod_key, action = act.ActivatePaneDirection("Down") },
+  { key = "k", mods = mod_key, action = act.ActivatePaneDirection("Up") },
+  { key = "l", mods = mod_key, action = act.ActivatePaneDirection("Right") },
+  { key = "q", mods = mod_key, action = act.CloseCurrentPane({ confirm = true }) },
+  -- { key = "f", mods = mod_key, action = act.TogglePaneZoomState },
+  -- { key = "o", mods = mod_key, action = act.RotatePanes("Clockwise") },
+  { key = "+", mods = mod_key, action = act.IncreaseFontSize },
+  { key = "-", mods = mod_key, action = act.DecreaseFontSize },
+  { key = "k", mods = mod_key, action = act.ScrollByLine(-2) },
+  { key = "j", mods = mod_key, action = act.ScrollByLine(2) },
   -- Tab keybindings
-  { key = "n", mods = "WIN", action = act.SpawnTab("CurrentPaneDomain") },
-  { key = "q", mods = "ALT", action = act.ActivateTabRelative(-1) },
-  { key = "w", mods = "ALT", action = act.ActivateTabRelative(1) },
-  { key = "t", mods = "WIN", action = act.ShowTabNavigator },
+  { key = "n", mods = mod_key, action = act.SpawnTab("CurrentPaneDomain") },
+  { key = "u", mods = mod_key, action = act.ActivateTabRelative(-1) },
+  { key = "i", mods = mod_key, action = act.ActivateTabRelative(1) },
+  { key = "t", mods = mod_key, action = act.ShowTabNavigator },
   { key = "v", mods = "CTRL", action = act.PasteFrom("Clipboard") },
-  -- {
-  -- 	key = "y",
-  -- 	mods = "CTRL",
-  -- 	action = wezterm.action.CopyTo("ClipboardAndPrimarySelection"),
-  -- },
   {
     key = "e",
-    mods = "WIN",
+    mods = mod_key,
     action = act.PromptInputLine({
       description = wezterm.format({
         { Attribute = { Intensity = "Bold" } },
@@ -168,15 +164,15 @@ config.keys = {
       end),
     }),
   },
-  { key = "r", mods = "WIN", action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }) },
-  { key = "m", mods = "WIN", action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
-  -- { key = "t", mods = "WIN", action = act.ActivateKeyTable({ name = "text_zoom_in_out", one_shot = false }) },
+  { key = "r", mods = mod_key, action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }) },
+  { key = "m", mods = mod_key, action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
+  -- { key = "t", mods = mod_key, action = act.ActivateKeyTable({ name = "text_zoom_in_out", one_shot = false }) },
 }
 
 for i = 1, 9 do
   table.insert(config.keys, {
     key = tostring(i),
-    mods = "WIN",
+    mods = mod_key,
     action = act.ActivateTab(i - 1),
   })
 end

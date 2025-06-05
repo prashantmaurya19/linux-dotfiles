@@ -135,6 +135,7 @@ alias fcd='cd "$(find ~/wellpapers/ ~/.config/ ~/Documents/ ~/Downloads/ -type d
 alias fcdv='. ~/Documents/linux-dotfiles/scripts/cd_and_open_dir_in_nvim.sh'
 alias fv='nvim "$(find ~ -type f -print | fzf)"'
 alias dir='lsd -a -1'
+alias chrome='google-chrome'
 alias v='nvim'
 alias vs='nvim -S s.vim'
 alias y='yazi'
