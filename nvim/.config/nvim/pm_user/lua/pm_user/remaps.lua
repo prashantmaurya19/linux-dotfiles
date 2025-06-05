@@ -84,10 +84,10 @@ keyset("n", "<C-k>", "<C-w><C-k>")
 keyset("n", "<C-h>", "<C-w><C-h>")
 keyset("n", "<C-l>", "<C-w><C-l>")
 
-keyset("n", "<A-[>", ":tabmove-1<CR>", M.keyargs({ "noremap", "silent" }))
-keyset("n", "<A-]>", ":tabmove+1<CR>", M.keyargs({ "noremap", "silent" }))
-keyset("n", "<A-w>", ":tabnext<CR>", M.keyargs({ "noremap", "silent" }))
-keyset("n", "<A-q>", ":tabprevious<CR>", M.keyargs({ "noremap", "silent" }))
+keyset("n", "<A-o>", ":tabmove-1<CR>", M.keyargs({ "noremap", "silent" }))
+keyset("n", "<A-p>", ":tabmove+1<CR>", M.keyargs({ "noremap", "silent" }))
+keyset("n", "<A-i>", ":tabnext<CR>", M.keyargs({ "noremap", "silent" }))
+keyset("n", "<A-u>", ":tabprevious<CR>", M.keyargs({ "noremap", "silent" }))
 
 keyset("n", "<leader>fo", function()
   require("conform").format({

@@ -140,6 +140,10 @@ alias v='nvim'
 alias vs='nvim -S s.vim'
 alias y='yazi'
 
+# bind -x '"\e,":"cd \"$(find ~/wellpapers/ ~/.config/ ~/Documents/ ~/Downloads/ -type d -print | fzf)\""'
+bind -x '"\e,":"fcd"'
+bind -x '"\e.":"fv"'
+
 export EDITOR="nvim"
 export PATH=$PATH:/usr/bin/zig/
 export PATH=$PATH:~/nvim/bin/

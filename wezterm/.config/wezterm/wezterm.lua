@@ -144,8 +144,8 @@ config.keys = {
   { key = "j", mods = mod_key, action = act.ScrollByLine(2) },
   -- Tab keybindings
   { key = "n", mods = mod_key, action = act.SpawnTab("CurrentPaneDomain") },
-  { key = "u", mods = mod_key, action = act.ActivateTabRelative(-1) },
-  { key = "i", mods = mod_key, action = act.ActivateTabRelative(1) },
+  { key = "q", mods = "ALT", action = act.ActivateTabRelative(-1) },
+  { key = "w", mods = "ALT", action = act.ActivateTabRelative(1) },
   { key = "t", mods = mod_key, action = act.ShowTabNavigator },
   { key = "v", mods = "CTRL", action = act.PasteFrom("Clipboard") },
   {
@@ -242,7 +242,7 @@ end)
 
 wezterm.on("update-status", function(window, pane)
   -- Workspace name
-  local stat = window:active_workspace()
+  local stat = ""..window:active_workspace()
   local stat_color = "#f7768e"
   if window:active_key_table() then
     stat = window:active_key_table()
@@ -251,6 +251,13 @@ wezterm.on("update-status", function(window, pane)
   if window:leader_is_active() then
     stat = "LDR"
     stat_color = "#bb9af7"
+  end
+
+  local stat_symbol = wezterm.nerdfonts.fa_linux
+  if stat=="default" then
+    stat_symbol = wezterm.nerdfonts.oct_table
+  elseif stat=="resize_pane" then
+    stat_symbol = wezterm.nerdfonts.md_resize
   end
 
   local tab = pane:window():active_tab()
@@ -262,17 +269,22 @@ wezterm.on("update-status", function(window, pane)
   -- else
   -- 	tab:set_title(cmd)
   -- end
+
   tab:set_title(cmd)
   window:set_right_status(wezterm.format({
     { Text = " | " },
+    {Foreground = {Color = stat_color}},
+    {Text="Mode: "..stat},
+    { Foreground = { Color = "#fff" } },
+    {Text=" | "},
     { Foreground = { Color = "#e0af68" } },
-    { Text = wezterm.nerdfonts.fa_code .. "  " .. cmd .. " " },
+    { Text =wezterm.nerdfonts.fa_code .. "  " .. cmd},
   }))
 
   window:set_left_status(wezterm.format({
     { Foreground = { Color = stat_color } },
     { Text = " " },
-    { Text = wezterm.nerdfonts.oct_table .. "  " .. stat },
+    { Text = stat_symbol},
     { Text = " |" },
   }))
   return {
