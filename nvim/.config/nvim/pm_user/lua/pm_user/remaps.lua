@@ -125,10 +125,6 @@ M.mapKeyForNewtab("n", "<leader>fb", function()
   builtin.buffers(M.telescope_opt())
 end, M.keyargs({ "noremap", "silent" }))
 
-keyset("n", "<leader>ft", function()
-  pm_telescope_ext.find_tabs(M.telescope_opt())
-end, M.keyargs({ "noremap", "silent" }))
-
 keyset("n", "<leader>fg", function()
   builtin.live_grep(M.telescope_opt())
 end, M.keyargs({ "noremap", "silent" }))
