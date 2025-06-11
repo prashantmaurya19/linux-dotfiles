@@ -107,7 +107,7 @@
 }
 
 window#waybar {
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.8);
   transition-duration: 0.2s;
   transition-property: background-color;
 }
@@ -129,14 +129,14 @@ window#waybar {
 }
 
 #workspaces button {
-  background: transparent;
+  /* background: transparent; */
+  background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
   margin-right: 5px;
   border-radius: 0px;
   opacity: 0.9;
-  font-size: 16px;
-  /* padding-right: 2px; */
-  padding-left: 3px;
+  padding-left: 2px;
+  font-size: 20px;
 }
 
 #workspaces button.focused {
