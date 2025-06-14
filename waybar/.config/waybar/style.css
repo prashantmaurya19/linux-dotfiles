@@ -112,6 +112,10 @@ window#waybar {
   transition-property: background-color;
 }
 
+.modules-left {
+  padding: 5px 0 5px 0;
+}
+
 #workspaces button:hover {
   background: @second;
   color: #ffffff;
@@ -133,7 +137,7 @@ window#waybar {
   background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
   margin-right: 5px;
-  border-radius: 0px;
+  border-radius:2px;
   opacity: 0.9;
   padding-left: 2px;
   font-size: 20px;
