@@ -18,7 +18,7 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30,
+    "height": 31,
     "spacing": 0,
     "margin-top": 0,
     "margin-bottom": 0,
@@ -54,12 +54,12 @@
             "critical": 15,
         },
         "format": "{icon} {capacity}%",
-        "format-charging": "⚡{capacity}%",
+        "format-charging": "󰂈 {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""],
+        "format-full": "󱈏 {capacity}%",
+        "format-icons": ["󰁻", "󰁾", "󰂀","󰂂"],
     },
 
     "custom/logout": {

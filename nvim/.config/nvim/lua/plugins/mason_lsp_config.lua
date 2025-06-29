@@ -52,6 +52,29 @@ return {
             })
           end,
           ["jdtls"] = function() end,
+          ["cssls"] = function(server_name)
+            lspconfig[server_name].setup({
+              capabilities = cmp_nvim_lsp.default_capabilities(),
+              filetypes = { "javascriptreact", "typescriptreact" },
+              settings = {
+                css = {
+                  lint = {
+                    unknownAtRules = "ignore", -- Optional: to ignore unknown at-rules from CSS-in-JS
+                  },
+                },
+                less = {
+                  lint = {
+                    unknownAtRules = "ignore",
+                  },
+                },
+                scss = {
+                  lint = {
+                    unknownAtRules = "ignore",
+                  },
+                },
+              },
+            })
+          end,
           ["lua_ls"] = function()
             lspconfig.lua_ls.setup({
               capabilities = cmp_nvim_lsp.default_capabilities(),

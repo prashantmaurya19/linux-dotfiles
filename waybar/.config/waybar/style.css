@@ -5,7 +5,8 @@
     Helvetica,
     Arial,
     sans-serif;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: bold;
   min-height: 0;
   padding: 0;
 }
@@ -88,22 +89,6 @@
 
 #keyboard-state label.locked {
   color: #60ff40;
-}
-
-#tray {
-  color: #ffffff;
-}
-
-#tray > .passive {
-  -gtk-icon-effect: dim;
-  background: #1f1f1f;
-  color: #ffffff;
-}
-
-#tray > .needs-attention {
-  -gtk-icon-effect: highlight;
-  background: #1f1f1f;
-  color: #ffffff;
 }
 
 window#waybar {
