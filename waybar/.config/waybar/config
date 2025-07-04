@@ -70,7 +70,7 @@
     "sway/mode": {
 	    "format": "{}", 
 	    "max-length": 50,
-	    "tooltip": true 
+	    "tooltip": false 
     },
 
     "keyboard-state": {
