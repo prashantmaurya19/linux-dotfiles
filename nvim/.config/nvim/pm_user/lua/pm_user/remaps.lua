@@ -1,7 +1,6 @@
 local builtin = require("telescope.builtin")
 local pm_telescope_ext = require("pm_user.telescope_ext")
 local keyset = vim.keymap.set
-
 local M = {
   on_lsp_attach = function(ev)
     vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
@@ -65,11 +64,13 @@ local M = {
     end, kmode)
   end,
 }
+
 keyset("n", "<leader>ss", ":mksession!s.vim<CR>", M.keyargs({ "noremap", "silent" }))
 keyset("n", "<leader>ro", ":e!<CR>", M.keyargs({ "noremap", "silent" }))
 keyset("n", "<leader>w", "<CMD>wshada<BAR>w<CR>", M.keyargs({ "noremap", "silent" }))
 keyset({ "t" }, "<C-n>", "<C-\\><C-n>")
 keyset("x", "<leader>p", [["_dP]])
+keyset("i", "<Tab>", "<C-v><Tab>")
 keyset("v", "J", ":m '>+1<CR>gv=gv")
 keyset("v", "K", ":m '<-2<CR>gv=gv")
 keyset("v", "Y", [["+y]])
@@ -85,9 +86,9 @@ keyset("n", "<C-l>", "<C-w><C-l>")
 
 keyset("n", "<leader>fo", function()
   require("conform").format({
-    lsp_fallback=true,
+    lsp_fallback = true,
     async = false,
-    timeout_ms=500
+    timeout_ms = 500,
   })
 end, M.keyargs({ "noremap", "silent", desc = "conform format" }))
 

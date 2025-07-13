@@ -24,7 +24,7 @@ config.window_padding = {
   bottom = 0,
 }
 
-config.font_size = 12.4
+config.font_size = 12.5
 -- For example, changing the color scheme:
 config.color_scheme = "Campbell (Gogh)"
 -- config.color_scheme = "Catch Me If You Can (terminal.sexy)"

@@ -24,6 +24,7 @@ bindsym $mod+Shift+e exec $HOME/.config/sway/exit.sh
 output * bg /home/prashant/wellpapers/ature-landscape-pathway-clouds-desktop-wallpaper.jpg fill
 # output * bg "/home/prashant/Documents/status bar referance.png" fill
 
+# output eDP-1 scale 1.03
 
 # exec swayidle -w \
 #     timeout 600 $lock \
