@@ -36,11 +36,6 @@
 	 "justify": "center"
     },
 
-    "tray": {
-        "icon-size": 18,
-        "spacing": 10,
-    },
-
     "clock": {
         "timezone": "Asia/Kolkata",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
@@ -53,7 +48,7 @@
             "warning": 30,
             "critical": 15,
         },
-        "format": "{icon} {capacity}%",
+        "format": " {icon} {capacity}%",
         "format-charging": "󰂈 {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
@@ -64,7 +59,7 @@
 
     "custom/logout": {
       "on-click": "wlogout -p layer-shell",
-      "format": "󰕈 ",
+      "format": " 󰕈 ",
     },
 
     "sway/mode": {
@@ -88,23 +83,23 @@
 
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{icon} {essid}",
+        "format-wifi": "<span foreground='white'></span> {icon} {essid}",
         "format-ethernet": "Connected  ",
         "tooltip-format": "{ifname}: {gwaddr}",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "󰤮 No Wifi",
-        "format-alt": "{ifname}:{essid}@{ipaddr}/{cidr}",
+        "format-alt": " {ifname}:{essid}@{ipaddr}/{cidr}",
 	"format-icons" : ["󰤟","󰤢","󰤥","󰤨"]
     },
 
     "backlight": {
         //"device": "intel_backlight",
-        "format": " {percent}%",
-        "format-icons": ["", ""]
+        "format": " {icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟","󰃝","󰃠"]
     },
 
     "custom/audio": {
-        "format": "{}",
+        "format": " {}",
         "signal": 8,
         "interval": "once",
         "exec": "~/.config/sway/audio.sh",
