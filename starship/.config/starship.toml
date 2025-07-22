@@ -1,17 +1,15 @@
-add_newline = true
+add_newline = false
 
 format = '''
-$character$directory$conda$git_branch'''
-
-right_format='''$cmd_duration'''
+$character$directory$conda$git_branch$cmd_duration'''
 
 [cmd_duration]
 min_time = 500
-format = 'took [$duration](bold yellow)'
+format = 'took [$duration](bold yellow) '
 
 [character]
-format = "$symbol"
-success_symbol = "[➜](bold green) "
+format = "$symbol "
+success_symbol = "[➜](bold green)"
 error_symbol = "[➜](bold red)"
 
 [directory]
@@ -24,10 +22,12 @@ use_os_path_sep = true
 
 [git_branch]
 format = '[git:](green)[\(](white)[$branch]($style)[\)](white) '
+# format = '[$symbol$branch]($style) '
 symbol = " "
 style = "purple"
 
 [conda]
 format = '[conda:](green)[\(](white)[$environment]($style)[\)](white) '
+# format = '[$symbol$environment]($style) '
 symbol = ' '
 style = "purple"

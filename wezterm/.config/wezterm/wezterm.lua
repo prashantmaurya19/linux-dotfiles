@@ -1,5 +1,6 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
+local mux = wezterm.mux
 
 -- The filled in variant of the < symbol
 local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
@@ -24,7 +25,7 @@ config.window_padding = {
   bottom = 0,
 }
 
-config.font_size = 12.5
+config.font_size = 12.6
 -- For example, changing the color scheme:
 config.color_scheme = "Campbell (Gogh)"
 -- config.color_scheme = "Catch Me If You Can (terminal.sexy)"
@@ -136,8 +137,8 @@ config.keys = {
   { key = "k", mods = mod_key, action = act.ActivatePaneDirection("Up") },
   { key = "l", mods = mod_key, action = act.ActivatePaneDirection("Right") },
   { key = "q", mods = mod_key, action = act.CloseCurrentPane({ confirm = true }) },
-  -- { key = "f", mods = mod_key, action = act.TogglePaneZoomState },
-  -- { key = "o", mods = mod_key, action = act.RotatePanes("Clockwise") },
+  { key = "z", mods = "ALT", action = act.TogglePaneZoomState },
+  { key = "o", mods = mod_key, action = act.RotatePanes("Clockwise") },
   { key = "+", mods = mod_key, action = act.IncreaseFontSize },
   { key = "-", mods = mod_key, action = act.DecreaseFontSize },
   { key = "k", mods = "CTRL", action = act.ScrollByLine(-2) },
@@ -155,16 +156,28 @@ config.keys = {
       description = wezterm.format({
         { Attribute = { Intensity = "Bold" } },
         { Foreground = { AnsiColor = "Fuchsia" } },
-        { Text = "Renaming Tab Title...:" },
+        { Text = "Enter name for new workspace" },
       }),
-      action = wezterm.action_callback(function(window, _, line)
+      action = wezterm.action_callback(function(window, pane, line)
         if line then
-          window:active_tab():set_title(line)
+          window:perform_action(
+            act.SwitchToWorkspace({
+              name = line,
+            }),
+            pane
+          )
         end
       end),
     }),
   },
-  { key = "r", mods = mod_key, action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }) },
+  {
+    key = "phys:Space",
+    mods = mod_key,
+    action = act.ShowLauncherArgs({
+      flags = "FUZZY|WORKSPACES",
+    }),
+  },
+  { key = "[", mods = mod_key, action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }) },
   { key = "m", mods = mod_key, action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
   -- { key = "t", mods = mod_key, action = act.ActivateKeyTable({ name = "text_zoom_in_out", one_shot = false }) },
 }
@@ -242,7 +255,7 @@ end)
 
 wezterm.on("update-status", function(window, pane)
   -- Workspace name
-  local stat = ""..window:active_workspace()
+  local stat = "" .. window:active_workspace()
   local stat_color = "#f7768e"
   if window:active_key_table() then
     stat = window:active_key_table()
@@ -254,9 +267,9 @@ wezterm.on("update-status", function(window, pane)
   end
 
   local stat_symbol = wezterm.nerdfonts.fa_linux
-  if stat=="default" then
+  if stat == "default" then
     stat_symbol = wezterm.nerdfonts.oct_table
-  elseif stat=="resize_pane" then
+  elseif stat == "resize_pane" then
     stat_symbol = wezterm.nerdfonts.md_resize
   end
 
@@ -273,18 +286,21 @@ wezterm.on("update-status", function(window, pane)
   tab:set_title(cmd)
   window:set_right_status(wezterm.format({
     { Text = " | " },
-    {Foreground = {Color = stat_color}},
-    {Text="Mode: "..stat},
+    { Foreground = { Color = stat_color } },
+    { Text = "Mode: " .. stat },
     { Foreground = { Color = "#fff" } },
-    {Text=" | "},
+    { Text = " | " },
     { Foreground = { Color = "#e0af68" } },
-    { Text =wezterm.nerdfonts.fa_code .. "  " .. cmd},
+    { Text = wezterm.nerdfonts.fa_code .. "  " .. cmd .. " " },
+    { Text = " | " },
+    { Foreground = { Color = "#d627f9" } },
+    { Text = "" .. "  " .. window:active_workspace() .. " " },
   }))
 
   window:set_left_status(wezterm.format({
     { Foreground = { Color = stat_color } },
     { Text = " " },
-    { Text = stat_symbol},
+    { Text = stat_symbol },
     { Text = " |" },
   }))
   return {
