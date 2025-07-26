@@ -28,21 +28,50 @@ function M.parse(path)
   return dirs
 end
 
-function M.scandir(directory)
+--- Defines a structure for user data.
+--- @class ScanOptions
+--- @field ignore_folders table<string> list of ignore folders
+
+--- @param directory string
+--- @param opt ScanOptions
+--- @return table<string>
+function M.scandir(directory, opt)
+  local option = opt or {
+    ignore_folders = { ".git", "target" },
+  }
+
+  local ignore_folders = ""
+  for index, value in ipairs(option.ignore_folders) do
+    ignore_folders = ignore_folders
+      .. "-name "
+      .. "'"
+      -- .. directory
+      -- .. "/"
+      .. value
+      .. "' "
+      .. (index < #option.ignore_folders and "-o" or "")
+      .. " "
+  end
+
   local i, t, popen = 0, {}, io.popen
   -- this support in only for window's powershell yet
 
   local cmd = ""
   if vim.loop.os_uname().sysname == "Linux" then
-    cmd = "find " .. directory .. "/ -type d"
+    -- cmd = "find " .. directory .. "/ -type d"
+    cmd = "find '" .. directory .. "' \\( " .. ignore_folders .. "\\) -prune -o -type d"
   else
     cmd = 'dir "' .. directory .. '" /s /b /w /ad'
   end
   local pfile = popen(cmd)
   if pfile ~= nil then
     for filename in pfile:lines() do
+      if filename == directory then
+	goto continue
+      end
       i = i + 1
-      t[i] = filename
+      t[i] = string.gsub(filename,directory,".")
+        ::continue::
     end
     pfile:close()
   end

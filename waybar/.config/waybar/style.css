@@ -1,28 +1,31 @@
 * {
-  font-family:
-    'FiraCode Nerd Font',
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif;
+  font-family: "FiraCode Nerd Font", Roboto, Helvetica, Arial, sans-serif;
   font-size: 15px;
   font-weight: bold;
   min-height: 0;
   padding: 0;
 }
 
+@define-color way-bg rgba(0, 0, 0, 0.9);
+@define-color module-bg transparent;
+@define-color wifi #d900b5;
+@define-color wifi-disconnect red;
 @define-color primary #018f33;
 @define-color second #0ad150;
-
+@define-color ubuntu #D74614;
+@define-color audio #00c0fa;
+@define-color battery-charging #60d606;
+@define-color battery #0ad150;
+@define-color backlight #f5e900;
 
 #battery {
   background: transparent;
-  color: #ffffff;
+  color: @battery;
   opacity: 0.7;
   margin-right: 7px;
 }
 
-#mode{
+#mode {
   background: rgba(255, 255, 255, 0.2);
   color: white;
   opacity: 0.9;
@@ -32,7 +35,7 @@
 
 #battery.charging,
 #battery.plugged {
-  color: #ffffff;
+  color: @battery-charging;
 }
 
 #battery.critical:not(.charging) {
@@ -54,7 +57,7 @@
 
 #backlight {
   background: transparent;
-  color: #ffffff;
+  color: @backlight;
   margin-right: 7px;
   opacity: 0.7;
 }
@@ -66,14 +69,14 @@
   margin-right: 7px;
 }
 
-#network.wifi{
+#network.wifi {
   background: transparent;
-  color: #60ff40;
+  color: @wifi;
 }
 
 #network.disconnected {
   background: transparent;
-  color: red;
+  color: @wifi-disconnect;
 }
 
 #keyboard-state {
@@ -92,16 +95,30 @@
 }
 
 window#waybar {
-  background: rgba(0, 0, 0, 0.8);
+  background: @way-bg;
   transition-duration: 0.2s;
   transition-property: background-color;
 }
 
-.modules-left {
-  padding: 5px 0 5px 0;
+.modules-center {
+  background: @module-bg;
+  padding: 0 10px 0 10px;
+  border-radius: 20px;
+  border-radius: 20px;
 }
+
+.modules-left {
+  background: @module-bg;
+  padding: 5px 10px 5px 5px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
 .modules-right {
-  padding: 5px 0 5px 0;
+  background: @module-bg;
+  padding: 5px 0 5px 10px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 #workspaces button:hover {
@@ -125,7 +142,7 @@ window#waybar {
   background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
   margin-right: 5px;
-  border-radius:2px;
+  border-radius: 2px;
   opacity: 0.9;
   padding-left: 2px;
   font-size: 20px;
@@ -143,14 +160,14 @@ window#waybar {
 /* Custom Stuff */
 #custom-audio {
   background: transparent;
-  color: #ffffff;
+  color: @audio;
   opacity: 0.7;
   margin-right: 7px;
 }
 
 #custom-logout {
   background: transparent;
-  color: #ffffff;
+  color: @ubuntu;
   opacity: 0.7;
   margin-right: 7px;
 }

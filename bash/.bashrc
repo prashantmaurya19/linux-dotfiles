@@ -125,13 +125,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
+alias git-push-main='git push origin main'
+alias git-commit='git add . && git commit -m'
 alias git-dev='git add . && git commit -m "dev : some changes"'
 alias git-add='git add . && git commit -m "add : some addition"'
 alias git-fix='git add . && git commit -m "add : some fixes"'
 alias git-dev-push='git add . && git commit -m "dev : some changes" && git push origin main'
 alias git-add-push='git add . && git commit -m "add : some addition" && git push origin main'
 alias git-fix-push='git add . && git commit -m "add : some fixes" && git push origin main'
-alias fcd='cd "$(find ~/wellpapers/ ~/.config/ ~/Documents/ ~/Downloads/ -type d -print | fzf)"'
+alias fcd='cd "$(find ~/wellpapers/ ~/.local/ ~/Documents/ ~/Downloads/ -type d -print | fzf)"'
 alias fcdv='. ~/Documents/linux-dotfiles/scripts/cd_and_open_dir_in_nvim.sh'
 alias fv='nvim "$(find ~ -type f -print | fzf)"'
 alias dir='lsd -a -1'

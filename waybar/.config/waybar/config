@@ -48,7 +48,7 @@
             "warning": 30,
             "critical": 15,
         },
-        "format": " {icon} {capacity}%",
+        "format": "<span foreground='white'></span> {icon} {capacity}%",
         "format-charging": "󰂈 {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
@@ -59,7 +59,7 @@
 
     "custom/logout": {
       "on-click": "wlogout -p layer-shell",
-      "format": " 󰕈 ",
+      "format": "<span foreground='white'></span>  ",
     },
 
     "sway/mode": {
@@ -88,18 +88,18 @@
         "tooltip-format": "{ifname}: {gwaddr}",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "󰤮 No Wifi",
-        "format-alt": " {ifname}:{essid}@{ipaddr}/{cidr}",
+        "format-alt": "<span foreground='white'></span> {ifname}:{essid}@{ipaddr}/{cidr}",
 	"format-icons" : ["󰤟","󰤢","󰤥","󰤨"]
     },
 
     "backlight": {
         //"device": "intel_backlight",
-        "format": " {icon} {percent}%",
+        "format": "<span foreground='white'></span> {icon} {percent}%",
         "format-icons": ["󰃞", "󰃟","󰃝","󰃠"]
     },
 
     "custom/audio": {
-        "format": " {}",
+        "format": "<span foreground='white'></span> {}",
         "signal": 8,
         "interval": "once",
         "exec": "~/.config/sway/audio.sh",

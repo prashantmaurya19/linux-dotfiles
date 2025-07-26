@@ -19,6 +19,9 @@ return {
       -- I don't want to search in the `.git` directory.
       table.insert(vimgrep_arguments, "--glob")
       table.insert(vimgrep_arguments, "!**/.git/*")
+      table.insert(vimgrep_arguments, "!**/node_modules/*")
+      table.insert(vimgrep_arguments, "!**/build/*")
+      table.insert(vimgrep_arguments, "!**/dist/*")
       -- local select_one_or_multi = function(prompt_bufnr)
       -- 	local picker = require("telescope.actions.state").get_current_picker(prompt_bufnr)
       -- 	local multi = picker:get_multi_selection()
