@@ -43,6 +43,10 @@ return {
     config = function()
       local lspconfig = require("lspconfig")
       local cmp_nvim_lsp = require("cmp_nvim_lsp")
+-- jdtls
+-- cssls
+-- luals
+-- emmet_ls
       require("mason-lspconfig").setup({
         ensure_installed = { "lua_ls" },
         handlers = {

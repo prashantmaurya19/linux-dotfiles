@@ -21,7 +21,7 @@ exec_always --no-startup-id redshift -P -O 3500
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 bindsym $mod+Shift+e exec $HOME/.config/sway/exit.sh
-output * bg /home/prashant/wellpapers/killua-zoldyck-art-style-desktop-wallpaper-4k.jpg fill
+output * bg /home/prashant/Pictures/killua-zoldyck-art-style-desktop-wallpaper-4k.jpg fill
 # output * bg "/home/prashant/Documents/status bar referance.png" fill
 
 # output eDP-1 scale 1.03

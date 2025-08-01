@@ -1,15 +1,11 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
 
 eval "$(starship init bash)"
 
-# fnm
-FNM_PATH="/home/prashant/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env`"
-fi
 
 # If not running interactively, don't do anything
 case $- in
@@ -133,9 +129,9 @@ alias git-fix='git add . && git commit -m "add : some fixes"'
 alias git-dev-push='git add . && git commit -m "dev : some changes" && git push origin main'
 alias git-add-push='git add . && git commit -m "add : some addition" && git push origin main'
 alias git-fix-push='git add . && git commit -m "add : some fixes" && git push origin main'
-alias fcd='cd "$(find ~/wellpapers/ ~/.local/ ~/Documents/ ~/Downloads/ -type d -print | fzf)"'
+alias fcd='cd "$(find ~/.local/ ~/Documents/ ~/Downloads/ \( -name ".git" -o -name "fnm" -o -name "target" -o -name "node_modules" \) -prune -o -type d -print | fzf)"'
 alias fcdv='. ~/Documents/linux-dotfiles/scripts/cd_and_open_dir_in_nvim.sh'
-alias fv='nvim "$(find ~ -type f -print | fzf)"'
+alias fv='nvim "$(find ~ \( -name ".git" -o -name "fnm" -o -name "target" -o -name "node_modules" \) -prune -o -type f -print | fzf)"'
 alias dir='lsd -a -1'
 alias chrome='google-chrome'
 alias v='nvim'
@@ -149,11 +145,27 @@ bind -x '"\e.":"fv"'
 export EDITOR="nvim"
 export PATH=$PATH:/usr/bin/zig/
 export PATH=$PATH:~/nvim/bin/
-export PATH=$PATH:~/xodopdfreader/
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/flatpak/exports/share
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:/home/prashant/.local/share/flatpak/exports/share
 export XAUTHORITY=$HOME/.Xauthority
 
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('/home/prashant/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/home/prashant/miniconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/prashant/miniconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/home/prashant/miniconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# <<< conda initialize <<<
+
+# conda activate
 
 # fnm
 FNM_PATH="/home/prashant/.local/share/fnm"
@@ -161,20 +173,3 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
 fi
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/prashant/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/prashant/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/prashant/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/prashant/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-conda activate

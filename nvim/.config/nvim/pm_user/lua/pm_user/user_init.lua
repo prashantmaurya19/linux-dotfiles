@@ -5,6 +5,7 @@ vim.opt.encoding = "UTF-8"
 vim.opt.cursorline = true
 vim.opt.termguicolors = true
 vim.g.mapleader = " "
+vim.opt.clipboard = "unnamedplus"
 
 vim.diagnostic.config({
   virtual_text = false,

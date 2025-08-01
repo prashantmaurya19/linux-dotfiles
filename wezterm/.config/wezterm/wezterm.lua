@@ -231,7 +231,7 @@ wezterm.on("update-status", function(window, pane)
     { Text = wezterm.nerdfonts.fa_code .. "  " .. cmd .. " " },
     { Text = " | " },
     { Foreground = { Color = "#d627f9" } },
-    { Text = "" .. "  " .. window:active_workspace() .. " " },
+    { Text = "" .. " " .. window:active_workspace() .. " " },
   }))
 
   window:set_left_status(wezterm.format({
