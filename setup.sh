@@ -1,3 +1,5 @@
+# do 
+
 sudo apt update && apt upgrade
 sudo apt install imagemagick wlogout sway swaybg swayidle swayimg swaylock waybar wofi fonts-font-awesome curl wget lsd stow fzf -y 
 sudo apt install pulseaudio pulseaudio-utils -y
