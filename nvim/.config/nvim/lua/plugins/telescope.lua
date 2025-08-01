@@ -19,8 +19,9 @@ return {
       -- I don't want to search in the `.git` directory.
       table.insert(vimgrep_arguments, "--glob")
       table.insert(vimgrep_arguments, "!**/.git/*")
-      table.insert(vimgrep_arguments, "!**/node_modules/*")
+      table.insert(vimgrep_arguments, "!**/node_modules/**")
       table.insert(vimgrep_arguments, "!**/build/*")
+      table.insert(vimgrep_arguments, "!**/target/*")
       table.insert(vimgrep_arguments, "!**/dist/*")
       -- local select_one_or_multi = function(prompt_bufnr)
       -- 	local picker = require("telescope.actions.state").get_current_picker(prompt_bufnr)
@@ -44,9 +45,11 @@ return {
           path_display = { "truncate" },
         },
         file_ignore_patterns = {
-          "node_modules",
-          "build",
-          "dist",
+          "node_modules/",
+          "target/",
+          ".git/",
+          "build/",
+          "dist/",
           "yarn.lock",
         },
         pickers = {
@@ -54,6 +57,9 @@ return {
           layout_config = {
             height = 40,
             width = 0.8,
+          },
+          find_files = {
+            find_command = { "rg", "--files", "--color", "never", "--no-require-git" },
           },
           current_buffer_fuzzy_find = {
             previewer = false,

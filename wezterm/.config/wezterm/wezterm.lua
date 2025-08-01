@@ -1,6 +1,5 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
-local mux = wezterm.mux
 local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
 local SOLID_RIGHT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
 local config = wezterm.config_builder()
@@ -12,7 +11,7 @@ config.window_padding = {
   top = 0,
   bottom = 0,
 }
-config.font_size = 12.6
+config.font_size = 13
 config.color_scheme = "Campbell (Gogh)"
 config.font = wezterm.font("FiraCode Nerd Font")
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
