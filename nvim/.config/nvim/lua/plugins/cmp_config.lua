@@ -63,7 +63,7 @@ return {
         Operator = "  ",
         TypeParameter = "  ",
       }
-      
+
       cmp.setup({
         formatting = {
           fields = { "abbr", "kind", "menu" },
