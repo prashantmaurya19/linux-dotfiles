@@ -45,8 +45,6 @@ function M.scandir(directory, opt)
     ignore_folders = ignore_folders
       .. "-name "
       .. "'"
-      -- .. directory
-      -- .. "/"
       .. value
       .. "' "
       .. (index < #option.ignore_folders and "-o" or "")
@@ -59,7 +57,7 @@ function M.scandir(directory, opt)
   local cmd = ""
   if vim.loop.os_uname().sysname == "Linux" then
     -- cmd = "find " .. directory .. "/ -type d"
-    cmd = "find '" .. directory .. "' \\( " .. ignore_folders .. "\\) -prune -o -type d"
+    cmd = "find '" .. directory .. "' \\( " .. ignore_folders .. "\\) -prune -o -type d -print"
   else
     cmd = 'dir "' .. directory .. '" /s /b /w /ad'
   end

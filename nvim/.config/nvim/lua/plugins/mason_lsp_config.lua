@@ -43,12 +43,8 @@ return {
     config = function()
       local lspconfig = require("lspconfig")
       local cmp_nvim_lsp = require("cmp_nvim_lsp")
--- jdtls
--- cssls
--- luals
--- emmet_ls
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls" },
+        ensure_installed = { "lua_ls", "jdtls", "cssls", "ts_ls", "tailwindcss" },
         handlers = {
           function(server_name) -- default handler (optional)
             lspconfig[server_name].setup({
@@ -56,6 +52,13 @@ return {
             })
           end,
           ["jdtls"] = function() end,
+          ["tailwindcss"] = function(sname)
+            lspconfig[sname].setup({
+              capabilities = cmp_nvim_lsp.default_capabilities(),
+              filetypes = { "javascriptreact", "typescriptreact" },
+              classAttributes = { "className", "classList", "inputClass", "svgClass", "pathClass" },
+            })
+          end,
           ["cssls"] = function(server_name)
             lspconfig[server_name].setup({
               capabilities = cmp_nvim_lsp.default_capabilities(),

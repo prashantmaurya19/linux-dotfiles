@@ -85,7 +85,7 @@ return {
               -- The function below will be called before any actual modifications from lspkind
               -- so that you can provide more controls on popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
               before = function(vim_entry, vim_item)
-                vim_item.kind = (cmp_kinds[vim_item.kind] or '') .. vim_item.kind
+                vim_item.kind = (cmp_kinds[vim_item.kind] or "") .. vim_item.kind
                 -- end
                 vim_item.menu = ({
                   nvim_lsp = "[LSP]",
@@ -114,7 +114,7 @@ return {
           documentation = cmp.config.window.bordered({}),
           completion = cmp.config.window.bordered({
             border = "single",
-            winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel"
+            winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel",
           }),
         },
 

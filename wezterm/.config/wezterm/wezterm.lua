@@ -11,7 +11,7 @@ config.window_padding = {
   top = 0,
   bottom = 0,
 }
-config.font_size = 13
+config.font_size = 13.5
 config.color_scheme = "Campbell (Gogh)"
 config.font = wezterm.font("FiraCode Nerd Font")
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
@@ -223,14 +223,11 @@ wezterm.on("update-status", function(window, pane)
   window:set_right_status(wezterm.format({
     { Text = " | " },
     { Foreground = { Color = stat_color } },
-    { Text = "Mode: " .. stat },
+    { Text = " " .. stat },
     { Foreground = { Color = "#fff" } },
     { Text = " | " },
     { Foreground = { Color = "#e0af68" } },
-    { Text = wezterm.nerdfonts.fa_code .. "  " .. cmd .. " " },
-    { Text = " | " },
-    { Foreground = { Color = "#d627f9" } },
-    { Text = "" .. " " .. window:active_workspace() .. " " },
+    { Text = wezterm.nerdfonts.fa_code .. " " .. cmd .. " " },
   }))
 
   window:set_left_status(wezterm.format({

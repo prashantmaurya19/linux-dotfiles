@@ -80,6 +80,8 @@ set $menu wofi --show drun  -i | xargs swaymsg exec --
 
 bindsym $mod+Return exec wezterm
 
+bindsym Mod4+s exec ~/.local/bin/sway-screenshot/sway-screenshot -m region -o ~/Pictures/sway-screentshot/
+
 # Open a terminal emulator:
 # set $term wezterm
 # bindsym $mod+t exec $term
