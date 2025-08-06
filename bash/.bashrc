@@ -122,6 +122,7 @@ if ! shopt -oq posix; then
 fi
 
 alias git-push-main='git push origin main'
+alias python='python3'
 alias git-commit='git add . && git commit -m'
 alias git-dev='git add . && git commit -m "dev : some changes"'
 alias git-add='git add . && git commit -m "add : some addition"'

@@ -53,10 +53,24 @@ return {
           end,
           ["jdtls"] = function() end,
           ["tailwindcss"] = function(sname)
+	    print(sname)
             lspconfig[sname].setup({
               capabilities = cmp_nvim_lsp.default_capabilities(),
               filetypes = { "javascriptreact", "typescriptreact" },
-              classAttributes = { "className", "classList", "inputClass", "svgClass", "pathClass" },
+              settings = {
+                tailwindCSS = {
+                  classAttributes = {
+                    "class",
+                    "className",
+                    "class:list",
+                    "classList",
+                    "ngClass",
+                    "inputClass",
+                    "svgClass",
+                    "pathClass",
+                  },
+                },
+              },
             })
           end,
           ["cssls"] = function(server_name)

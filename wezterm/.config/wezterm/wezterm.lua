@@ -11,7 +11,7 @@ config.window_padding = {
   top = 0,
   bottom = 0,
 }
-config.font_size = 13.5
+config.font_size = 15
 config.color_scheme = "Campbell (Gogh)"
 config.font = wezterm.font("FiraCode Nerd Font")
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
