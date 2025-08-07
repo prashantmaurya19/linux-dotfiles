@@ -77,8 +77,8 @@ config.keys = {
   { key = "o", mods = mod_key, action = act.RotatePanes("Clockwise") },
   { key = "+", mods = mod_key, action = act.IncreaseFontSize },
   { key = "-", mods = mod_key, action = act.DecreaseFontSize },
-  { key = "k", mods = "CTRL", action = act.ScrollByLine(-2) },
-  { key = "j", mods = "CTRL", action = act.ScrollByLine(2) },
+  { key = "K", mods = "CTRL", action = act.ScrollByLine(-2) },
+  { key = "J", mods = "CTRL", action = act.ScrollByLine(2) },
   -- Tab keybindings
   { key = "n", mods = mod_key, action = act.SpawnTab("CurrentPaneDomain") },
   { key = "q", mods = "ALT", action = act.ActivateTabRelative(-1) },

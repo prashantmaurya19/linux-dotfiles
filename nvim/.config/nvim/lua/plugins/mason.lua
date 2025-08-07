@@ -4,32 +4,11 @@ return {
 
   {
     "neovim/nvim-lspconfig",
+    dependencies = {
+      "hrsh7th/nvim-cmp",
+    },
     config = function()
-      local lspconfig = require("lspconfig")
-
-      -- require("lspconfig").cssmodules_ls.setup({
-      --   -- provide your on_attach to bind keymappings
-      --   on_attach = require("pm_user.remaps").on_lsp_attach,
-      --   -- optionally
-      --   init_options = {
-      --     camelCase = "dashes",
-      --   },
-      -- })
-
-      lspconfig["dartls"].setup({
-        capabilities = require("cmp_nvim_lsp").default_capabilities(),
-        dart = {
-          analysisexcludedfolders = {
-            vim.fn.expand("$home/appdata/local/pub/cache"),
-            vim.fn.expand("$home/.pub-cache"),
-            vim.fn.expand("/opt/homebrew/"),
-            vim.fn.expand("$home/flutter_home/flutter/"),
-          },
-          updateimportsonrename = true,
-          completefunctioncalls = true,
-          showtodos = true,
-        },
-      })
+      vim.PM.lsp.setup_handlers(require("cmp_nvim_lsp"))
     end,
   },
   {
@@ -39,94 +18,25 @@ return {
     end,
   },
   {
+    dependencies = {
+      "williamboman/mason.nvim",
+      "neovim/nvim-lspconfig",
+      "hrsh7th/nvim-cmp",
+    },
     "williamboman/mason-lspconfig.nvim",
     config = function()
-      local lspconfig = require("lspconfig")
-      local cmp_nvim_lsp = require("cmp_nvim_lsp")
-      require("mason-lspconfig").setup({
+      local mason_lspconfig = require("mason-lspconfig")
+      mason_lspconfig.setup({
+        automatic_enable = false,
         ensure_installed = { "lua_ls", "jdtls", "cssls", "ts_ls", "tailwindcss" },
-        handlers = {
-          function(server_name) -- default handler (optional)
-            lspconfig[server_name].setup({
-              capabilities = cmp_nvim_lsp.default_capabilities(),
-            })
-          end,
-          ["jdtls"] = function() end,
-          ["tailwindcss"] = function(sname)
-	    print(sname)
-            lspconfig[sname].setup({
-              capabilities = cmp_nvim_lsp.default_capabilities(),
-              filetypes = { "javascriptreact", "typescriptreact" },
-              settings = {
-                tailwindCSS = {
-                  classAttributes = {
-                    "class",
-                    "className",
-                    "class:list",
-                    "classList",
-                    "ngClass",
-                    "inputClass",
-                    "svgClass",
-                    "pathClass",
-                  },
-                },
-              },
-            })
-          end,
-          ["cssls"] = function(server_name)
-            lspconfig[server_name].setup({
-              capabilities = cmp_nvim_lsp.default_capabilities(),
-              filetypes = { "javascriptreact", "typescriptreact" },
-              settings = {
-                css = {
-                  lint = {
-                    unknownAtRules = "ignore", -- Optional: to ignore unknown at-rules from CSS-in-JS
-                  },
-                },
-                less = {
-                  lint = {
-                    unknownAtRules = "ignore",
-                  },
-                },
-                scss = {
-                  lint = {
-                    unknownAtRules = "ignore",
-                  },
-                },
-              },
-            })
-          end,
-          ["lua_ls"] = function()
-            lspconfig.lua_ls.setup({
-              capabilities = cmp_nvim_lsp.default_capabilities(),
-              settings = {
-                lua = {
-                  diagnostics = {
-                    globals = { "vim" },
-                  },
-                },
-              },
-            })
-          end,
-          ["emmet_ls"] = function()
-            -- local configs = require("lspconfig/configs")
-            local capabilities = vim.lsp.protocol.make_client_capabilities()
-            capabilities.textDocument.completion.completionItem.snippetSupport = true
-            lspconfig.emmet_ls.setup({
-              capabilities = capabilities,
-              filetypes = { "eruby", "html", "javascriptreact", "typescriptreact", "vue" },
-              init_options = {
-                html = {
-                  options = {
-                    -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
-                    ["bem.enabled"] = true,
-                  },
-                },
-              },
-            })
-          end,
-        },
       })
+      -- enabling LSPs with default configrations
+      for _, value in ipairs({
+        "lua_ls",
+        "ts_ls",
+      }) do
+        vim.lsp.enable(value)
+      end
     end,
   },
 }
