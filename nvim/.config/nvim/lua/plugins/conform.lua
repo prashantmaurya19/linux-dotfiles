@@ -14,6 +14,7 @@ return {
           rust = { "rustfmt" },
           html = { "prettier" },
           css = { "prettier" },
+          yaml = { "prettier" },
           scss = { "prettier" },
           javascript = { "prettier" },
           javascriptreact = { "prettier" },
@@ -30,11 +31,11 @@ return {
               "Spaces",
             },
           },
-	  prettier={
-	    "--tab-width ",
-	    vim.PM.g.shiftwidth.javascriptreact,
-	    "--use-tabs false",
-	  }
+          prettier = {
+            "--tab-width ",
+            vim.PM.g.shiftwidth.javascriptreact,
+            "--use-tabs false",
+          },
         },
       })
     end,

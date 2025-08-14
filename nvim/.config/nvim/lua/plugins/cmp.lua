@@ -10,30 +10,6 @@ return {
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
-      {
-        "luckasRanarison/tailwind-tools.nvim",
-        name = "tailwind-tools",
-        build = ":UpdateRemotePlugins",
-        dependencies = {
-          "nvim-treesitter/nvim-treesitter",
-          "nvim-telescope/telescope.nvim", -- optional
-          "neovim/nvim-lspconfig", -- optional
-        },
-        opts = {
-          server = {
-            override = false, -- setup the server from the plugin if true
-          },
-          document_color = {
-            enabled = true, -- can be toggled by commands
-            kind = "inline", -- "inline" | "foreground" | "background"
-            inline_symbol = "󰝤 ", -- only used in inline mode
-            debounce = 200, -- in milliseconds, only applied in insert mode
-          },
-          cmp = {
-            highlight = "background", -- color preview style, "foreground" | "background"
-          },
-        }, -- your configuration
-      },
       "nvim-highlight-colors",
       "neovim/nvim-lspconfig",
       "hrsh7th/cmp-nvim-lsp",
@@ -92,11 +68,7 @@ return {
                 abbr = 50, -- actual suggestion item
                 kind = 50, -- actual suggestion item
               },
-              ellipsis_char = "...", -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
-              show_labelDetails = true, -- show labelDetails in menu. Disabled by default
 
-              -- The function below will be called before any actual modifications from lspkind
-              -- so that you can provide more controls on popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
               before = function(vim_entry, vim_item)
                 vim_item.kind = (cmp_kinds[vim_item.kind] or "") .. vim_item.kind
                 -- end
@@ -112,7 +84,7 @@ return {
             })(entry, item)
             if color_item.abbr_hl_group then
               item.kind_hl_group = color_item.abbr_hl_group
-              item.kind = color_item.abbr
+              -- item.kind = color_item.abbr
             end
             return item
           end,
@@ -132,8 +104,6 @@ return {
         },
 
         mapping = cmp.mapping.preset.insert({
-          ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-          ["<C-f>"] = cmp.mapping.scroll_docs(4),
           ["<C-y>"] = cmp.mapping(
             cmp.mapping.confirm({
               behavior = cmp.ConfirmBehavior.Insert,
@@ -141,7 +111,6 @@ return {
             }),
             { "i", "c" }
           ),
-          ["<C-e>"] = cmp.mapping.abort(),
           ["<CR>"] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert }),
         }),
         sources = cmp.config.sources({

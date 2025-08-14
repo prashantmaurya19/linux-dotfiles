@@ -151,7 +151,7 @@ config.key_tables = {
   },
 }
 config.use_fancy_tab_bar = false
-config.status_update_interval = 1000
+config.status_update_interval = 5000
 config.tab_bar_at_bottom = false
 
 local function basename(s)

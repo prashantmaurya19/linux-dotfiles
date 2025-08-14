@@ -64,22 +64,22 @@ local M = {
     end, kmode)
   end,
 }
-
-keyset("n", "<leader>ss", ":mksession!s.vim<CR>", M.keyargs({ "noremap", "silent" }))
-keyset("n", "<leader>ro", ":e!<CR>", M.keyargs({ "noremap", "silent" }))
-keyset("n", "<leader>w", ":bd<CR>", M.keyargs({ "noremap", "silent" }))
-keyset({ "t" }, "<C-n>", "<C-\\><C-n>")
-keyset("x", "<leader>p", [["_dP]])
--- keyset("i", "<Tab>", "<C-v><Tab>")
-keyset("v", "J", ":m '>+1<CR>gv=gv")
-keyset("v", "K", ":m '<-2<CR>gv=gv")
-keyset("v", "Y", [["+y]])
--- keyset("n", "<C-x>", ":bd<CR>", M.keyargs({ "noremap", "silent" }))
+keyset("n", "<leader>vs", ":vsplit<CR>", M.keyargs({ "noremap", "silent" })) -- splite buffer vertical
+keyset("n", "<leader>ss", ":mksession!s.vim<CR>", M.keyargs({ "noremap", "silent" })) -- save session on cwd
+keyset("n", "<leader>w", ":bd<CR>", M.keyargs({ "noremap", "silent" })) -- delete buffer
+keyset({ "t" }, "<C-n>", "<C-\\><C-n>",M.keyargs({"silent"}))
+keyset("x", "<leader>p", [["_dP]]) -- paste without losing the copied text
+-- move line up and down
+keyset("v", "J", ":m '>+1<CR>gv=gv",M.keyargs({"silent"}))
+keyset("v", "K", ":m '<-2<CR>gv=gv",M.keyargs({"silent"}))
+-- half page up and down
 keyset("n", "<C-d>", "<C-d>zz")
 keyset("n", "<C-u>", "<C-u>zz")
-keyset("n", "<leader>l", ":nohlsearch<CR>")
-keyset("n","<A-[>",":tabp<CR>")
-keyset("n","<A-]>",":tabn<CR>")
+-- clear search highlight
+keyset("n", "<leader>l", ":nohlsearch<CR>",M.keyargs({"silent"}))
+-- tab switching
+keyset("n", "<A-[>", ":tabp<CR>",M.keyargs({"silent"}))
+keyset("n", "<A-]>", ":tabn<CR>",M.keyargs({"silent"}))
 --window movement mapping
 keyset("n", "<C-j>", "<C-w><C-j>")
 keyset("n", "<C-k>", "<C-w><C-k>")

@@ -17,6 +17,7 @@
 @define-color battery-charging #60d606;
 @define-color battery #0ad150;
 @define-color backlight #f5e900;
+@define-color urgent #eb4d4b;
 
 #battery {
   background: transparent;
@@ -154,7 +155,7 @@ window#waybar {
 }
 
 #workspaces button.urgent {
-  background-color: #eb4d4b;
+  background-color: @urgent;
 }
 
 /* Custom Stuff */

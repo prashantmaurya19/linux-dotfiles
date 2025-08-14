@@ -1,0 +1,24 @@
+return {
+  -- "luckasRanarison/tailwind-tools.nvim",
+  -- name = "tailwind-tools",
+  -- build = ":UpdateRemotePlugins",
+  -- dependencies = {
+  --   "nvim-treesitter/nvim-treesitter",
+  --   "nvim-telescope/telescope.nvim", -- optional
+  --   "neovim/nvim-lspconfig", -- optional
+  -- },
+  -- opts = {
+  --   server = {
+  --     override = false, -- setup the server from the plugin if true
+  --   },
+  --   document_color = {
+  --     enabled = true, -- can be toggled by commands
+  --     kind = "inline", -- "inline" | "foreground" | "background"
+  --     inline_symbol = "󰝤 ", -- only used in inline mode
+  --     debounce = 200, -- in milliseconds, only applied in insert mode
+  --   },
+  --   cmp = {
+  --     highlight = "foreground", -- color preview style, "foreground" | "background"
+  --   },
+  -- }, -- your configuration
+}
