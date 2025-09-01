@@ -27,8 +27,8 @@ return {
       vim.opt.pumblend = 10
       local cmp_kinds = {
         Text = "  ",
-        Method = "󰊕()",
-        Function = "󰊕()",
+        Method = "󰊕 ",
+        Function = "󰊕 ",
         Constructor = "󰡱  ",
         Field = "  ",
         Variable = "  ",
@@ -53,11 +53,13 @@ return {
         TypeParameter = "  ",
       }
 
+      local nvim_highlight_color = require("nvim-highlight-colors")
+
       cmp.setup({
         formatting = {
           fields = { "abbr", "kind", "menu" },
           format = function(entry, item)
-            local color_item = require("nvim-highlight-colors").format(entry, { kind = item.kind })
+            local color_item = nvim_highlight_color.format(entry, { kind = item.kind })
             item = lspkind.cmp_format({
               -- mode = "symbol", -- show only symbol annotations
               maxwidth = {
@@ -114,6 +116,7 @@ return {
           ["<CR>"] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert }),
         }),
         sources = cmp.config.sources({
+          { name = "path" },
           { name = "nvim_lsp" },
           { name = "luasnip" }, -- For luasnip users.
         }, {

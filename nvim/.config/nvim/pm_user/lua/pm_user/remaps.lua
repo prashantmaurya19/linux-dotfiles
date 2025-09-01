@@ -16,7 +16,7 @@ local M = {
     keyset("n", "[d", function()
       vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
     end, opts)
-    keyset("n", "<leader>u", vim.lsp.buf.signature_help, opts)
+    keyset("n", ";",vim.lsp.buf.signature_help, opts)
     keyset("n", "gd", function()
       vim.lsp.buf.references()
     end, opts)
@@ -67,19 +67,19 @@ local M = {
 keyset("n", "<leader>vs", ":vsplit<CR>", M.keyargs({ "noremap", "silent" })) -- splite buffer vertical
 keyset("n", "<leader>ss", ":mksession!s.vim<CR>", M.keyargs({ "noremap", "silent" })) -- save session on cwd
 keyset("n", "<leader>w", ":bd<CR>", M.keyargs({ "noremap", "silent" })) -- delete buffer
-keyset({ "t" }, "<C-n>", "<C-\\><C-n>",M.keyargs({"silent"}))
+keyset({ "t" }, "<C-n>", "<C-\\><C-n>", M.keyargs({ "silent" }))
 keyset("x", "<leader>p", [["_dP]]) -- paste without losing the copied text
 -- move line up and down
-keyset("v", "J", ":m '>+1<CR>gv=gv",M.keyargs({"silent"}))
-keyset("v", "K", ":m '<-2<CR>gv=gv",M.keyargs({"silent"}))
+keyset("v", "J", ":m '>+1<CR>gv=gv", M.keyargs({ "silent" }))
+keyset("v", "K", ":m '<-2<CR>gv=gv", M.keyargs({ "silent" }))
 -- half page up and down
 keyset("n", "<C-d>", "<C-d>zz")
 keyset("n", "<C-u>", "<C-u>zz")
 -- clear search highlight
-keyset("n", "<leader>l", ":nohlsearch<CR>",M.keyargs({"silent"}))
+keyset("n", "<leader>l", ":nohlsearch<CR>", M.keyargs({ "silent" }))
 -- tab switching
-keyset("n", "<A-[>", ":tabp<CR>",M.keyargs({"silent"}))
-keyset("n", "<A-]>", ":tabn<CR>",M.keyargs({"silent"}))
+keyset("n", "<A-[>", ":tabp<CR>", M.keyargs({ "silent" }))
+keyset("n", "<A-]>", ":tabn<CR>", M.keyargs({ "silent" }))
 --window movement mapping
 keyset("n", "<C-j>", "<C-w><C-j>")
 keyset("n", "<C-k>", "<C-w><C-k>")
@@ -123,7 +123,7 @@ M.mapKeyForNewtab("n", "<leader>fb", function()
 end, M.keyargs({ "noremap", "silent" }))
 
 keyset("n", "<leader>fg", function()
-  builtin.live_grep(M.telescope_opt())
+  builtin.live_grep(M.telescope_opt({ previewer = true }))
 end, M.keyargs({ "noremap", "silent" }))
 
 keyset("n", "<leader>fh", function()

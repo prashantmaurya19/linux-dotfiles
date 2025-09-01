@@ -1,5 +1,3 @@
-
-
 sudo apt update && apt upgrade
 sudo apt install wezterm wlogout sway swaybg -y 
 sudo apt install pulseaudio pulseaudio-utils -y

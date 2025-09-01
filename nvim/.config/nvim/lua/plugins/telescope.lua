@@ -13,30 +13,21 @@ return {
 
       -- Clone the default Telescope configuration
       local vimgrep_arguments = { unpack(telescopeConfig.values.vimgrep_arguments) }
+      -- local vimgrep_arguments = {"grep"}
 
       -- I want to search in hidden/dot files.
+      table.insert(vimgrep_arguments, "-g")
+      table.insert(vimgrep_arguments, "'!**/.git/*'")
+      table.insert(vimgrep_arguments, "-g")
+      table.insert(vimgrep_arguments, "'!**/node_modules/**'")
+      table.insert(vimgrep_arguments, "-g")
+      table.insert(vimgrep_arguments, "'!**/build/*'")
+      table.insert(vimgrep_arguments, "-g")
+      table.insert(vimgrep_arguments, "'!**/target/*'")
+      table.insert(vimgrep_arguments, "-g")
+      table.insert(vimgrep_arguments, "'!**/dist/*'")
       table.insert(vimgrep_arguments, "--hidden")
-      -- I don't want to search in the `.git` directory.
-      table.insert(vimgrep_arguments, "--glob")
-      table.insert(vimgrep_arguments, "!**/.git/*")
-      table.insert(vimgrep_arguments, "!**/node_modules/**")
-      table.insert(vimgrep_arguments, "!**/build/*")
-      table.insert(vimgrep_arguments, "!**/target/*")
-      table.insert(vimgrep_arguments, "!**/dist/*")
-      -- local select_one_or_multi = function(prompt_bufnr)
-      -- 	local picker = require("telescope.actions.state").get_current_picker(prompt_bufnr)
-      -- 	local multi = picker:get_multi_selection()
-      -- 	if not vim.tbl_isempty(multi) then
-      -- 		require("telescope.actions").close(prompt_bufnr)
-      -- 		for _, j in pairs(multi) do
-      -- 			if j.path ~= nil then
-      -- 				vim.cmd(string.format("%s %s", "edit", j.path))
-      -- 			end
-      -- 		end
-      -- 	else
-      -- 		require("telescope.actions").select_default(prompt_bufnr)
-      -- 	end
-      -- end
+
 
       telescope.setup({
         defaults = {
@@ -44,14 +35,14 @@ return {
           vimgrep_arguments = vimgrep_arguments,
           path_display = { "truncate" },
         },
-        file_ignore_patterns = {
-          "node_modules/",
-          "target/",
-          ".git/",
-          "build/",
-          "dist/",
-          "yarn.lock",
-        },
+        -- file_ignore_patterns = {
+        --   "node_modules/",
+        --   "target/",
+        --   ".git/",
+        --   "build/",
+        --   "dist/",
+        --   "yarn.lock",
+        -- },
         pickers = {
           layout_strategy = "vertical",
           layout_config = {

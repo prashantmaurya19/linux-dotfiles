@@ -44,6 +44,7 @@ return {
       for _, value in ipairs({
         "lua_ls",
         "ts_ls",
+        "jedi_language_server",
       }) do
         vim.lsp.enable(value)
       end

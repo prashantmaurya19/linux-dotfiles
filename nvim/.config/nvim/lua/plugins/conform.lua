@@ -21,6 +21,7 @@ return {
           json = { "prettier" },
           xml = { "xmlformatter" },
           java = { "google-java-format" },
+          sh = { "shfmt" },
         },
         formatters = {
           stylua = {

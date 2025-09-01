@@ -113,7 +113,7 @@ config.keys = {
       flags = "FUZZY|WORKSPACES",
     }),
   },
-  { key = "[", mods = mod_key, action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }) },
+  { key = "r", mods = mod_key, action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }) },
   { key = "m", mods = mod_key, action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
   -- { key = "t", mods = mod_key, action = act.ActivateKeyTable({ name = "text_zoom_in_out", one_shot = false }) },
 }

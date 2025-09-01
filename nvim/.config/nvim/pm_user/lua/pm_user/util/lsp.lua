@@ -15,7 +15,7 @@ M.handler = {
       "pathClass",
     }
     cnf.settings.tailwindCSS.validate = true
-    cnf.settings.tailwindCSS.classFunctions = { "joinTWClass" }
+    cnf.settings.tailwindCSS.classFunctions = { "joinTWClass", "tw\\.[a-z-]+", "expandTWClass" }
     vim.lsp.config["tailwindcss"] = cnf
   end,
   ["cssls"] = function()

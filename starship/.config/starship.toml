@@ -31,3 +31,9 @@ format = '[conda:](green)[\(](white)[$environment]($style)[\)](white) '
 # format = '[$symbol$environment]($style) '
 symbol = ' '
 style = "purple"
+
+[python]
+format = '[python:](green)[\(](white)[$virtualenv]($style)[\)](white) '
+python_binary = ['python3']
+symbol = '󰌠 '
+style = "purple"

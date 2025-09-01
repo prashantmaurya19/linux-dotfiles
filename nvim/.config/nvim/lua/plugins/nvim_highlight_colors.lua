@@ -48,6 +48,10 @@ return {
 
       ---Highlight tailwind colors, e.g. 'bg-blue-500'
       enable_tailwind = true,
+      custom_colors = {
+        { label = "%-%-theme%-primary%-color", color = "#0f1219" },
+        { label = "%-%-theme%-secondary%-color", color = "#5a5d64" },
+      },
     })
   end,
 }

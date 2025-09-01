@@ -121,10 +121,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+
 alias git-push-main='git push origin main'
 alias cls='clear'
-alias python='python3'
-alias pip='pip3'
+alias startup='python3 /home/prashant/Documents/coding/startup/main.py'
 alias git-commit='git add . && git commit -m'
 alias git-dev='git add . && git commit -m "dev : some changes"'
 alias git-add='git add . && git commit -m "add : some addition"'
@@ -132,9 +132,9 @@ alias git-fix='git add . && git commit -m "add : some fixes"'
 alias git-dev-push='git add . && git commit -m "dev : some changes" && git push origin main'
 alias git-add-push='git add . && git commit -m "add : some addition" && git push origin main'
 alias git-fix-push='git add . && git commit -m "add : some fixes" && git push origin main'
-alias fcd='cd "$(find ~/.local/ ~/Documents/ ~/Downloads/ \( -name "snap" -o -name ".cache" -o -name ".yarn" -o -name ".m2" -o -name ".fonts" -o -name ".npm" -o -name "AppData" -o -name "mason" -o -name ".git" -o -name "fnm" -o -name "target" -o -name "node_modules" \) -prune -o -type d -print | fzf)"'
+alias fcd='cd "$(find ~/.local/ ~/Documents/ ~/Downloads/ \( -name "Trash" -o -name "snap" -o -name ".cache" -o -name ".yarn" -o -name ".m2" -o -name ".fonts" -o -name ".npm" -o -name "AppData" -o -name "mason" -o -name ".git" -o -name "fnm" -o -name "target" -o -name "node_modules" \) -prune -o -type d -print | fzf)"'
 alias fcdv='. ~/Documents/linux-dotfiles/scripts/cd_and_open_dir_in_nvim.sh'
-alias fv='nvim "$(find ~ \( -name "snap" -o -name ".cache" -o -name ".yarn" -o -name ".m2" -o -name ".fonts" -o -name ".npm" -o -name "AppData" -o -name "mason" -o -name ".git" -o -name "fnm" -o -name "target" -o -name "node_modules" \) -prune -o -type f -print | fzf)"'
+alias fv='nvim "$(find ~ \( -name ".vscode" -o -name "snap" -o -name "Trash" -o -name ".cache" -o -name ".yarn" -o -name ".m2" -o -name ".fonts" -o -name ".npm" -o -name "AppData" -o -name "mason" -o -name ".git" -o -name "fnm" -o -name "target" -o -name "node_modules" \) -prune -o -type f -print | fzf)"'
 alias dir='lsd -a -1'
 alias chrome='google-chrome'
 alias v='nvim'
