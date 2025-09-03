@@ -16,7 +16,7 @@ local M = {
     keyset("n", "[d", function()
       vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
     end, opts)
-    keyset("n", ";",vim.lsp.buf.signature_help, opts)
+    keyset("n", ";", vim.lsp.buf.signature_help, opts)
     keyset("n", "gd", function()
       vim.lsp.buf.references()
     end, opts)
@@ -65,7 +65,9 @@ local M = {
   end,
 }
 keyset("n", "<leader>vs", ":vsplit<CR>", M.keyargs({ "noremap", "silent" })) -- splite buffer vertical
-keyset("n", "<leader>ss", ":mksession!s.vim<CR>", M.keyargs({ "noremap", "silent" })) -- save session on cwd
+keyset("n", "<leader>hs", ":split<CR>", M.keyargs({ "noremap", "silent" })) -- splite buffer vertical
+keyset("n", "<leader>sa", ":mksession!s.vim<CR>", M.keyargs({ "noremap", "silent" })) -- save session on cwd
+keyset("n", "<leader>ss", ":wa<CR>", M.keyargs({ "noremap", "silent" })) -- save session on cwd
 keyset("n", "<leader>w", ":bd<CR>", M.keyargs({ "noremap", "silent" })) -- delete buffer
 keyset({ "t" }, "<C-n>", "<C-\\><C-n>", M.keyargs({ "silent" }))
 keyset("x", "<leader>p", [["_dP]]) -- paste without losing the copied text

@@ -8,7 +8,7 @@ return {
     -- REQUIRED
     harpoon:setup()
     -- REQUIRED
-    vim.keymap.set("n", "<leader>h", function()
+    vim.keymap.set("n", "<leader><leader>", function()
       harpoon:list():add()
     end)
     vim.keymap.set("n", "<A-e>", function()

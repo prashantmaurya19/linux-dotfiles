@@ -394,6 +394,7 @@ coding/PSO/api/UserServices/src/test/java/com/
 coding/PSO/api/UserServices/src/test/java/com/PlayChess/
 coding/PSO/api/UserServices/src/test/java/com/PlayChess/com/
 coding/PSO/api/UserServices/src/test/java/com/PlayChess/com/UserServices/
+coding/PSO/demo/.settings/
 coding/PSO/experimental_project/
 coding/PSO/experimental_project/SpecificUserWebsocket/
 coding/PSO/experimental_project/SpecificUserWebsocket/bin/
@@ -441,6 +442,8 @@ coding/PSO/frontend/src/components/buttons/form/
 coding/PSO/frontend/src/components/buttons/navbutton/
 coding/PSO/frontend/src/components/buttons/tooltip-menu-buttons/
 coding/PSO/frontend/src/components/chess-arena/
+coding/PSO/frontend/src/components/chess-arena/chess-board/
+coding/PSO/frontend/src/components/chess-arena/panels/
 coding/PSO/frontend/src/components/chess_piece/
 coding/PSO/frontend/src/components/dropdown/
 coding/PSO/frontend/src/components/dropdown/bot-play-menu/
@@ -477,6 +480,7 @@ coding/PSO/frontend/src/store/feature/
 coding/PSO/frontend/src/store/feature/app-data/
 coding/PSO/frontend/src/store/feature/chess-data/
 coding/PSO/frontend/src/store/feature/context-switching/
+coding/PSO/frontend/src/store/feature/events/
 coding/PSO/frontend/src/store/feature/settings/
 coding/PSO/frontend/src/store/feature/sockjs-socket/
 coding/PSO/frontend/src/util/
@@ -498,6 +502,7 @@ linux-dotfiles/.git/logs/refs/remotes/
 linux-dotfiles/.git/logs/refs/remotes/origin/
 linux-dotfiles/.git/objects/
 linux-dotfiles/.git/objects/00/
+linux-dotfiles/.git/objects/03/
 linux-dotfiles/.git/objects/04/
 linux-dotfiles/.git/objects/05/
 linux-dotfiles/.git/objects/06/
@@ -511,13 +516,19 @@ linux-dotfiles/.git/objects/13/
 linux-dotfiles/.git/objects/14/
 linux-dotfiles/.git/objects/15/
 linux-dotfiles/.git/objects/1a/
+linux-dotfiles/.git/objects/1b/
 linux-dotfiles/.git/objects/22/
 linux-dotfiles/.git/objects/23/
+linux-dotfiles/.git/objects/24/
+linux-dotfiles/.git/objects/27/
 linux-dotfiles/.git/objects/2a/
 linux-dotfiles/.git/objects/2b/
+linux-dotfiles/.git/objects/2c/
 linux-dotfiles/.git/objects/2e/
 linux-dotfiles/.git/objects/2f/
 linux-dotfiles/.git/objects/31/
+linux-dotfiles/.git/objects/32/
+linux-dotfiles/.git/objects/33/
 linux-dotfiles/.git/objects/35/
 linux-dotfiles/.git/objects/37/
 linux-dotfiles/.git/objects/38/
@@ -528,11 +539,13 @@ linux-dotfiles/.git/objects/40/
 linux-dotfiles/.git/objects/41/
 linux-dotfiles/.git/objects/42/
 linux-dotfiles/.git/objects/43/
+linux-dotfiles/.git/objects/46/
 linux-dotfiles/.git/objects/48/
 linux-dotfiles/.git/objects/49/
 linux-dotfiles/.git/objects/4a/
 linux-dotfiles/.git/objects/4b/
 linux-dotfiles/.git/objects/4e/
+linux-dotfiles/.git/objects/50/
 linux-dotfiles/.git/objects/51/
 linux-dotfiles/.git/objects/52/
 linux-dotfiles/.git/objects/53/
@@ -541,8 +554,11 @@ linux-dotfiles/.git/objects/55/
 linux-dotfiles/.git/objects/57/
 linux-dotfiles/.git/objects/5b/
 linux-dotfiles/.git/objects/5c/
+linux-dotfiles/.git/objects/5d/
+linux-dotfiles/.git/objects/62/
 linux-dotfiles/.git/objects/63/
 linux-dotfiles/.git/objects/65/
+linux-dotfiles/.git/objects/6a/
 linux-dotfiles/.git/objects/6e/
 linux-dotfiles/.git/objects/70/
 linux-dotfiles/.git/objects/72/
@@ -556,11 +572,14 @@ linux-dotfiles/.git/objects/7f/
 linux-dotfiles/.git/objects/80/
 linux-dotfiles/.git/objects/81/
 linux-dotfiles/.git/objects/83/
+linux-dotfiles/.git/objects/86/
 linux-dotfiles/.git/objects/87/
 linux-dotfiles/.git/objects/8a/
+linux-dotfiles/.git/objects/8b/
 linux-dotfiles/.git/objects/8d/
 linux-dotfiles/.git/objects/8e/
 linux-dotfiles/.git/objects/8f/
+linux-dotfiles/.git/objects/91/
 linux-dotfiles/.git/objects/93/
 linux-dotfiles/.git/objects/95/
 linux-dotfiles/.git/objects/99/
@@ -573,14 +592,17 @@ linux-dotfiles/.git/objects/a9/
 linux-dotfiles/.git/objects/ab/
 linux-dotfiles/.git/objects/ac/
 linux-dotfiles/.git/objects/ad/
+linux-dotfiles/.git/objects/b0/
 linux-dotfiles/.git/objects/b1/
 linux-dotfiles/.git/objects/b2/
 linux-dotfiles/.git/objects/b8/
 linux-dotfiles/.git/objects/b9/
 linux-dotfiles/.git/objects/bb/
+linux-dotfiles/.git/objects/bd/
 linux-dotfiles/.git/objects/be/
 linux-dotfiles/.git/objects/bf/
 linux-dotfiles/.git/objects/c2/
+linux-dotfiles/.git/objects/c3/
 linux-dotfiles/.git/objects/c4/
 linux-dotfiles/.git/objects/c5/
 linux-dotfiles/.git/objects/c6/
@@ -613,6 +635,7 @@ linux-dotfiles/.git/objects/fb/
 linux-dotfiles/.git/objects/fc/
 linux-dotfiles/.git/objects/fd/
 linux-dotfiles/.git/objects/fe/
+linux-dotfiles/.git/objects/ff/
 linux-dotfiles/.git/objects/info/
 linux-dotfiles/.git/objects/pack/
 linux-dotfiles/.git/refs/
@@ -683,8 +706,8 @@ linux-dotfiles/yazi/.config/yazi/flavors/kanagawa-lotus.yazi/
 linux-dotfiles/yazi/.config/yazi/flavors/sunset.yazi/
 linux-dotfiles/yazi/.config/yazi/flavors/tokyo-night.yazi/
 
-sent 352,063 bytes  received 20,204 bytes  744,534.00 bytes/sec
-total size is 39,512,671  speedup is 106.14
+sent 356,284 bytes  received 20,455 bytes  753,478.00 bytes/sec
+total size is 39,561,153  speedup is 105.01
 /media/prashant/PM Store/rsync_backup/prashant/Downloads/
 sending incremental file list
 firacode/
@@ -695,12 +718,12 @@ total size is 42,998,815  speedup is 55,988.04
 sending incremental file list
 ./
 
-sent 161 bytes  received 28 bytes  378.00 bytes/sec
-total size is 454  speedup is 2.40
+sent 165 bytes  received 28 bytes  386.00 bytes/sec
+total size is 454  speedup is 2.35
 /media/prashant/PM Store/rsync_backup/prashant/Pictures/
 sending incremental file list
 Screenshots/
 sway-screentshot/
 
-sent 812 bytes  received 60 bytes  1,744.00 bytes/sec
-total size is 4,548,262  speedup is 5,215.90
+sent 865 bytes  received 63 bytes  1,856.00 bytes/sec
+total size is 4,554,893  speedup is 4,908.29
