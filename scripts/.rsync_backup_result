@@ -390,46 +390,28 @@ coding/PSO/api/UserServices/src/main/java/com/PlayChess/com/UserServices/Utils/
 coding/PSO/api/UserServices/src/main/resources/avro/
 coding/PSO/api/UserServices/src/test/
 coding/PSO/api/UserServices/src/test/java/
+deleting coding/PSO/frontend/src/util/util/chess.test.js
+deleting coding/PSO/frontend/src/util/util/chess.js
+deleting coding/PSO/frontend/src/util/util/astring.js
+deleting coding/PSO/frontend/src/util/util/
 coding/PSO/api/UserServices/src/test/java/com/
 coding/PSO/api/UserServices/src/test/java/com/PlayChess/
 coding/PSO/api/UserServices/src/test/java/com/PlayChess/com/
 coding/PSO/api/UserServices/src/test/java/com/PlayChess/com/UserServices/
-coding/PSO/demo/.settings/
 coding/PSO/experimental_project/
-coding/PSO/experimental_project/SpecificUserWebsocket/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/.mvn/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/.mvn/wrapper/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/.settings/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/src/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/src/main/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/src/main/java/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/src/main/java/com/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/src/main/java/com/PlayChess/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/src/main/java/com/PlayChess/com/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/src/main/java/com/PlayChess/com/SpecificUserWebsocket/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/src/main/java/com/PlayChess/com/SpecificUserWebsocket/Configuration/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/src/main/java/com/PlayChess/com/SpecificUserWebsocket/Controller/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/src/main/java/com/PlayChess/com/SpecificUserWebsocket/Pojo/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/src/main/resources/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/src/main/resources/templates/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/src/test/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/src/test/java/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/src/test/java/com/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/src/test/java/com/PlayChess/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/src/test/java/com/PlayChess/com/
-coding/PSO/experimental_project/SpecificUserWebsocket/bin/src/test/java/com/PlayChess/com/SpecificUserWebsocket/
-coding/PSO/experimental_project/one-to-one-chat-spring-boot-web-socket/
-coding/PSO/experimental_project/test_sockjs_project/
-coding/PSO/experimental_project/test_sockjs_project/public/
-coding/PSO/experimental_project/test_sockjs_project/src/
-coding/PSO/experimental_project/test_sockjs_project/src/assets/
-coding/PSO/experimental_project/test_sockjs_project/src/components/
-coding/PSO/experimental_project/test_sockjs_project/src/redux/
-coding/PSO/experimental_project/test_sockjs_project/src/redux/feature/
-coding/PSO/experimental_project/test_sockjs_project/src/redux/feature/socket/
-coding/PSO/experimental_project/test_sockjs_project/src/suits/
-coding/PSO/experimental_project/test_sockjs_project/src/utils/
+coding/PSO/experimental_project/js_prototype/
+coding/PSO/experimental_project/js_prototype/util/
+coding/PSO/experimental_project/js_prototype/util/util/
+coding/PSO/experimental_project/ui_prototype/
+coding/PSO/experimental_project/ui_prototype/public/
+coding/PSO/experimental_project/ui_prototype/src/
+coding/PSO/experimental_project/ui_prototype/src/assets/
+coding/PSO/experimental_project/ui_prototype/src/components/
+coding/PSO/experimental_project/ui_prototype/src/redux/
+coding/PSO/experimental_project/ui_prototype/src/redux/feature/
+coding/PSO/experimental_project/ui_prototype/src/redux/feature/socket/
+coding/PSO/experimental_project/ui_prototype/src/suits/
+coding/PSO/experimental_project/ui_prototype/src/utils/
 coding/PSO/frontend/
 coding/PSO/frontend/public/
 coding/PSO/frontend/src/
@@ -480,7 +462,6 @@ coding/PSO/frontend/src/store/feature/
 coding/PSO/frontend/src/store/feature/app-data/
 coding/PSO/frontend/src/store/feature/chess-data/
 coding/PSO/frontend/src/store/feature/context-switching/
-coding/PSO/frontend/src/store/feature/events/
 coding/PSO/frontend/src/store/feature/settings/
 coding/PSO/frontend/src/store/feature/sockjs-socket/
 coding/PSO/frontend/src/util/
@@ -517,6 +498,7 @@ linux-dotfiles/.git/objects/14/
 linux-dotfiles/.git/objects/15/
 linux-dotfiles/.git/objects/1a/
 linux-dotfiles/.git/objects/1b/
+linux-dotfiles/.git/objects/1d/
 linux-dotfiles/.git/objects/22/
 linux-dotfiles/.git/objects/23/
 linux-dotfiles/.git/objects/24/
@@ -558,6 +540,7 @@ linux-dotfiles/.git/objects/5d/
 linux-dotfiles/.git/objects/62/
 linux-dotfiles/.git/objects/63/
 linux-dotfiles/.git/objects/65/
+linux-dotfiles/.git/objects/67/
 linux-dotfiles/.git/objects/6a/
 linux-dotfiles/.git/objects/6e/
 linux-dotfiles/.git/objects/70/
@@ -587,6 +570,7 @@ linux-dotfiles/.git/objects/9a/
 linux-dotfiles/.git/objects/9e/
 linux-dotfiles/.git/objects/a1/
 linux-dotfiles/.git/objects/a3/
+linux-dotfiles/.git/objects/a4/
 linux-dotfiles/.git/objects/a8/
 linux-dotfiles/.git/objects/a9/
 linux-dotfiles/.git/objects/ab/
@@ -595,6 +579,7 @@ linux-dotfiles/.git/objects/ad/
 linux-dotfiles/.git/objects/b0/
 linux-dotfiles/.git/objects/b1/
 linux-dotfiles/.git/objects/b2/
+linux-dotfiles/.git/objects/b4/
 linux-dotfiles/.git/objects/b8/
 linux-dotfiles/.git/objects/b9/
 linux-dotfiles/.git/objects/bb/
@@ -613,6 +598,7 @@ linux-dotfiles/.git/objects/cc/
 linux-dotfiles/.git/objects/cf/
 linux-dotfiles/.git/objects/d3/
 linux-dotfiles/.git/objects/d5/
+linux-dotfiles/.git/objects/d7/
 linux-dotfiles/.git/objects/da/
 linux-dotfiles/.git/objects/dc/
 linux-dotfiles/.git/objects/dd/
@@ -706,24 +692,24 @@ linux-dotfiles/yazi/.config/yazi/flavors/kanagawa-lotus.yazi/
 linux-dotfiles/yazi/.config/yazi/flavors/sunset.yazi/
 linux-dotfiles/yazi/.config/yazi/flavors/tokyo-night.yazi/
 
-sent 356,284 bytes  received 20,455 bytes  753,478.00 bytes/sec
-total size is 39,561,153  speedup is 105.01
+sent 604,603 bytes  received 33,895 bytes  1,276,996.00 bytes/sec
+total size is 48,863,144  speedup is 76.53
 /media/prashant/PM Store/rsync_backup/prashant/Downloads/
 sending incremental file list
 firacode/
 
-sent 688 bytes  received 80 bytes  1,536.00 bytes/sec
-total size is 42,998,815  speedup is 55,988.04
+sent 687 bytes  received 80 bytes  1,534.00 bytes/sec
+total size is 42,998,815  speedup is 56,061.04
 /media/prashant/PM Store/rsync_backup/prashant/.local/share/applications/
 sending incremental file list
 ./
 
-sent 165 bytes  received 28 bytes  386.00 bytes/sec
-total size is 454  speedup is 2.35
+sent 161 bytes  received 28 bytes  378.00 bytes/sec
+total size is 454  speedup is 2.40
 /media/prashant/PM Store/rsync_backup/prashant/Pictures/
 sending incremental file list
 Screenshots/
 sway-screentshot/
 
-sent 865 bytes  received 63 bytes  1,856.00 bytes/sec
-total size is 4,554,893  speedup is 4,908.29
+sent 1,102 bytes  received 72 bytes  2,348.00 bytes/sec
+total size is 11,153,449  speedup is 9,500.38

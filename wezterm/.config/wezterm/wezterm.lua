@@ -3,6 +3,7 @@ local act = wezterm.action
 local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
 local SOLID_RIGHT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
 local config = wezterm.config_builder()
+local init_time = os.time()
 config.front_end = "WebGpu"
 config.webgpu_power_preference = "HighPerformance"
 config.window_padding = {
@@ -158,7 +159,7 @@ local function basename(s)
   return string.gsub(s, "(.*[/\\])(.*)", "%2")
 end
 
-wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
+wezterm.on("format-tab-title", function(tab, tabs, panes, configs, hover, max_width)
   local edge_background = "#0b0022"
   local background = "#1b1032"
   local foreground = "#808080"
@@ -188,6 +189,15 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
     { Text = SOLID_RIGHT_ARROW },
   }
 end)
+
+local function format_duration(seconds)
+  local h = math.floor(seconds / 3600)
+  local m = math.floor((seconds % 3600) / 60)
+  local s = seconds % 60
+
+  -- Use wezterm.format to add colors and attributes if you want
+  return string.format("%dh %dm %ds", h, m, s)
+end
 
 wezterm.on("update-status", function(window, pane)
   -- Workspace name
@@ -220,6 +230,7 @@ wezterm.on("update-status", function(window, pane)
   -- end
 
   tab:set_title(cmd)
+
   window:set_right_status(wezterm.format({
     { Text = " | " },
     { Foreground = { Color = stat_color } },
@@ -228,6 +239,10 @@ wezterm.on("update-status", function(window, pane)
     { Text = " | " },
     { Foreground = { Color = "#e0af68" } },
     { Text = wezterm.nerdfonts.fa_code .. " " .. cmd .. " " },
+    { Foreground = { Color = "#fff" } },
+    { Text = " | " },
+    { Foreground = { Color = "#00ff77" } },
+    { Text = wezterm.nerdfonts.fa_clock_o .. " " .. format_duration(os.time() - init_time) .. "" },
   }))
 
   window:set_left_status(wezterm.format({

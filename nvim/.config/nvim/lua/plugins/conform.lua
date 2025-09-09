@@ -37,6 +37,12 @@ return {
             vim.PM.g.shiftwidth.javascriptreact,
             "--use-tabs false",
           },
+          shfmt = {
+            append_args = {
+              "--indent",
+              vim.PM.g.shiftwidth.sh,
+            },
+          },
         },
       })
     end,

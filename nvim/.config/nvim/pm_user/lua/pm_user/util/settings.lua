@@ -20,6 +20,7 @@ M.shiftwidth = {
   ps1 = 2,
   lua = 2,
   html = 3,
+  sh = 2,
 }
 
 M.forward_slash_comment_filext = {

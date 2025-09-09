@@ -28,21 +28,18 @@ return {
       table.insert(vimgrep_arguments, "'!**/dist/*'")
       table.insert(vimgrep_arguments, "--hidden")
 
-
       telescope.setup({
         defaults = {
           -- `hidden = true` is not supported in text grep commands.
           vimgrep_arguments = vimgrep_arguments,
           path_display = { "truncate" },
         },
-        -- file_ignore_patterns = {
-        --   "node_modules/",
-        --   "target/",
-        --   ".git/",
-        --   "build/",
-        --   "dist/",
-        --   "yarn.lock",
-        -- },
+        file_ignore_patterns = {
+          "node_modules/", -- Ignores 'node_modules' folder
+          "^vendor/", -- Ignores 'vendor' folder at the root
+          "%.git/", -- Ignores '.git' folder
+          "build/", -- Ignores 'build' folder
+        },
         pickers = {
           layout_strategy = "vertical",
           layout_config = {
