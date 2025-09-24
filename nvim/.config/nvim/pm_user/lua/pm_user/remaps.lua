@@ -22,6 +22,7 @@ local M = {
     end, opts)
     keyset("n", "gD", vim.lsp.buf.declaration, opts)
     keyset("n", "gd", vim.lsp.buf.definition, opts)
+    keyset("n", "<F2>", vim.lsp.buf.rename, opts)
   end,
 
   telescope_opt = function(opt)
@@ -68,8 +69,16 @@ keyset("n", "<leader>vs", ":vsplit<CR>", M.keyargs({ "noremap", "silent" })) -- 
 keyset("n", "<leader>hs", ":split<CR>", M.keyargs({ "noremap", "silent" })) -- splite buffer vertical
 keyset("n", "<leader>sa", ":mksession!s.vim<CR>", M.keyargs({ "noremap", "silent" })) -- save session on cwd
 keyset("n", "<leader>ss", ":wa<CR>", M.keyargs({ "noremap", "silent" })) -- save session on cwd
+keyset("n", "<leader>q", ":q!<CR>", M.keyargs({ "noremap", "silent" })) -- quit window by force
 keyset("n", "<leader>w", ":bd<CR>", M.keyargs({ "noremap", "silent" })) -- delete buffer
+keyset("n", "<leader>gg", ":Git<CR>", M.keyargs({ "noremap", "silent" })) -- Git command
+keyset("n", "<leader>gc", ":Git commit<CR>", M.keyargs({ "noremap", "silent" })) -- Git commit command
+keyset("n", "<leader>gp", ":Git push<CR>", M.keyargs({ "noremap", "silent" })) -- Git commit command
 keyset({ "t" }, "<C-n>", "<C-\\><C-n>", M.keyargs({ "silent" }))
+keyset({ "n", "x" }, "{", "<C-u>zz")
+keyset({ "n", "x" }, "}", "<C-d>zz")
+keyset("n", "<Tab>", ">>", M.keyargs({ "silent" }))
+keyset("n", "<S-Tab>", "<<", M.keyargs({ "silent" }))
 keyset("x", "<leader>p", [["_dP]]) -- paste without losing the copied text
 -- move line up and down
 keyset("v", "J", ":m '>+1<CR>gv=gv", M.keyargs({ "silent" }))
@@ -87,6 +96,9 @@ keyset("n", "<C-j>", "<C-w><C-j>")
 keyset("n", "<C-k>", "<C-w><C-k>")
 keyset("n", "<C-h>", "<C-w><C-h>")
 keyset("n", "<C-l>", "<C-w><C-l>")
+--screen adjusment
+-- keyset("n", "<C-l>", "<C-y>") -- for up
+-- keyset("n", "<C-l>", "<C-e>") -- for down
 
 keyset("n", "<leader>fo", function()
   require("conform").format({
@@ -133,7 +145,11 @@ keyset("n", "<leader>fh", function()
 end, M.keyargs({ "noremap", "silent" }))
 
 keyset("n", "<leader>fs", function()
-  builtin.lsp_document_symbols(M.telescope_opt())
+  builtin.lsp_document_symbols(M.telescope_opt({
+    fname_width = 40,
+    symbol_width = 50,
+    symbol_type_width = 16,
+  }))
 end, M.keyargs({ "noremap", "silent" }))
 
 keyset("n", "<leader>fr", function()

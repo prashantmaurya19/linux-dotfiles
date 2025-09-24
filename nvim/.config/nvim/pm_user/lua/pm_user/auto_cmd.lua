@@ -18,3 +18,10 @@ autocmd("FileType", {
     -- end
   end,
 })
+
+vim.api.nvim_create_autocmd("InsertEnter", {
+  group = vim.api.nvim_create_augroup("CenterOnInsert", { clear = true }),
+  callback = function()
+    vim.cmd("normal! zz")
+  end,
+})

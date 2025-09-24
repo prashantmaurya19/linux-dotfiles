@@ -87,7 +87,7 @@
         "format-ethernet": "Connected  ",
         "tooltip-format": "{ifname}: {gwaddr}",
         "format-linked": "{ifname} (No IP)",
-        "format-disconnected": "󰤮 No Wifi",
+        "format-disconnected": "<span foreground='white'></span> 󰤮 No Wifi",
         "format-alt": "<span foreground='white'></span> {ifname}:{essid}@{ipaddr}/{cidr}",
 	"format-icons" : ["󰤟","󰤢","󰤥","󰤨"]
     },

@@ -238,11 +238,11 @@ wezterm.on("update-status", function(window, pane)
     { Foreground = { Color = "#fff" } },
     { Text = " | " },
     { Foreground = { Color = "#e0af68" } },
-    { Text = wezterm.nerdfonts.fa_code .. " " .. cmd .. " " },
+    { Text = wezterm.nerdfonts.fa_code .. " " .. cmd },
     { Foreground = { Color = "#fff" } },
     { Text = " | " },
     { Foreground = { Color = "#00ff77" } },
-    { Text = wezterm.nerdfonts.fa_clock_o .. " " .. format_duration(os.time() - init_time) .. "" },
+    { Text = wezterm.nerdfonts.fa_clock_o .. " " .. format_duration(os.time() - init_time) },
   }))
 
   window:set_left_status(wezterm.format({
