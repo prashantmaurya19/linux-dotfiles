@@ -122,7 +122,7 @@ FZF_IGNORE_DIR=" -name "Trash" -o -name "share" -o -name "snap" -o -name ".cache
 
 alias git-push-main='git push origin main'
 alias cls='clear'
-alias startup='python3 /home/prashant/Documents/coding/startup/main.py'
+alias startup='python3 ~/Documents/coding/startup/main.py'
 alias git-commit='git add . && git commit -m'
 alias git-dev='git add . && git commit -m "dev : some changes"'
 alias git-add='git add . && git commit -m "add : some addition"'
@@ -146,7 +146,7 @@ export EDITOR="nvim"
 export PATH=$PATH:/usr/bin/zig/
 export PATH=$PATH:~/nvim/bin/
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/flatpak/exports/share
-export XDG_DATA_DIRS=$XDG_DATA_DIRS:/home/prashant/.local/share/flatpak/exports/share
+export XDG_DATA_DIRS=$XDG_DATA_DIRS:~/.local/share/flatpak/exports/share
 export XAUTHORITY=$HOME/.Xauthority
 
 # >>> conda initialize >>>
