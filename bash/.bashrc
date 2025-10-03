@@ -118,7 +118,46 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-FZF_IGNORE_DIR=" -name "Trash" -o -name "share" -o -name "snap" -o -name ".cache" -o -name ".yarn" -o -name ".m2" -o -name ".fonts" -o -name ".npm" -o -name "AppData" -o -name "mason" -o -name ".git" -o -name "fnm" -o -name "target" -o -name "node_modules" "
+
+IGNORED_DIRS=(
+  "Trash"
+  ".vscode"
+  "share"
+  "snap"
+  ".cache"
+  ".yarn"
+  ".m2"
+  ".fonts"
+  ".npm"
+  "AppData"
+  "mason"
+  ".git"
+  "fnm"
+  "target"
+  "node_modules"
+  ".docker"
+  ".var"
+  ".cache"
+  ".dotnet"
+  ".fonts"
+  ".gnupg"
+  ".m2"
+  ".mongodb"
+  ".npm"
+  ".pki"
+  ".ssh"
+  ".sts4"
+  ".yarn"
+)
+
+# 2. Build the string by joining the array elements with ' -o -name '
+# We use parameter expansion to join the elements.
+# The result will be: "Trash -o -name .vscode -o -name share..."
+JOINED_DIRS="${IGNORED_DIRS[@]/#/ -o -name }"
+
+# 3. Prepend the first '-name ' to the entire string
+# We remove the first ' -o -name ' which is redundant at the beginning.
+FZF_IGNORE_DIR="${JOINED_DIRS:4}"
 
 alias git-push-main='git push origin main'
 alias cls='clear'
@@ -133,6 +172,7 @@ alias git-fix-push='git add . && git commit -m "add : some fixes" && git push or
 alias fcd='cd "$(find ~/.local/ ~/Documents/ ~/Downloads/ \( $FZF_IGNORE_DIR \) -prune -o -type d -print | fzf)"'
 alias fcdv='. ~/Documents/linux-dotfiles/scripts/cd_and_open_dir_in_nvim.sh'
 alias fv='nvim "$(find ~ \( $FZF_IGNORE_DIR \) -prune -o -type f -print | fzf)"'
+alias fhr='echo $(history | fzf | cut -c 6-)'
 alias dir='lsd -a -1'
 alias v='nvim'
 alias vleet='nvim leetcode.nvim'
@@ -141,6 +181,8 @@ alias y='yazi'
 
 bind -x '"\e,":"fcd"'
 bind -x '"\e.":"fv"'
+bind -x '"\e;":"cls"'
+bind -x '"\em":"fhr"'
 
 export EDITOR="nvim"
 export PATH=$PATH:/usr/bin/zig/
@@ -148,6 +190,8 @@ export PATH=$PATH:~/nvim/bin/
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/flatpak/exports/share
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:~/.local/share/flatpak/exports/share
 export XAUTHORITY=$HOME/.Xauthority
+export HISTSIZE=5000
+export HISTFILESIZE=10000
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

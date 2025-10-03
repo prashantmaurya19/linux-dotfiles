@@ -82,8 +82,11 @@ config.keys = {
   { key = "J", mods = "CTRL", action = act.ScrollByLine(2) },
   -- Tab keybindings
   { key = "n", mods = mod_key, action = act.SpawnTab("CurrentPaneDomain") },
-  { key = "q", mods = "ALT", action = act.ActivateTabRelative(-1) },
-  { key = "w", mods = "ALT", action = act.ActivateTabRelative(1) },
+  { key = "u", mods = "ALT", action = act.ActivateTabRelative(-1) },
+  { key = "i", mods = "ALT", action = act.ActivateTabRelative(1) },
+  { key = "o", mods = "ALT", action = act.MoveTabRelative(-1) },
+  { key = "p", mods = "ALT", action = act.MoveTabRelative(1) },
+  -- Tab keybindings end
   { key = "t", mods = mod_key, action = act.ShowTabNavigator },
   { key = "v", mods = "CTRL", action = act.PasteFrom("Clipboard") },
   {
@@ -115,7 +118,7 @@ config.keys = {
     }),
   },
   { key = "r", mods = mod_key, action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }) },
-  { key = "m", mods = mod_key, action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
+  -- { key = "m", mods = mod_key, action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
   -- { key = "t", mods = mod_key, action = act.ActivateKeyTable({ name = "text_zoom_in_out", one_shot = false }) },
 }
 
@@ -142,14 +145,12 @@ config.key_tables = {
     { key = "Escape", action = "PopKeyTable" },
     { key = "Enter", action = "PopKeyTable" },
   },
-  move_tab = {
-    { key = "h", action = act.MoveTabRelative(-1) },
-    { key = "j", action = act.MoveTabRelative(-1) },
-    { key = "k", action = act.MoveTabRelative(1) },
-    { key = "l", action = act.MoveTabRelative(1) },
-    { key = "Escape", action = "PopKeyTable" },
-    { key = "Enter", action = "PopKeyTable" },
-  },
+  -- move_tab = {
+  --   { key = "h", action = act.MoveTabRelative(-1) },
+  --   { key = "j", action = act.MoveTabRelative(-1) },
+  --   { key = "Escape", action = "PopKeyTable" },
+  --   { key = "Enter", action = "PopKeyTable" },
+  -- },
 }
 config.use_fancy_tab_bar = false
 config.status_update_interval = 5000

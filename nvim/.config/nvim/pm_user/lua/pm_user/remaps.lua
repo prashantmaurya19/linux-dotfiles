@@ -84,8 +84,8 @@ keyset("x", "<leader>p", [["_dP]]) -- paste without losing the copied text
 keyset("v", "J", ":m '>+1<CR>gv=gv", M.keyargs({ "silent" }))
 keyset("v", "K", ":m '<-2<CR>gv=gv", M.keyargs({ "silent" }))
 -- half page up and down
-keyset("n", "<C-d>", "<C-d>zz")
-keyset("n", "<C-u>", "<C-u>zz")
+-- keyset("n", "<C-d>", "<C-d>zz")
+-- keyset("n", "<C-u>", "<C-u>zz")
 -- clear search highlight
 keyset("n", "<leader>l", ":nohlsearch<CR>", M.keyargs({ "silent" }))
 -- tab switching
