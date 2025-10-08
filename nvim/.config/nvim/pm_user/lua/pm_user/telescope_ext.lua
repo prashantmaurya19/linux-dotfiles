@@ -12,7 +12,10 @@ M.find_folders = function(opts)
   pickers
     .new(opts, {
       finder = finders.new_table({
-        results = vim.PM.file.scandir(vim.fn.getcwd(),{ignore_folders={".git","target",".mvn",".settings","node_modules"}}),
+        results = vim.PM.file.scandir(
+          vim.fn.getcwd(),
+          { ignore_folders = { ".git", "target", ".mvn", ".settings", "node_modules", ".yarn", "dist" } }
+        ),
       }),
       sorter = conf.generic_sorter(opts),
       attach_mappings = function(bufnr, _)

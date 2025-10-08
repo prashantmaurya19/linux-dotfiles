@@ -31,7 +31,6 @@ return {
       telescope.setup({
         defaults = {
           -- `hidden = true` is not supported in text grep commands.
-          vimgrep_arguments = vimgrep_arguments,
           path_display = { "truncate" },
         },
         file_ignore_patterns = {
@@ -39,6 +38,7 @@ return {
           "^vendor/", -- Ignores 'vendor' folder at the root
           "%.git/", -- Ignores '.git' folder
           "build/", -- Ignores 'build' folder
+          "^dist/", -- Ignores 'dist' folder
         },
         pickers = {
           layout_strategy = "vertical",

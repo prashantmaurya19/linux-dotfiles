@@ -14,14 +14,14 @@ esac
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
-HISTCONTROL=ignoreboth
+HISTCONTROL=ignoreboth:erasedups
 
 # append to the history file, don't overwrite it
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=5000
+HISTFILESIZE=10000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -119,41 +119,105 @@ if ! shopt -oq posix; then
   fi
 fi
 
+_fzf_history_search_and_insert() {
+  # Use fzf to search history.
+  # --print-query keeps the current prompt content if no history item is selected.
+  # --expect=ctrl-v is an example to show how to handle special keys
+  # In this example, 'ctrl-v' can be used to paste the command without running it (optional)
+  local result
+  result=$(
+    history | fzf --tac --query="$READLINE_LINE" | cut -c 8-
+  )
+
+  # Check if fzf was canceled (result is empty)
+  if [[ -z "$result" ]]; then
+    return 1
+  fi
+
+  # Split the result into the key pressed and the selected command
+  local key_pressed command_selected
+  key_pressed=$(echo "$result" | head -n 1)
+  command_selected=$(echo "$result" | tail -n 1)
+
+  # Check if fzf was canceled after displaying the list (e.g., via ESC or Ctrl-C)
+  if [[ "$key_pressed" == "" ]]; then
+    # If canceled, restore the original line
+    READLINE_LINE="$READLINE_LINE"
+    READLINE_POINT=$READLINE_POINT
+    return 0
+  fi
+
+  # 1. Update the prompt line with the selected command
+  READLINE_LINE="$command_selected"
+  # 2. Move the cursor to the end of the line
+  READLINE_POINT=${#READLINE_LINE}
+
+  # Optional: If you want to execute the command immediately on 'Enter',
+  # you'll need a different approach or to execute the function directly.
+  # The default 'Enter' behavior in fzf will land here, and you can type 'Enter' again.
+
+  # Optional: Handle the special key press (e.g., run immediately on Enter)
+  if [[ "$key_pressed" == "enter" ]]; then
+    # You can't directly execute here, but you can set a flag or try to
+    # simulate an 'Enter' key press, which is complex and often discouraged.
+    # Setting the line and point is usually enough.
+    : # Do nothing extra, just set the line
+  elif [[ "$key_pressed" == "ctrl-v" ]]; then
+    # If Ctrl-V was pressed, it just pastes the command like 'Enter' but
+    # you know the user explicitly chose to paste without running.
+    : # Do nothing extra, just set the line
+  fi
+}
+
 IGNORED_DIRS=(
-  "Trash"
-  ".vscode"
-  "share"
-  "snap"
-  ".cache"
-  ".yarn"
-  ".m2"
-  ".fonts"
-  ".npm"
-  "AppData"
   "mason"
-  ".git"
   "fnm"
+  ".git"
+  ".vscode"
   "target"
   "node_modules"
-  ".docker"
-  ".var"
-  ".cache"
-  ".dotnet"
-  ".fonts"
-  ".gnupg"
-  ".m2"
-  ".mongodb"
-  ".npm"
-  ".pki"
-  ".ssh"
-  ".sts4"
-  ".yarn"
+  "Trash"
+  "share"
+)
+
+IGNORED_PATH_DIRS=(
+  "$HOME/AppData"
+  "$HOME/snap"
+  "$HOME/.cache"
+  "$HOME/.yarn"
+  "$HOME/.m2"
+  "$HOME/.fonts"
+  "$HOME/.npm"
+  "$HOME/.docker"
+  "$HOME/.var"
+  "$HOME/.cache"
+  "$HOME/.dotnet"
+  "$HOME/.fonts"
+  "$HOME/.gnupg"
+  "$HOME/.m2"
+  "$HOME/.mongodb"
+  "$HOME/.npm"
+  "$HOME/.pki"
+  "$HOME/.ssh"
+  "$HOME/.sts4"
+  "$HOME/Apps"
+  "$HOME/.config/google-chrome"
+  "$HOME/.config/Zoho"
+  "$HOME/.config/ibus"
+  "$HOME/.config/BraveSoftware"
+  "$HOME/.config/Postman"
+  "$HOME/.config/Code"
+  "$HOME/.config/dconf"
+  "$HOME/.config/enchant"
+  "$HOME/.config/eog"
+  "$HOME/.config/evolution"
+  "$HOME/.config/GIMP"
 )
 
 # 2. Build the string by joining the array elements with ' -o -name '
 # We use parameter expansion to join the elements.
 # The result will be: "Trash -o -name .vscode -o -name share..."
-JOINED_DIRS="${IGNORED_DIRS[@]/#/ -o -name }"
+JOINED_DIRS="${IGNORED_PATH_DIRS[@]/#/ -o -path } -prune ${IGNORED_DIRS[@]/#/ -o -name }"
 
 # 3. Prepend the first '-name ' to the entire string
 # We remove the first ' -o -name ' which is redundant at the beginning.
@@ -162,6 +226,7 @@ FZF_IGNORE_DIR="${JOINED_DIRS:4}"
 alias git-push-main='git push origin main'
 alias cls='clear'
 alias startup='python3 ~/Documents/coding/startup/main.py'
+alias rwsf='wezterm cli rename-workspace "${PWD##*/}"'
 alias git-commit='git add . && git commit -m'
 alias git-dev='git add . && git commit -m "dev : some changes"'
 alias git-add='git add . && git commit -m "add : some addition"'
@@ -169,10 +234,10 @@ alias git-fix='git add . && git commit -m "add : some fixes"'
 alias git-dev-push='git add . && git commit -m "dev : some changes" && git push origin main'
 alias git-add-push='git add . && git commit -m "add : some addition" && git push origin main'
 alias git-fix-push='git add . && git commit -m "add : some fixes" && git push origin main'
-alias fcd='cd "$(find ~/.local/ ~/Documents/ ~/Downloads/ \( $FZF_IGNORE_DIR \) -prune -o -type d -print | fzf)"'
+alias fcd='cd "$(find ~ \( $FZF_IGNORE_DIR \) -prune -o -type d -print | fzf)"'
 alias fcdv='. ~/Documents/linux-dotfiles/scripts/cd_and_open_dir_in_nvim.sh'
 alias fv='nvim "$(find ~ \( $FZF_IGNORE_DIR \) -prune -o -type f -print | fzf)"'
-alias fhr='echo $(history | fzf | cut -c 6-)'
+alias fhr='_fzf_history_search_and_insert'
 alias dir='lsd -a -1'
 alias v='nvim'
 alias vleet='nvim leetcode.nvim'
@@ -190,8 +255,9 @@ export PATH=$PATH:~/nvim/bin/
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/flatpak/exports/share
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:~/.local/share/flatpak/exports/share
 export XAUTHORITY=$HOME/.Xauthority
-export HISTSIZE=5000
-export HISTFILESIZE=10000
+# export HISTCONTROL=ignoreboth:erasedups
+# export HISTSIZE=5000
+# export HISTFILESIZE=10000
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

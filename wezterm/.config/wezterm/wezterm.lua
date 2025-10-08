@@ -66,7 +66,6 @@ local mod_key = "WIN"
 config.keys = {
   -- { key = "a", mods = "WIN|CTRL", action = act.SendKey({ key = "a", mods = "CTRL" }) },
   { key = "c", mods = mod_key, action = act.ActivateCopyMode },
-  { key = "phys:Space", mods = mod_key, action = act.ActivateCommandPalette },
   { key = "u", mods = mod_key, action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
   { key = "v", mods = mod_key, action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
   { key = "h", mods = mod_key, action = act.ActivatePaneDirection("Left") },
@@ -82,34 +81,34 @@ config.keys = {
   { key = "J", mods = "CTRL", action = act.ScrollByLine(2) },
   -- Tab keybindings
   { key = "n", mods = mod_key, action = act.SpawnTab("CurrentPaneDomain") },
-  { key = "u", mods = "ALT", action = act.ActivateTabRelative(-1) },
-  { key = "i", mods = "ALT", action = act.ActivateTabRelative(1) },
-  { key = "o", mods = "ALT", action = act.MoveTabRelative(-1) },
-  { key = "p", mods = "ALT", action = act.MoveTabRelative(1) },
+  { key = "u", mods = mod_key, action = act.ActivateTabRelative(-1) },
+  { key = "i", mods = mod_key, action = act.ActivateTabRelative(1) },
+  { key = "o", mods = mod_key, action = act.MoveTabRelative(-1) },
+  { key = "p", mods = mod_key, action = act.MoveTabRelative(1) },
   -- Tab keybindings end
   { key = "t", mods = mod_key, action = act.ShowTabNavigator },
   { key = "v", mods = "CTRL", action = act.PasteFrom("Clipboard") },
-  {
-    key = "e",
-    mods = mod_key,
-    action = act.PromptInputLine({
-      description = wezterm.format({
-        { Attribute = { Intensity = "Bold" } },
-        { Foreground = { AnsiColor = "Fuchsia" } },
-        { Text = "Enter name for new workspace" },
-      }),
-      action = wezterm.action_callback(function(window, pane, line)
-        if line then
-          window:perform_action(
-            act.SwitchToWorkspace({
-              name = line,
-            }),
-            pane
-          )
-        end
-      end),
-    }),
-  },
+  -- {
+  --   key = "phys:Space",
+  --   mods = "SHIFT",
+  --   action = act.PromptInputLine({
+  --     description = wezterm.format({
+  --       { Attribute = { Intensity = "Bold" } },
+  --       { Foreground = { AnsiColor = "Fuchsia" } },
+  --       { Text = "Enter name for new workspace" },
+  --     }),
+  --     action = wezterm.action_callback(function(window, pane, line)
+  --       if line then
+  --         window:perform_action(
+  --           act.SwitchToWorkspace({
+  --             name = line,
+  --           }),
+  --           pane
+  --         )
+  --       end
+  --     end),
+  --   }),
+  -- },
   {
     key = "phys:Space",
     mods = mod_key,
@@ -118,8 +117,6 @@ config.keys = {
     }),
   },
   { key = "r", mods = mod_key, action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }) },
-  -- { key = "m", mods = mod_key, action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
-  -- { key = "t", mods = mod_key, action = act.ActivateKeyTable({ name = "text_zoom_in_out", one_shot = false }) },
 }
 
 for i = 1, 9 do

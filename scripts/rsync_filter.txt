@@ -7,6 +7,7 @@
 - .gnupg/
 - .lesshst/
 - .m2/
+- .git/
 - .mongodb/
 - .pki/
 - .profile/

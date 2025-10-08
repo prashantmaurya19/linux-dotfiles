@@ -10,6 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod1
+set $win_mod Mod4
 
 # exec --no-startup-id picom
 exec_always --no-startup-id killall redshift
@@ -21,7 +22,7 @@ exec_always --no-startup-id redshift -P -O 4000
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 bindsym $mod+Shift+e exec $HOME/.config/sway/exit.sh
-output * bg /home/prashant/Pictures/demon-slayer-zenitsu-thunder-breathing-graffiti-desktop-wallpaper.jpg fill
+output * bg /home/prashant/Pictures/deer-orange-sunset-epic-desktop-wallpaper.jpg fill
 # output * bg "/home/prashant/Documents/status bar referance.png" fill
 
 # output eDP-1 scale 1.03
@@ -78,9 +79,7 @@ set $menu wofi --show drun  -i | xargs swaymsg exec --
 # Open a file manager:
 # bindsym ctrl+$mod+f exec pcmanfm
 
-bindsym $mod+Return exec wezterm
-
-bindsym Mod4+s exec ~/.local/bin/sway-screenshot/sway-screenshot -m region -o ~/Pictures/sway-screentshot/
+bindsym $win_mod+s exec ~/.local/bin/sway-screenshot/sway-screenshot -m region -o ~/Pictures/sway-screentshot/
 
 # Open a terminal emulator:
 # set $term wezterm
@@ -174,8 +173,8 @@ set $ws10 "10"
 
 
 # switch to workspace
-bindsym $mod+s workspace next
-bindsym $mod+a workspace prev
+bindsym $mod+u workspace next
+bindsym $mod+i workspace prev
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
 bindsym $mod+3 workspace number $ws3
