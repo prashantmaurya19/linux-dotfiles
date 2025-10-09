@@ -80,13 +80,13 @@ config.keys = {
   { key = "K", mods = "CTRL", action = act.ScrollByLine(-2) },
   { key = "J", mods = "CTRL", action = act.ScrollByLine(2) },
   -- Tab keybindings
-  { key = "n", mods = mod_key, action = act.SpawnTab("CurrentPaneDomain") },
-  { key = "u", mods = mod_key, action = act.ActivateTabRelative(-1) },
-  { key = "i", mods = mod_key, action = act.ActivateTabRelative(1) },
-  { key = "o", mods = mod_key, action = act.MoveTabRelative(-1) },
-  { key = "p", mods = mod_key, action = act.MoveTabRelative(1) },
+  { key = "n", mods = "ALT", action = act.SpawnTab("CurrentPaneDomain") },
+  { key = "u", mods = "ALT", action = act.ActivateTabRelative(-1) },
+  { key = "i", mods = "ALT", action = act.ActivateTabRelative(1) },
+  { key = "o", mods = "ALT", action = act.MoveTabRelative(-1) },
+  { key = "p", mods = "ALT", action = act.MoveTabRelative(1) },
   -- Tab keybindings end
-  { key = "t", mods = mod_key, action = act.ShowTabNavigator },
+  -- { key = "t", mods = mod_key, action = act.ShowTabNavigator },
   { key = "v", mods = "CTRL", action = act.PasteFrom("Clipboard") },
   -- {
   --   key = "phys:Space",

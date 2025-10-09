@@ -22,6 +22,7 @@ return {
           xml = { "xmlformatter" },
           java = { "google-java-format" },
           sh = { "shfmt" },
+	  sql = {"sqlfmt"}
         },
         formatters = {
           stylua = {
