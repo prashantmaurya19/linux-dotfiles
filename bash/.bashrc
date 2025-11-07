@@ -157,16 +157,16 @@ _fzf_history_search_and_insert() {
   # The default 'Enter' behavior in fzf will land here, and you can type 'Enter' again.
 
   # Optional: Handle the special key press (e.g., run immediately on Enter)
-  if [[ "$key_pressed" == "enter" ]]; then
-    # You can't directly execute here, but you can set a flag or try to
-    # simulate an 'Enter' key press, which is complex and often discouraged.
-    # Setting the line and point is usually enough.
-    : # Do nothing extra, just set the line
-  elif [[ "$key_pressed" == "ctrl-v" ]]; then
-    # If Ctrl-V was pressed, it just pastes the command like 'Enter' but
-    # you know the user explicitly chose to paste without running.
-    : # Do nothing extra, just set the line
-  fi
+  # if [[ "$key_pressed" == "enter" ]]; then
+  # You can't directly execute here, but you can set a flag or try to
+  # simulate an 'Enter' key press, which is complex and often discouraged.
+  # Setting the line and point is usually enough.
+  # : # Do nothing extra, just set the line
+  # elif [[ "$key_pressed" == "ctrl-v" ]]; then
+  # If Ctrl-V was pressed, it just pastes the command like 'Enter' but
+  # you know the user explicitly chose to paste without running.
+  # : # Do nothing extra, just set the line
+  # fi
 }
 
 IGNORED_DIRS=(
@@ -223,6 +223,58 @@ JOINED_DIRS="${IGNORED_PATH_DIRS[@]/#/ -o -path } -prune ${IGNORED_DIRS[@]/#/ -o
 # We remove the first ' -o -name ' which is redundant at the beginning.
 FZF_IGNORE_DIR="${JOINED_DIRS:4}"
 
+_fzf_open_file() {
+  local result
+  result=$(
+    find ~ \( $FZF_IGNORE_DIR \) -prune -o -type f -print | fzf
+  )
+
+  if [[ -z "$result" ]]; then
+    return 1
+  fi
+
+  # Split the result into the key pressed and the selected command
+  local key_pressed command_selected
+  key_pressed=$(echo "$result" | head -n 1)
+  command_selected=$(echo "$result" | tail -n 1)
+
+  if [[ "$key_pressed" == "" ]]; then
+    # If canceled, restore the original line
+    return 0
+  fi
+
+  nvim $command_selected
+
+}
+
+_fzf_open_folder() {
+  local result
+  result=$(
+    find ~ \( $FZF_IGNORE_DIR \) -prune -o -type d -print | fzf
+  )
+
+  if [[ -z "$result" ]]; then
+    return 1
+  fi
+
+  # Split the result into the key pressed and the selected command
+  local key_pressed command_selected
+  key_pressed=$(echo "$result" | head -n 1)
+  command_selected=$(echo "$result" | tail -n 1)
+
+  if [[ "$key_pressed" == "" ]]; then
+    # If canceled, restore the original line
+    return 0
+  fi
+
+  cd $command_selected
+
+  if [ "$(which wezterm)" != "" ]; then
+    wezterm cli rename-workspace "${PWD##*/}"
+  fi
+
+}
+
 alias git-push-main='git push origin main'
 alias cls='clear'
 alias startup='python3 ~/Documents/coding/startup/main.py'
@@ -234,20 +286,17 @@ alias git-fix='git add . && git commit -m "add : some fixes"'
 alias git-dev-push='git add . && git commit -m "dev : some changes" && git push origin main'
 alias git-add-push='git add . && git commit -m "add : some addition" && git push origin main'
 alias git-fix-push='git add . && git commit -m "add : some fixes" && git push origin main'
-alias fcd='cd "$(find ~ \( $FZF_IGNORE_DIR \) -prune -o -type d -print | fzf)"'
 alias fcdv='. ~/Documents/linux-dotfiles/scripts/cd_and_open_dir_in_nvim.sh'
-alias fv='nvim "$(find ~ \( $FZF_IGNORE_DIR \) -prune -o -type f -print | fzf)"'
-alias fhr='_fzf_history_search_and_insert'
 alias dir='lsd -a -1'
 alias v='nvim'
 alias vleet='nvim leetcode.nvim'
 alias vs='nvim -S s.vim'
 alias y='yazi'
 
-bind -x '"\e,":"fcd"'
-bind -x '"\e.":"fv"'
+bind -x '"\e,":"_fzf_open_folder"'
+bind -x '"\e.":"_fzf_open_file"'
 bind -x '"\e;":"cls"'
-bind -x '"\em":"fhr"'
+bind -x '"\em":"_fzf_history_search_and_insert"'
 
 export EDITOR="nvim"
 export PATH=$PATH:/usr/bin/zig/
@@ -282,3 +331,5 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "$(fnm env)"
 fi
+
+# source -- ~/.local/share/blesh/ble.sh

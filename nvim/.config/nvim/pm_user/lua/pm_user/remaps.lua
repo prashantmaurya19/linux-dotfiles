@@ -11,10 +11,12 @@ local M = {
       vim.diagnostic.open_float(nil, { focus = false })
     end, opts)
     keyset("n", "]d", function()
-      vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR })
+      -- vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR })
+      vim.diagnostic.jump({ count = 1, float = true })
     end, opts)
     keyset("n", "[d", function()
-      vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
+      -- vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
+      vim.diagnostic.jump({ count = -1, float = true })
     end, opts)
     keyset("n", ";", vim.lsp.buf.signature_help, opts)
     keyset("n", "gd", function()
@@ -70,7 +72,7 @@ keyset("n", "<leader>hs", ":split<CR>", M.keyargs({ "noremap", "silent" })) -- s
 keyset("n", "<leader>sa", ":mksession!s.vim<CR>", M.keyargs({ "noremap", "silent" })) -- save session on cwd
 keyset("n", "<leader>ss", ":wa<CR>", M.keyargs({ "noremap", "silent" })) -- save session on cwd
 keyset("n", "<leader>q", ":q!<CR>", M.keyargs({ "noremap", "silent" })) -- quit window by force
-keyset("n", "<leader>w", ":bd<CR>", M.keyargs({ "noremap", "silent" })) -- delete buffer
+keyset("n", "<leader>w", ":bd!<CR>", M.keyargs({ "noremap", "silent" })) -- delete buffer
 keyset("n", "<leader>gg", ":Git<CR>", M.keyargs({ "noremap", "silent" })) -- Git command
 keyset("n", "<leader>gc", ":Git commit<CR>", M.keyargs({ "noremap", "silent" })) -- Git commit command
 keyset("n", "<leader>gp", ":Git push<CR>", M.keyargs({ "noremap", "silent" })) -- Git commit command
@@ -121,7 +123,9 @@ M.mapKeyForNewtab("n", "<leader>ef", function(bf)
 end, M.keyargs({ "noremap", "silent" }))
 --telescope
 M.mapKeyForNewtab("n", "<leader>ff", function()
-  builtin.find_files(M.telescope_opt())
+  builtin.find_files(M.telescope_opt({
+    hidden = true,
+  }))
 end, M.keyargs({ "noremap", "silent" }))
 
 M.mapKeyForNewtab("n", "<leader>en", function()

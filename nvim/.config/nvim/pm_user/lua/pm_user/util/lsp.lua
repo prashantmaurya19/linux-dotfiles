@@ -41,11 +41,36 @@ M.handler = {
     vim.lsp.config["cssls"] = cnf
   end,
   ["lua_ls"] = function()
+    -- Get the paths for all Neovim runtime files, including plugins
+    local runtime_path = vim.api.nvim_get_runtime_file("", true)
+
+    -- Optional: If you want to include Neovim's core Lua documentation/typings
+    -- This is often the path to $VIMRUNTIME/lua
+    local vim_runtime = vim.fn.expand("$VIMRUNTIME/lua")
+
+    -- Remove the default vim runtime path from the list if it's already there
+    -- This is sometimes necessary to avoid issues, but nvim_get_runtime_file should handle it.
+    local library_paths = {}
+    for _, path in ipairs(runtime_path) do
+      if path ~= vim_runtime then
+        table.insert(library_paths, path)
+      end
+    end
+    table.insert(library_paths, vim_runtime) -- Explicitly add the core vim runtime
+
     local cnf = vim.lsp.config.lua_ls
     cnf.settings = {
       Lua = {
+        runtime = {
+          version = "LuaJIT", -- Or 'Lua 5.1', 'Lua 5.3', etc.
+        },
         diagnostics = {
           globals = { "vim" },
+        },
+        workspace = {
+          -- CRITICAL: This array tells luals which directories to index
+          library = library_paths,
+          checkThirdParty = false, -- Recommended to prevent luals from prompting for unknown third-party environments
         },
       },
     }
@@ -83,6 +108,7 @@ end
 
 --- setup lsp handlers
 --- @param cmp_nvim_lsp table
+--- @return nil
 M.setup_handlers = function(cmp_nvim_lsp)
   vim.lsp.config("*", {
     capabilities = cmp_nvim_lsp.default_capabilities(),

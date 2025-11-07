@@ -22,7 +22,7 @@ exec_always --no-startup-id redshift -P -O 4000
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 bindsym $mod+Shift+e exec $HOME/.config/sway/exit.sh
-output * bg /home/prashant/Pictures/deer-orange-sunset-epic-desktop-wallpaper.jpg fill
+output * bg /home/prashant/Pictures/solar-eclipse-lonely-girl-desktop-wallpaper.jpg fill
 # output * bg "/home/prashant/Documents/status bar referance.png" fill
 
 # output eDP-1 scale 1.03
@@ -147,7 +147,7 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+v layout toggle split
 
 # toggle tiling / floating
-#bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 #bindsym $mod+space focus mode_toggle

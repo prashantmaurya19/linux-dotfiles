@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
-local SOLID_RIGHT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
+local SOLID_RIGHT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
 local config = wezterm.config_builder()
 local init_time = os.time()
 config.front_end = "WebGpu"
@@ -27,37 +27,38 @@ config.inactive_pane_hsb = {
   saturation = 0.24,
   brightness = 0.2,
 }
+local theme = {
+  background = "#0b0022",
+  active_tab = {
+    bg_color = "#ff2042",
+    fg_color = "#c0c0c0",
+    intensity = "Normal",
+    underline = "None",
+    italic = false,
+    strikethrough = false,
+  },
+  inactive_tab = {
+    bg_color = "#1b1032",
+    fg_color = "#808080",
+  },
+  inactive_tab_hover = {
+    bg_color = "#3b3052",
+    fg_color = "#909090",
+    italic = true,
+  },
+  new_tab = {
+    bg_color = "#1b1032",
+    fg_color = "#808080",
+  },
+  new_tab_hover = {
+    bg_color = "#3b3052",
+    fg_color = "#909090",
+    italic = true,
+  },
+}
 --colors
 config.colors = {
-  tab_bar = {
-    background = "#0b0022",
-    active_tab = {
-      bg_color = "#ff2042",
-      fg_color = "#c0c0c0",
-      intensity = "Normal",
-      underline = "None",
-      italic = false,
-      strikethrough = false,
-    },
-    inactive_tab = {
-      bg_color = "#1b1032",
-      fg_color = "#808080",
-    },
-    inactive_tab_hover = {
-      bg_color = "#3b3052",
-      fg_color = "#909090",
-      italic = true,
-    },
-    new_tab = {
-      bg_color = "#1b1032",
-      fg_color = "#808080",
-    },
-    new_tab_hover = {
-      bg_color = "#3b3052",
-      fg_color = "#909090",
-      italic = true,
-    },
-  },
+  tab_bar = theme,
 }
 
 --keys
@@ -152,6 +153,7 @@ config.key_tables = {
 config.use_fancy_tab_bar = false
 config.status_update_interval = 5000
 config.tab_bar_at_bottom = false
+config.show_new_tab_button_in_tab_bar = false
 
 local function basename(s)
   return string.gsub(s, "(.*[/\\])(.*)", "%2")
@@ -184,7 +186,7 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, configs, hover, max_wi
     { Text = (tab.tab_index + 1) .. ":" .. title },
     { Background = { Color = edge_background } },
     { Foreground = { Color = edge_foreground } },
-    { Text = SOLID_RIGHT_ARROW },
+    { Text = SOLID_LEFT_ARROW },
   }
 end)
 
@@ -212,7 +214,7 @@ wezterm.on("update-status", function(window, pane)
 
   local stat_symbol = wezterm.nerdfonts.fa_linux
   if stat == "default" then
-    stat_symbol = wezterm.nerdfonts.oct_table
+    stat_symbol = wezterm.nerdfonts.cod_terminal_linux
   elseif stat == "resize_pane" then
     stat_symbol = wezterm.nerdfonts.md_resize
   end
@@ -230,24 +232,44 @@ wezterm.on("update-status", function(window, pane)
   tab:set_title(cmd)
 
   window:set_right_status(wezterm.format({
-    { Text = " | " },
-    { Foreground = { Color = stat_color } },
-    { Text = " " .. stat },
-    { Foreground = { Color = "#fff" } },
-    { Text = " | " },
+    -- { Text = " | " },
+    -- { Foreground = { Color = stat_color } },
+    -- { Text = " " .. stat },
+    -- { Foreground = { Color = "#fff" } },
+    -- { Text = " | " },
+    -- { Foreground = { Color = "#e0af68" } },
+    -- { Text = wezterm.nerdfonts.fa_code .. " " .. cmd },
+    -- { Foreground = { Color = "#fff" } },
+    -- { Text = " | " },
+    -- { Foreground = { Color = "#00ff77" } },
+    -- { Text = wezterm.nerdfonts.fa_clock_o .. " " .. format_duration(os.time() - init_time) },
+    { Background = { Color = theme.background } },
     { Foreground = { Color = "#e0af68" } },
-    { Text = wezterm.nerdfonts.fa_code .. " " .. cmd },
-    { Foreground = { Color = "#fff" } },
-    { Text = " | " },
+    { Text = SOLID_RIGHT_ARROW },
+    { Background = { Color = "#e0af68" } },
+    { Foreground = { Color = theme.background } },
+    { Text = " " .. wezterm.nerdfonts.fa_code .. " " .. cmd .. " " },
+    { Foreground = { Color = theme.background } },
+    { Background = { Color = "#e0af68" } },
+    { Text = SOLID_RIGHT_ARROW },
+    -- Timer section
+    { Background = { Color = theme.background } },
     { Foreground = { Color = "#00ff77" } },
-    { Text = wezterm.nerdfonts.fa_clock_o .. " " .. format_duration(os.time() - init_time) },
+    { Text = SOLID_RIGHT_ARROW },
+    { Background = { Color = "#00ff77" } },
+    { Foreground = { Color = theme.background } },
+    { Text = " " .. wezterm.nerdfonts.fa_clock_o .. " " .. format_duration(os.time() - init_time) .. " " },
   }))
 
   window:set_left_status(wezterm.format({
-    { Foreground = { Color = stat_color } },
+    { Background = { Color = stat_color } },
+    { Foreground = { Color = theme.background } },
     { Text = " " },
-    { Text = stat_symbol },
-    { Text = " |" },
+    { Attribute = { Intensity = "Bold" } },
+    { Text = stat_symbol .. " " .. stat },
+    { Foreground = { Color = stat_color } },
+    { Background = { Color = theme.background } },
+    { Text = SOLID_LEFT_ARROW },
   }))
   return {
     font_size = 30,

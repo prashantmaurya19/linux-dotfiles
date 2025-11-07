@@ -36,7 +36,7 @@ return {
         file_ignore_patterns = {
           "node_modules/", -- Ignores 'node_modules' folder
           "^vendor/", -- Ignores 'vendor' folder at the root
-          "%.git/", -- Ignores '.git' folder
+          ".git/", -- Ignores '.git' folder
           "build/", -- Ignores 'build' folder
           "^dist/", -- Ignores 'dist' folder
         },

@@ -8,6 +8,7 @@ return {
       "hrsh7th/nvim-cmp",
     },
     config = function()
+      -- inintializing LSPs
       vim.PM.lsp.setup_handlers(require("cmp_nvim_lsp"))
       vim.diagnostic.config({
         signs = {

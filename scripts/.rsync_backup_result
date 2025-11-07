@@ -1,271 +1,63 @@
 /media/prashant/PM Store/rsync_backup/prashant/Documents/
 sending incremental file list
+deleting coding/competitive_problems/in_out/src/util/time.js
+deleting coding/competitive_problems/in_out/src/util/
+deleting coding/competitive_problems/in_out/src/index.js
+deleting coding/competitive_problems/in_out/src/
+deleting coding/competitive_problems/in_out/yarn.lock
+deleting coding/competitive_problems/in_out/testcase.txt
+deleting coding/competitive_problems/in_out/s.vim
+deleting coding/competitive_problems/in_out/package.json
+deleting coding/competitive_problems/in_out/package-lock.json
+deleting coding/competitive_problems/in_out/jsconfig.json
+deleting coding/competitive_problems/in_out/answer.txt
+deleting coding/competitive_problems/in_out/README.md
+deleting coding/competitive_problems/in_out/.yarnrc.yml
+deleting coding/competitive_problems/in_out/.history_links
+deleting coding/competitive_problems/in_out/.gitignore
+deleting coding/competitive_problems/in_out/.gitattributes
+deleting coding/competitive_problems/in_out/
+deleting coding/competitive_problems/s.vim
+deleting coding/competitive_problems/run.sh
+deleting coding/competitive_problems/Solve.java
+deleting coding/competitive_problems/Checker.java
+deleting coding/competitive_problems/.history_links
+deleting coding/competitive_problems/
+deleting coding/PSO/frontend/dist/assets/index-C-8iKpb2.js
+deleting coding/PSO/frontend/dist/assets/index-BIEy8Sb7.css
 coding/
+coding/Jarurat-Care-Frontend/
+coding/Jarurat-Care-Frontend/.gitignore
+coding/Jarurat-Care-Frontend/README.md
+coding/Jarurat-Care-Frontend/components.json
+coding/Jarurat-Care-Frontend/eslint.config.js
+coding/Jarurat-Care-Frontend/index.html
+coding/Jarurat-Care-Frontend/package.json
+coding/Jarurat-Care-Frontend/tsconfig.json
+coding/Jarurat-Care-Frontend/vite.config.js
+coding/Jarurat-Care-Frontend/yarn.lock
+coding/Jarurat-Care-Frontend/public/
+coding/Jarurat-Care-Frontend/public/2025-10-15-122602_sway-screenshot.png
+coding/Jarurat-Care-Frontend/public/vite.svg
+coding/Jarurat-Care-Frontend/src/
+coding/Jarurat-Care-Frontend/src/App.jsx
+coding/Jarurat-Care-Frontend/src/index.css
+coding/Jarurat-Care-Frontend/src/main.jsx
+coding/Jarurat-Care-Frontend/src/components/
+coding/Jarurat-Care-Frontend/src/components/navbar/
+coding/Jarurat-Care-Frontend/src/components/navbar/index.jsx
+coding/Jarurat-Care-Frontend/src/components/ui/
+coding/Jarurat-Care-Frontend/src/components/ui/navigation-menu.tsx
+coding/Jarurat-Care-Frontend/src/lib/
+coding/Jarurat-Care-Frontend/src/lib/utils.ts
+coding/Jarurat-Care-Frontend/src/pages/
+coding/Jarurat-Care-Frontend/src/pages/home/
+coding/Jarurat-Care-Frontend/src/pages/home/index.jsx
+coding/Jarurat-Care-Frontend/src/util/
+coding/Jarurat-Care-Frontend/src/util/jjsx.js
+coding/Jarurat-Care-Frontend/src/util/tailwind.js
 coding/PSO/
-coding/PSO/.git/
-coding/PSO/.git/branches/
-coding/PSO/.git/hooks/
-coding/PSO/.git/info/
-coding/PSO/.git/logs/
-coding/PSO/.git/logs/refs/
-coding/PSO/.git/logs/refs/heads/
-coding/PSO/.git/logs/refs/remotes/
-coding/PSO/.git/logs/refs/remotes/origin/
-coding/PSO/.git/objects/
-coding/PSO/.git/objects/00/
-coding/PSO/.git/objects/01/
-coding/PSO/.git/objects/02/
-coding/PSO/.git/objects/03/
-coding/PSO/.git/objects/04/
-coding/PSO/.git/objects/05/
-coding/PSO/.git/objects/06/
-coding/PSO/.git/objects/07/
-coding/PSO/.git/objects/08/
-coding/PSO/.git/objects/09/
-coding/PSO/.git/objects/0a/
-coding/PSO/.git/objects/0b/
-coding/PSO/.git/objects/0c/
-coding/PSO/.git/objects/0d/
-coding/PSO/.git/objects/0e/
-coding/PSO/.git/objects/0f/
-coding/PSO/.git/objects/10/
-coding/PSO/.git/objects/11/
-coding/PSO/.git/objects/12/
-coding/PSO/.git/objects/13/
-coding/PSO/.git/objects/14/
-coding/PSO/.git/objects/15/
-coding/PSO/.git/objects/16/
-coding/PSO/.git/objects/17/
-coding/PSO/.git/objects/18/
-coding/PSO/.git/objects/19/
-coding/PSO/.git/objects/1a/
-coding/PSO/.git/objects/1b/
-coding/PSO/.git/objects/1c/
-coding/PSO/.git/objects/1d/
-coding/PSO/.git/objects/1e/
-coding/PSO/.git/objects/1f/
-coding/PSO/.git/objects/20/
-coding/PSO/.git/objects/21/
-coding/PSO/.git/objects/22/
-coding/PSO/.git/objects/23/
-coding/PSO/.git/objects/24/
-coding/PSO/.git/objects/25/
-coding/PSO/.git/objects/26/
-coding/PSO/.git/objects/27/
-coding/PSO/.git/objects/28/
-coding/PSO/.git/objects/2a/
-coding/PSO/.git/objects/2b/
-coding/PSO/.git/objects/2c/
-coding/PSO/.git/objects/2d/
-coding/PSO/.git/objects/2e/
-coding/PSO/.git/objects/2f/
-coding/PSO/.git/objects/30/
-coding/PSO/.git/objects/31/
-coding/PSO/.git/objects/32/
-coding/PSO/.git/objects/33/
-coding/PSO/.git/objects/34/
-coding/PSO/.git/objects/35/
-coding/PSO/.git/objects/36/
-coding/PSO/.git/objects/37/
-coding/PSO/.git/objects/38/
-coding/PSO/.git/objects/39/
-coding/PSO/.git/objects/3a/
-coding/PSO/.git/objects/3b/
-coding/PSO/.git/objects/3c/
-coding/PSO/.git/objects/3d/
-coding/PSO/.git/objects/3e/
-coding/PSO/.git/objects/3f/
-coding/PSO/.git/objects/40/
-coding/PSO/.git/objects/41/
-coding/PSO/.git/objects/42/
-coding/PSO/.git/objects/43/
-coding/PSO/.git/objects/44/
-coding/PSO/.git/objects/45/
-coding/PSO/.git/objects/46/
-coding/PSO/.git/objects/47/
-coding/PSO/.git/objects/48/
-coding/PSO/.git/objects/49/
-coding/PSO/.git/objects/4a/
-coding/PSO/.git/objects/4b/
-coding/PSO/.git/objects/4c/
-coding/PSO/.git/objects/4d/
-coding/PSO/.git/objects/4e/
-coding/PSO/.git/objects/4f/
-coding/PSO/.git/objects/50/
-coding/PSO/.git/objects/51/
-coding/PSO/.git/objects/52/
-coding/PSO/.git/objects/53/
-coding/PSO/.git/objects/54/
-coding/PSO/.git/objects/55/
-coding/PSO/.git/objects/56/
-coding/PSO/.git/objects/57/
-coding/PSO/.git/objects/58/
-coding/PSO/.git/objects/59/
-coding/PSO/.git/objects/5a/
-coding/PSO/.git/objects/5c/
-coding/PSO/.git/objects/5d/
-coding/PSO/.git/objects/5e/
-coding/PSO/.git/objects/5f/
-coding/PSO/.git/objects/60/
-coding/PSO/.git/objects/61/
-coding/PSO/.git/objects/62/
-coding/PSO/.git/objects/63/
-coding/PSO/.git/objects/64/
-coding/PSO/.git/objects/65/
-coding/PSO/.git/objects/66/
-coding/PSO/.git/objects/67/
-coding/PSO/.git/objects/68/
-coding/PSO/.git/objects/69/
-coding/PSO/.git/objects/6b/
-coding/PSO/.git/objects/6c/
-coding/PSO/.git/objects/6d/
-coding/PSO/.git/objects/6e/
-coding/PSO/.git/objects/6f/
-coding/PSO/.git/objects/70/
-coding/PSO/.git/objects/71/
-coding/PSO/.git/objects/72/
-coding/PSO/.git/objects/73/
-coding/PSO/.git/objects/74/
-coding/PSO/.git/objects/75/
-coding/PSO/.git/objects/76/
-coding/PSO/.git/objects/77/
-coding/PSO/.git/objects/78/
-coding/PSO/.git/objects/79/
-coding/PSO/.git/objects/7b/
-coding/PSO/.git/objects/7c/
-coding/PSO/.git/objects/7d/
-coding/PSO/.git/objects/7e/
-coding/PSO/.git/objects/7f/
-coding/PSO/.git/objects/80/
-coding/PSO/.git/objects/81/
-coding/PSO/.git/objects/82/
-coding/PSO/.git/objects/83/
-coding/PSO/.git/objects/84/
-coding/PSO/.git/objects/85/
-coding/PSO/.git/objects/86/
-coding/PSO/.git/objects/87/
-coding/PSO/.git/objects/88/
-coding/PSO/.git/objects/89/
-coding/PSO/.git/objects/8a/
-coding/PSO/.git/objects/8b/
-coding/PSO/.git/objects/8c/
-coding/PSO/.git/objects/8d/
-coding/PSO/.git/objects/8e/
-coding/PSO/.git/objects/8f/
-coding/PSO/.git/objects/90/
-coding/PSO/.git/objects/91/
-coding/PSO/.git/objects/92/
-coding/PSO/.git/objects/93/
-coding/PSO/.git/objects/94/
-coding/PSO/.git/objects/95/
-coding/PSO/.git/objects/96/
-coding/PSO/.git/objects/97/
-coding/PSO/.git/objects/98/
-coding/PSO/.git/objects/99/
-coding/PSO/.git/objects/9b/
-coding/PSO/.git/objects/9c/
-coding/PSO/.git/objects/9d/
-coding/PSO/.git/objects/9e/
-coding/PSO/.git/objects/9f/
-coding/PSO/.git/objects/a0/
-coding/PSO/.git/objects/a1/
-coding/PSO/.git/objects/a2/
-coding/PSO/.git/objects/a3/
-coding/PSO/.git/objects/a4/
-coding/PSO/.git/objects/a5/
-coding/PSO/.git/objects/a6/
-coding/PSO/.git/objects/a7/
-coding/PSO/.git/objects/a8/
-coding/PSO/.git/objects/a9/
-coding/PSO/.git/objects/aa/
-coding/PSO/.git/objects/ac/
-coding/PSO/.git/objects/ad/
-coding/PSO/.git/objects/ae/
-coding/PSO/.git/objects/af/
-coding/PSO/.git/objects/b0/
-coding/PSO/.git/objects/b1/
-coding/PSO/.git/objects/b2/
-coding/PSO/.git/objects/b3/
-coding/PSO/.git/objects/b4/
-coding/PSO/.git/objects/b5/
-coding/PSO/.git/objects/b6/
-coding/PSO/.git/objects/b7/
-coding/PSO/.git/objects/b8/
-coding/PSO/.git/objects/b9/
-coding/PSO/.git/objects/ba/
-coding/PSO/.git/objects/bb/
-coding/PSO/.git/objects/bc/
-coding/PSO/.git/objects/bd/
-coding/PSO/.git/objects/be/
-coding/PSO/.git/objects/bf/
-coding/PSO/.git/objects/c0/
-coding/PSO/.git/objects/c1/
-coding/PSO/.git/objects/c2/
-coding/PSO/.git/objects/c3/
-coding/PSO/.git/objects/c4/
-coding/PSO/.git/objects/c5/
-coding/PSO/.git/objects/c6/
-coding/PSO/.git/objects/c7/
-coding/PSO/.git/objects/c8/
-coding/PSO/.git/objects/c9/
-coding/PSO/.git/objects/ca/
-coding/PSO/.git/objects/cb/
-coding/PSO/.git/objects/cc/
-coding/PSO/.git/objects/cd/
-coding/PSO/.git/objects/ce/
-coding/PSO/.git/objects/cf/
-coding/PSO/.git/objects/d0/
-coding/PSO/.git/objects/d1/
-coding/PSO/.git/objects/d2/
-coding/PSO/.git/objects/d3/
-coding/PSO/.git/objects/d4/
-coding/PSO/.git/objects/d5/
-coding/PSO/.git/objects/d6/
-coding/PSO/.git/objects/d7/
-coding/PSO/.git/objects/d8/
-coding/PSO/.git/objects/d9/
-coding/PSO/.git/objects/da/
-coding/PSO/.git/objects/db/
-coding/PSO/.git/objects/dc/
-coding/PSO/.git/objects/dd/
-coding/PSO/.git/objects/df/
-coding/PSO/.git/objects/e0/
-coding/PSO/.git/objects/e1/
-coding/PSO/.git/objects/e2/
-coding/PSO/.git/objects/e3/
-coding/PSO/.git/objects/e4/
-coding/PSO/.git/objects/e5/
-coding/PSO/.git/objects/e6/
-coding/PSO/.git/objects/e7/
-coding/PSO/.git/objects/e8/
-coding/PSO/.git/objects/e9/
-coding/PSO/.git/objects/ea/
-coding/PSO/.git/objects/eb/
-coding/PSO/.git/objects/ec/
-coding/PSO/.git/objects/ed/
-coding/PSO/.git/objects/ee/
-coding/PSO/.git/objects/f0/
-coding/PSO/.git/objects/f1/
-coding/PSO/.git/objects/f2/
-coding/PSO/.git/objects/f3/
-coding/PSO/.git/objects/f4/
-coding/PSO/.git/objects/f5/
-coding/PSO/.git/objects/f6/
-coding/PSO/.git/objects/f7/
-coding/PSO/.git/objects/f8/
-coding/PSO/.git/objects/f9/
-coding/PSO/.git/objects/fa/
-coding/PSO/.git/objects/fc/
-coding/PSO/.git/objects/fd/
-coding/PSO/.git/objects/fe/
-coding/PSO/.git/objects/ff/
-coding/PSO/.git/objects/info/
-coding/PSO/.git/objects/pack/
-coding/PSO/.git/refs/
-coding/PSO/.git/refs/heads/
-coding/PSO/.git/refs/remotes/
-coding/PSO/.git/refs/remotes/origin/
-coding/PSO/.git/refs/tags/
+coding/PSO/README.md
 coding/PSO/api/
 coding/PSO/api/Authentication/
 coding/PSO/api/Authentication/.mvn/
@@ -281,7 +73,6 @@ coding/PSO/api/Authentication/src/main/java/com/PlayChess/com/Authentication/
 coding/PSO/api/Authentication/src/main/java/com/PlayChess/com/Authentication/Configurations/
 coding/PSO/api/Authentication/src/main/java/com/PlayChess/com/Authentication/Controllers/
 coding/PSO/api/Authentication/src/main/java/com/PlayChess/com/Authentication/Entities/
-coding/PSO/api/Authentication/src/main/java/com/PlayChess/com/Authentication/Exceptions/
 coding/PSO/api/Authentication/src/main/java/com/PlayChess/com/Authentication/Filter/
 coding/PSO/api/Authentication/src/main/java/com/PlayChess/com/Authentication/Pojo/
 coding/PSO/api/Authentication/src/main/java/com/PlayChess/com/Authentication/Repositories/
@@ -289,7 +80,6 @@ coding/PSO/api/Authentication/src/main/java/com/PlayChess/com/Authentication/Res
 coding/PSO/api/Authentication/src/main/java/com/PlayChess/com/Authentication/Services/
 coding/PSO/api/Authentication/src/main/java/com/PlayChess/com/Authentication/Surrogate/
 coding/PSO/api/Authentication/src/main/java/com/PlayChess/com/Authentication/TransLayer/
-coding/PSO/api/Authentication/src/main/java/com/PlayChess/com/Authentication/Utils/
 coding/PSO/api/Authentication/src/main/resources/
 coding/PSO/api/Authentication/src/test/
 coding/PSO/api/Authentication/src/test/java/
@@ -309,11 +99,11 @@ coding/PSO/api/Gateway/src/main/java/com/PlayChess/
 coding/PSO/api/Gateway/src/main/java/com/PlayChess/com/
 coding/PSO/api/Gateway/src/main/java/com/PlayChess/com/Gateway/
 coding/PSO/api/Gateway/src/main/java/com/PlayChess/com/Gateway/config/
-coding/PSO/api/Gateway/src/main/java/com/PlayChess/com/Gateway/exception/
+coding/PSO/api/Gateway/src/main/java/com/PlayChess/com/Gateway/exceptions/
 coding/PSO/api/Gateway/src/main/java/com/PlayChess/com/Gateway/filter/
 coding/PSO/api/Gateway/src/main/java/com/PlayChess/com/Gateway/pojo/
 coding/PSO/api/Gateway/src/main/java/com/PlayChess/com/Gateway/service/
-coding/PSO/api/Gateway/src/main/java/com/PlayChess/com/Gateway/utils/
+coding/PSO/api/Gateway/src/main/java/com/PlayChess/com/Gateway/util/
 coding/PSO/api/Gateway/src/main/resources/
 coding/PSO/api/Gateway/src/test/
 coding/PSO/api/Gateway/src/test/java/
@@ -321,6 +111,7 @@ coding/PSO/api/Gateway/src/test/java/com/
 coding/PSO/api/Gateway/src/test/java/com/PlayChess/
 coding/PSO/api/Gateway/src/test/java/com/PlayChess/com/
 coding/PSO/api/Gateway/src/test/java/com/PlayChess/com/Gateway/
+coding/PSO/api/RequestConsumerDispatcher/
 coding/PSO/api/RequestConsumerDispatcher/.mvn/
 coding/PSO/api/RequestConsumerDispatcher/.mvn/wrapper/
 coding/PSO/api/RequestConsumerDispatcher/.settings/
@@ -334,10 +125,8 @@ coding/PSO/api/RequestConsumerDispatcher/src/main/java/com/PlayChess/com/Request
 coding/PSO/api/RequestConsumerDispatcher/src/main/java/com/PlayChess/com/RequestConsumerDispatcher/Configuration/
 coding/PSO/api/RequestConsumerDispatcher/src/main/java/com/PlayChess/com/RequestConsumerDispatcher/Controller/
 coding/PSO/api/RequestConsumerDispatcher/src/main/java/com/PlayChess/com/RequestConsumerDispatcher/Listener/
-coding/PSO/api/RequestConsumerDispatcher/src/main/java/com/PlayChess/com/RequestConsumerDispatcher/Model/
 coding/PSO/api/RequestConsumerDispatcher/src/main/java/com/PlayChess/com/RequestConsumerDispatcher/Producer/
 coding/PSO/api/RequestConsumerDispatcher/src/main/java/com/PlayChess/com/RequestConsumerDispatcher/Services/
-coding/PSO/api/RequestConsumerDispatcher/src/main/java/com/PlayChess/com/RequestConsumerDispatcher/Util/
 coding/PSO/api/RequestConsumerDispatcher/src/main/resources/
 coding/PSO/api/RequestConsumerDispatcher/src/main/resources/avro/
 coding/PSO/api/RequestConsumerDispatcher/src/test/
@@ -346,6 +135,7 @@ coding/PSO/api/RequestConsumerDispatcher/src/test/java/com/
 coding/PSO/api/RequestConsumerDispatcher/src/test/java/com/PlayChess/
 coding/PSO/api/RequestConsumerDispatcher/src/test/java/com/PlayChess/com/
 coding/PSO/api/RequestConsumerDispatcher/src/test/java/com/PlayChess/com/RequestConsumerDispatcher/
+coding/PSO/api/ServiceRegistry/
 coding/PSO/api/ServiceRegistry/.mvn/
 coding/PSO/api/ServiceRegistry/.mvn/wrapper/
 coding/PSO/api/ServiceRegistry/.settings/
@@ -363,6 +153,7 @@ coding/PSO/api/ServiceRegistry/src/test/java/com/
 coding/PSO/api/ServiceRegistry/src/test/java/com/PlayChess/
 coding/PSO/api/ServiceRegistry/src/test/java/com/PlayChess/com/
 coding/PSO/api/ServiceRegistry/src/test/java/com/PlayChess/com/ServiceRegistry/
+coding/PSO/api/UserServices/
 coding/PSO/api/UserServices/.mvn/
 coding/PSO/api/UserServices/.mvn/wrapper/
 coding/PSO/api/UserServices/.settings/
@@ -373,11 +164,9 @@ coding/PSO/api/UserServices/src/main/java/com/PlayChess/com/
 coding/PSO/api/UserServices/src/main/java/com/PlayChess/com/UserServices/
 coding/PSO/api/UserServices/src/main/java/com/PlayChess/com/UserServices/Configuration/
 coding/PSO/api/UserServices/src/main/java/com/PlayChess/com/UserServices/Controllers/
-coding/PSO/api/UserServices/src/main/java/com/PlayChess/com/UserServices/Enums/
 coding/PSO/api/UserServices/src/main/java/com/PlayChess/com/UserServices/FeignRepo/
 coding/PSO/api/UserServices/src/main/java/com/PlayChess/com/UserServices/Filters/
 coding/PSO/api/UserServices/src/main/java/com/PlayChess/com/UserServices/Listener/
-coding/PSO/api/UserServices/src/main/java/com/PlayChess/com/UserServices/Model/
 coding/PSO/api/UserServices/src/main/java/com/PlayChess/com/UserServices/Pojo/
 coding/PSO/api/UserServices/src/main/java/com/PlayChess/com/UserServices/Services/
 coding/PSO/api/UserServices/src/main/java/com/PlayChess/com/UserServices/Utils/
@@ -388,10 +177,26 @@ coding/PSO/api/UserServices/src/test/java/com/
 coding/PSO/api/UserServices/src/test/java/com/PlayChess/
 coding/PSO/api/UserServices/src/test/java/com/PlayChess/com/
 coding/PSO/api/UserServices/src/test/java/com/PlayChess/com/UserServices/
+coding/PSO/api/ViewService/
 coding/PSO/api/ViewService/.settings/
 coding/PSO/api/ViewService/src/main/java/com/PlayChess/com/ViewService/Configuration/
 coding/PSO/api/ViewService/src/main/java/com/PlayChess/com/ViewService/Controller/
+coding/PSO/api/ViewService/src/main/resources/static/index.html
+coding/PSO/api/ViewService/src/main/resources/static/vite.svg
 coding/PSO/api/ViewService/src/main/resources/static/assets/
+coding/PSO/api/ViewService/src/main/resources/static/assets/index-BDP_QM1I.js
+coding/PSO/api/ViewService/src/main/resources/static/assets/index-BkCBu0xx.js
+coding/PSO/api/ViewService/src/main/resources/static/assets/index-ByA2wLOF.js
+coding/PSO/api/ViewService/src/main/resources/static/assets/index-C-DDsbju.js
+coding/PSO/api/ViewService/src/main/resources/static/assets/index-CIhWOmtH.js
+coding/PSO/api/ViewService/src/main/resources/static/assets/index-CJ27us93.js
+coding/PSO/api/ViewService/src/main/resources/static/assets/index-CNaPd018.css
+coding/PSO/api/ViewService/src/main/resources/static/assets/index-Cf_YQ6Ha.js
+coding/PSO/api/ViewService/src/main/resources/static/assets/index-DCY9FOs7.js
+coding/PSO/api/ViewService/src/main/resources/static/assets/index-DPIpdvGM.js
+coding/PSO/api/ViewService/src/main/resources/static/assets/index-gYDYwjyE.js
+coding/PSO/api/ViewService/src/main/resources/static/assets/package-aBYktcue.js
+coding/PSO/archive/
 coding/PSO/experimental_project/
 coding/PSO/experimental_project/js_prototype/
 coding/PSO/experimental_project/js_prototype/util/
@@ -407,8 +212,14 @@ coding/PSO/experimental_project/ui_prototype/src/redux/feature/socket/
 coding/PSO/experimental_project/ui_prototype/src/suits/
 coding/PSO/experimental_project/ui_prototype/src/utils/
 coding/PSO/frontend/
+coding/PSO/frontend/vite.config.js
 coding/PSO/frontend/dist/
+coding/PSO/frontend/dist/index.html
+coding/PSO/frontend/dist/vite.svg
 coding/PSO/frontend/dist/assets/
+coding/PSO/frontend/dist/assets/index-CIhWOmtH.js
+coding/PSO/frontend/dist/assets/index-CNaPd018.css
+coding/PSO/frontend/dist/assets/package-aBYktcue.js
 coding/PSO/frontend/public/
 coding/PSO/frontend/src/
 coding/PSO/frontend/src/components/
@@ -431,6 +242,7 @@ coding/PSO/frontend/src/components/debug/overlay/fen-overlay/
 coding/PSO/frontend/src/components/dropdown/
 coding/PSO/frontend/src/components/dropdown/bot-play-menu/
 coding/PSO/frontend/src/components/form/
+coding/PSO/frontend/src/components/form/login.jsx
 coding/PSO/frontend/src/components/form/inputs/
 coding/PSO/frontend/src/components/form/title/
 coding/PSO/frontend/src/components/header/
@@ -452,10 +264,13 @@ coding/PSO/frontend/src/components/separator/tooltip-menu/
 coding/PSO/frontend/src/listeners/
 coding/PSO/frontend/src/pages/
 coding/PSO/frontend/src/pages/dashboard/
+coding/PSO/frontend/src/pages/dashboard/index.jsx
 coding/PSO/frontend/src/pages/dashboard/dmain/
+coding/PSO/frontend/src/pages/dashboard/dmain/index.jsx
 coding/PSO/frontend/src/pages/dashboard/dmain/DashboardInitializationPage/
 coding/PSO/frontend/src/pages/dashboard/dtooltip-menu/
 coding/PSO/frontend/src/pages/login/
+coding/PSO/frontend/src/pages/login/index.jsx
 coding/PSO/frontend/src/pages/main/
 coding/PSO/frontend/src/pages/register/
 coding/PSO/frontend/src/store/
@@ -465,213 +280,164 @@ coding/PSO/frontend/src/store/feature/component-data/
 coding/PSO/frontend/src/store/feature/initialization-data/
 coding/PSO/frontend/src/store/feature/settings/
 coding/PSO/frontend/src/util/
+coding/PSO/frontend/src/util/acookie.js
+coding/PSO/frontend/src/util/acookie.test.js
+coding/PSO/frontend/src/util/cache.js
 coding/PSO/frontend/src/var-data/
+coding/PSO/frontend/src/var-data/initialization-data.js
 coding/PSO/frontend/src/var-data/component-data/
+coding/PSO/lib/
+coding/PSO/lib/PsoUtility/
+coding/PSO/lib/PsoUtility/.gitignore
+coding/PSO/lib/PsoUtility/.settings/
+coding/PSO/lib/PsoUtility/src/
+coding/PSO/lib/PsoUtility/src/main/
+coding/PSO/lib/PsoUtility/src/main/java/
+coding/PSO/lib/PsoUtility/src/main/java/com/
+coding/PSO/lib/PsoUtility/src/main/java/com/PlayChess/
+coding/PSO/lib/PsoUtility/src/main/java/com/PlayChess/com/
+coding/PSO/lib/PsoUtility/src/main/java/com/PlayChess/com/constants/
+coding/PSO/lib/PsoUtility/src/main/java/com/PlayChess/com/interfaces/
+coding/PSO/lib/PsoUtility/src/main/java/com/PlayChess/com/model/
+coding/PSO/lib/PsoUtility/src/main/java/com/PlayChess/com/util/
+coding/PSO/lib/PsoUtility/src/test/
+coding/PSO/lib/PsoUtility/src/test/java/
+coding/PSO/lib/PsoUtility/src/test/java/com/
+coding/PSO/lib/PsoUtility/src/test/java/com/PlayChess/
+coding/PSO/lib/PsoUtility/src/test/java/com/PlayChess/com/
+coding/PSO/lib/pso-web-mvc-util/
+coding/PSO/lib/pso-web-mvc-util/.settings/
+coding/PSO/lib/pso-web-mvc-util/src/
+coding/PSO/lib/pso-web-mvc-util/src/main/
+coding/PSO/lib/pso-web-mvc-util/src/main/java/
+coding/PSO/lib/pso-web-mvc-util/src/main/java/com/
+coding/PSO/lib/pso-web-mvc-util/src/main/java/com/PlayChess/
+coding/PSO/lib/pso-web-mvc-util/src/main/java/com/PlayChess/com/
+coding/PSO/lib/pso-web-mvc-util/src/main/java/com/PlayChess/com/mvc/
+coding/PSO/lib/pso-web-mvc-util/src/main/java/com/PlayChess/com/mvc/exceptions/
+coding/PSO/lib/pso-web-mvc-util/src/main/java/com/PlayChess/com/mvc/util/
+coding/PSO/lib/pso-web-mvc-util/src/test/
+coding/PSO/lib/pso-web-mvc-util/src/test/java/
+coding/PSO/lib/pso-web-mvc-util/src/test/java/com/
+coding/PSO/lib/pso-web-mvc-util/src/test/java/com/PlayChess/
+coding/PSO/lib/pso-web-mvc-util/src/test/java/com/PlayChess/com/
+coding/PSO/lib/pso-web-mvc-util/src/test/java/com/PlayChess/com/mvc/
 coding/PSO/thinking/
 coding/PSO/thinking/.obsidian/
-coding/PSO/thinking/API Endpoints/
-coding/PSO/whiteboard thinking/
-coding/competitive_problems/
-coding/competitive_problems/in_out/
+coding/Ud-Studios-Assignment/
+coding/Ud-Studios-Assignment/backend/
+coding/Ud-Studios-Assignment/backend/.editorconfig
+coding/Ud-Studios-Assignment/backend/.env
+coding/Ud-Studios-Assignment/backend/.gitattributes
+coding/Ud-Studios-Assignment/backend/.gitignore
+coding/Ud-Studios-Assignment/backend/.pnp.cjs
+coding/Ud-Studios-Assignment/backend/.pnp.loader.mjs
+coding/Ud-Studios-Assignment/backend/README.md
+coding/Ud-Studios-Assignment/backend/google_client_secret.json
+coding/Ud-Studios-Assignment/backend/package.json
+coding/Ud-Studios-Assignment/backend/yarn.lock
+coding/Ud-Studios-Assignment/backend/src/
+coding/Ud-Studios-Assignment/backend/src/index.js
+coding/Ud-Studios-Assignment/backend/src/api/
+coding/Ud-Studios-Assignment/backend/src/api/index.js
+coding/Ud-Studios-Assignment/backend/src/api/auth/
+coding/Ud-Studios-Assignment/backend/src/api/auth/index.js
+coding/Ud-Studios-Assignment/backend/src/api/auth/google/
+coding/Ud-Studios-Assignment/backend/src/api/auth/google/index.js
+coding/Ud-Studios-Assignment/backend/src/api/test/
+coding/Ud-Studios-Assignment/backend/src/api/test/index.js
+coding/Ud-Studios-Assignment/backend/src/oauth/
+coding/Ud-Studios-Assignment/backend/src/oauth/index.js
+coding/Ud-Studios-Assignment/backend/src/oauth/google/
+coding/Ud-Studios-Assignment/backend/src/oauth/google/index.js
+coding/Ud-Studios-Assignment/backend/src/util/
+coding/Ud-Studios-Assignment/backend/src/view/
+coding/Ud-Studios-Assignment/backend/src/view/index.js
+coding/Ud-Studios-Assignment/frontend/
+coding/Ud-Studios-Assignment/frontend/.gitignore
+coding/Ud-Studios-Assignment/frontend/README.md
+coding/Ud-Studios-Assignment/frontend/eslint.config.js
+coding/Ud-Studios-Assignment/frontend/index.html
+coding/Ud-Studios-Assignment/frontend/package.json
+coding/Ud-Studios-Assignment/frontend/tailwind.config.js
+coding/Ud-Studios-Assignment/frontend/vite.config.js
+coding/Ud-Studios-Assignment/frontend/yarn.lock
+coding/Ud-Studios-Assignment/frontend/public/
+coding/Ud-Studios-Assignment/frontend/public/logo.png
+coding/Ud-Studios-Assignment/frontend/public/vite.svg
+coding/Ud-Studios-Assignment/frontend/src/
+coding/Ud-Studios-Assignment/frontend/src/App.jsx
+coding/Ud-Studios-Assignment/frontend/src/index.css
+coding/Ud-Studios-Assignment/frontend/src/main.jsx
+coding/Ud-Studios-Assignment/frontend/src/pages/
+coding/Ud-Studios-Assignment/frontend/src/pages/home/
+coding/Ud-Studios-Assignment/frontend/src/pages/home/dark-mode-button.jsx
+coding/Ud-Studios-Assignment/frontend/src/pages/home/index.jsx
+coding/Ud-Studios-Assignment/frontend/src/pages/home/search-bar.jsx
+coding/dsa-problems/
+coding/dsa-problems/.gitignore
+coding/dsa-problems/.history_links
+coding/dsa-problems/Checker.java
+coding/dsa-problems/Debug.java
+coding/dsa-problems/README.md
+coding/dsa-problems/Solve.java
+coding/dsa-problems/run.sh
+coding/dsa-problems/s.vim
+coding/dsa-problems/in_out/
+coding/dsa-problems/in_out/.gitattributes
+coding/dsa-problems/in_out/.gitignore
+coding/dsa-problems/in_out/.yarnrc.yml
+coding/dsa-problems/in_out/README.md
+coding/dsa-problems/in_out/answer.txt
+coding/dsa-problems/in_out/jsconfig.json
+coding/dsa-problems/in_out/package-lock.json
+coding/dsa-problems/in_out/package.json
+coding/dsa-problems/in_out/s.vim
+coding/dsa-problems/in_out/testcase.txt
+coding/dsa-problems/in_out/yarn.lock
+coding/dsa-problems/in_out/src/
+coding/dsa-problems/in_out/src/index.js
+coding/dsa-problems/in_out/src/util/
+coding/dsa-problems/in_out/src/util/time.js
+coding/dsa-problems/template/
+coding/dsa-problems/template/Solve.txt
+coding/dsa-problems/template/incomplete.txt
+coding/learn/
+coding/learn/mysql/
+coding/learn/mysql/sql/
 coding/question_practice/
 coding/question_practice/SudokuSolver/
-coding/question_practice/SudokuSolver/Main.java
+coding/question_practice/SudokuSolver/main.java
 coding/startup/
 coding/startup/__pycache__/
+jobs-research/
+jobs-research/naukri.com-data-collector/
+jobs-research/naukri.com-data-collector/data/
+jobs-research/naukri.com-data-collector/dist/
+jobs-research/naukri.com-data-collector/dist/context/
+jobs-research/naukri.com-data-collector/dist/object-proxy/
+jobs-research/naukri.com-data-collector/dist/scraper/
+jobs-research/naukri.com-data-collector/dist/scraper/naukri-com/
+jobs-research/naukri.com-data-collector/dist/types/
+jobs-research/naukri.com-data-collector/dist/types/scraper/
+jobs-research/naukri.com-data-collector/dist/util/
+jobs-research/naukri.com-data-collector/organize/
+jobs-research/naukri.com-data-collector/organize/.obsidian/
+jobs-research/naukri.com-data-collector/scripts/
+jobs-research/naukri.com-data-collector/src/
+jobs-research/naukri.com-data-collector/src/context/
+jobs-research/naukri.com-data-collector/src/object-proxy/
+jobs-research/naukri.com-data-collector/src/scraper/
+jobs-research/naukri.com-data-collector/src/scraper/naukri-com/
+jobs-research/naukri.com-data-collector/src/types/
+jobs-research/naukri.com-data-collector/src/types/scraper/
+jobs-research/naukri.com-data-collector/src/util/
 linux-dotfiles/
-linux-dotfiles/.git/
-linux-dotfiles/.git/branches/
-linux-dotfiles/.git/hooks/
-linux-dotfiles/.git/info/
-linux-dotfiles/.git/logs/
-linux-dotfiles/.git/logs/refs/
-linux-dotfiles/.git/logs/refs/heads/
-linux-dotfiles/.git/logs/refs/remotes/
-linux-dotfiles/.git/logs/refs/remotes/origin/
-linux-dotfiles/.git/objects/
-linux-dotfiles/.git/objects/00/
-linux-dotfiles/.git/objects/03/
-linux-dotfiles/.git/objects/04/
-linux-dotfiles/.git/objects/05/
-linux-dotfiles/.git/objects/06/
-linux-dotfiles/.git/objects/08/
-linux-dotfiles/.git/objects/09/
-linux-dotfiles/.git/objects/0c/
-linux-dotfiles/.git/objects/0d/
-linux-dotfiles/.git/objects/0f/
-linux-dotfiles/.git/objects/10/
-linux-dotfiles/.git/objects/11/
-linux-dotfiles/.git/objects/13/
-linux-dotfiles/.git/objects/14/
-linux-dotfiles/.git/objects/15/
-linux-dotfiles/.git/objects/1a/
-linux-dotfiles/.git/objects/1b/
-linux-dotfiles/.git/objects/1d/
-linux-dotfiles/.git/objects/1e/
-linux-dotfiles/.git/objects/22/
-linux-dotfiles/.git/objects/23/
-linux-dotfiles/.git/objects/24/
-linux-dotfiles/.git/objects/27/
-linux-dotfiles/.git/objects/2a/
-linux-dotfiles/.git/objects/2b/
-linux-dotfiles/.git/objects/2c/
-linux-dotfiles/.git/objects/2d/
-linux-dotfiles/.git/objects/2e/
-linux-dotfiles/.git/objects/2f/
-linux-dotfiles/.git/objects/30/
-linux-dotfiles/.git/objects/31/
-linux-dotfiles/.git/objects/32/
-linux-dotfiles/.git/objects/33/
-linux-dotfiles/.git/objects/35/
-linux-dotfiles/.git/objects/36/
-linux-dotfiles/.git/objects/37/
-linux-dotfiles/.git/objects/38/
-linux-dotfiles/.git/objects/39/
-linux-dotfiles/.git/objects/3b/
-linux-dotfiles/.git/objects/3c/
-linux-dotfiles/.git/objects/3d/
-linux-dotfiles/.git/objects/3e/
-linux-dotfiles/.git/objects/40/
-linux-dotfiles/.git/objects/41/
-linux-dotfiles/.git/objects/42/
-linux-dotfiles/.git/objects/43/
-linux-dotfiles/.git/objects/45/
-linux-dotfiles/.git/objects/46/
-linux-dotfiles/.git/objects/48/
-linux-dotfiles/.git/objects/49/
-linux-dotfiles/.git/objects/4a/
-linux-dotfiles/.git/objects/4b/
-linux-dotfiles/.git/objects/4e/
-linux-dotfiles/.git/objects/50/
-linux-dotfiles/.git/objects/51/
-linux-dotfiles/.git/objects/52/
-linux-dotfiles/.git/objects/53/
-linux-dotfiles/.git/objects/54/
-linux-dotfiles/.git/objects/55/
-linux-dotfiles/.git/objects/57/
-linux-dotfiles/.git/objects/58/
-linux-dotfiles/.git/objects/5b/
-linux-dotfiles/.git/objects/5c/
-linux-dotfiles/.git/objects/5d/
-linux-dotfiles/.git/objects/60/
-linux-dotfiles/.git/objects/62/
-linux-dotfiles/.git/objects/63/
-linux-dotfiles/.git/objects/65/
-linux-dotfiles/.git/objects/67/
-linux-dotfiles/.git/objects/69/
-linux-dotfiles/.git/objects/6a/
-linux-dotfiles/.git/objects/6e/
-linux-dotfiles/.git/objects/70/
-linux-dotfiles/.git/objects/71/
-linux-dotfiles/.git/objects/72/
-linux-dotfiles/.git/objects/73/
-linux-dotfiles/.git/objects/76/
-linux-dotfiles/.git/objects/78/
-linux-dotfiles/.git/objects/7a/
-linux-dotfiles/.git/objects/7b/
-linux-dotfiles/.git/objects/7c/
-linux-dotfiles/.git/objects/7d/
-linux-dotfiles/.git/objects/7e/
-linux-dotfiles/.git/objects/7f/
-linux-dotfiles/.git/objects/80/
-linux-dotfiles/.git/objects/81/
-linux-dotfiles/.git/objects/82/
-linux-dotfiles/.git/objects/83/
-linux-dotfiles/.git/objects/84/
-linux-dotfiles/.git/objects/86/
-linux-dotfiles/.git/objects/87/
-linux-dotfiles/.git/objects/89/
-linux-dotfiles/.git/objects/8a/
-linux-dotfiles/.git/objects/8b/
-linux-dotfiles/.git/objects/8d/
-linux-dotfiles/.git/objects/8e/
-linux-dotfiles/.git/objects/8f/
-linux-dotfiles/.git/objects/91/
-linux-dotfiles/.git/objects/93/
-linux-dotfiles/.git/objects/95/
-linux-dotfiles/.git/objects/96/
-linux-dotfiles/.git/objects/99/
-linux-dotfiles/.git/objects/9a/
-linux-dotfiles/.git/objects/9b/
-linux-dotfiles/.git/objects/9d/
-linux-dotfiles/.git/objects/9e/
-linux-dotfiles/.git/objects/a1/
-linux-dotfiles/.git/objects/a3/
-linux-dotfiles/.git/objects/a4/
-linux-dotfiles/.git/objects/a6/
-linux-dotfiles/.git/objects/a8/
-linux-dotfiles/.git/objects/a9/
-linux-dotfiles/.git/objects/ab/
-linux-dotfiles/.git/objects/ac/
-linux-dotfiles/.git/objects/ad/
-linux-dotfiles/.git/objects/b0/
-linux-dotfiles/.git/objects/b1/
-linux-dotfiles/.git/objects/b2/
-linux-dotfiles/.git/objects/b4/
-linux-dotfiles/.git/objects/b5/
-linux-dotfiles/.git/objects/b7/
-linux-dotfiles/.git/objects/b8/
-linux-dotfiles/.git/objects/b9/
-linux-dotfiles/.git/objects/bb/
-linux-dotfiles/.git/objects/bd/
-linux-dotfiles/.git/objects/be/
-linux-dotfiles/.git/objects/bf/
-linux-dotfiles/.git/objects/c1/
-linux-dotfiles/.git/objects/c2/
-linux-dotfiles/.git/objects/c3/
-linux-dotfiles/.git/objects/c4/
-linux-dotfiles/.git/objects/c5/
-linux-dotfiles/.git/objects/c6/
-linux-dotfiles/.git/objects/c7/
-linux-dotfiles/.git/objects/c8/
-linux-dotfiles/.git/objects/ca/
-linux-dotfiles/.git/objects/cb/
-linux-dotfiles/.git/objects/cc/
-linux-dotfiles/.git/objects/cf/
-linux-dotfiles/.git/objects/d2/
-linux-dotfiles/.git/objects/d3/
-linux-dotfiles/.git/objects/d4/
-linux-dotfiles/.git/objects/d5/
-linux-dotfiles/.git/objects/d6/
-linux-dotfiles/.git/objects/d7/
-linux-dotfiles/.git/objects/d9/
-linux-dotfiles/.git/objects/da/
-linux-dotfiles/.git/objects/dc/
-linux-dotfiles/.git/objects/dd/
-linux-dotfiles/.git/objects/de/
-linux-dotfiles/.git/objects/df/
-linux-dotfiles/.git/objects/e1/
-linux-dotfiles/.git/objects/e5/
-linux-dotfiles/.git/objects/e6/
-linux-dotfiles/.git/objects/e7/
-linux-dotfiles/.git/objects/e8/
-linux-dotfiles/.git/objects/ea/
-linux-dotfiles/.git/objects/eb/
-linux-dotfiles/.git/objects/ee/
-linux-dotfiles/.git/objects/ef/
-linux-dotfiles/.git/objects/f1/
-linux-dotfiles/.git/objects/f2/
-linux-dotfiles/.git/objects/f3/
-linux-dotfiles/.git/objects/f4/
-linux-dotfiles/.git/objects/f8/
-linux-dotfiles/.git/objects/f9/
-linux-dotfiles/.git/objects/fa/
-linux-dotfiles/.git/objects/fb/
-linux-dotfiles/.git/objects/fc/
-linux-dotfiles/.git/objects/fd/
-linux-dotfiles/.git/objects/fe/
-linux-dotfiles/.git/objects/ff/
-linux-dotfiles/.git/objects/info/
-linux-dotfiles/.git/objects/pack/
-linux-dotfiles/.git/refs/
-linux-dotfiles/.git/refs/heads/
-linux-dotfiles/.git/refs/remotes/
-linux-dotfiles/.git/refs/remotes/origin/
-linux-dotfiles/.git/refs/tags/
 linux-dotfiles/alacritty/
 linux-dotfiles/alacritty/.config/
 linux-dotfiles/alacritty/.config/alacritty/
 linux-dotfiles/bash/
+linux-dotfiles/bash/.bashrc
 linux-dotfiles/fastfetch/
 linux-dotfiles/fastfetch/.config/
 linux-dotfiles/fastfetch/.config/fastfetch/
@@ -682,15 +448,21 @@ linux-dotfiles/i3/.config/i3/
 linux-dotfiles/nvim/
 linux-dotfiles/nvim/.config/
 linux-dotfiles/nvim/.config/nvim/
+linux-dotfiles/nvim/.config/nvim/init.lua
 linux-dotfiles/nvim/.config/nvim/ftplugin/
 linux-dotfiles/nvim/.config/nvim/lua/
 linux-dotfiles/nvim/.config/nvim/lua/plugins/
+linux-dotfiles/nvim/.config/nvim/lua/plugins/cmp.lua
+linux-dotfiles/nvim/.config/nvim/lua/plugins/conform.lua
+linux-dotfiles/nvim/.config/nvim/lua/plugins/mason.lua
 linux-dotfiles/nvim/.config/nvim/pm_user/
 linux-dotfiles/nvim/.config/nvim/pm_user/colors/
 linux-dotfiles/nvim/.config/nvim/pm_user/lua/
 linux-dotfiles/nvim/.config/nvim/pm_user/lua/pm_user/
+linux-dotfiles/nvim/.config/nvim/pm_user/lua/pm_user/remaps.lua
 linux-dotfiles/nvim/.config/nvim/pm_user/lua/pm_user/clr/
 linux-dotfiles/nvim/.config/nvim/pm_user/lua/pm_user/util/
+linux-dotfiles/nvim/.config/nvim/pm_user/lua/pm_user/util/lsp.lua
 linux-dotfiles/picom/
 linux-dotfiles/picom/.config/
 linux-dotfiles/polybar/
@@ -703,6 +475,7 @@ linux-dotfiles/starship/.config/
 linux-dotfiles/sway/
 linux-dotfiles/sway/.config/
 linux-dotfiles/sway/.config/sway/
+linux-dotfiles/sway/.config/sway/config
 linux-dotfiles/swayimg/
 linux-dotfiles/swayimg/.config/
 linux-dotfiles/swayimg/.config/swayimg/
@@ -731,16 +504,342 @@ linux-dotfiles/yazi/.config/yazi/flavors/kanagawa-lotus.yazi/
 linux-dotfiles/yazi/.config/yazi/flavors/sunset.yazi/
 linux-dotfiles/yazi/.config/yazi/flavors/tokyo-night.yazi/
 
-sent 140,732 bytes  received 8,723 bytes  99,636.67 bytes/sec
-total size is 442,844,280  speedup is 2,963.06
+sent 9,845,097 bytes  received 7,159 bytes  6,568,170.67 bytes/sec
+total size is 303,669,906  speedup is 30.82
 /media/prashant/PM Store/rsync_backup/prashant/Downloads/
 sending incremental file list
+deleting games/tekken 7/ztlnpnf2fkky.1
+deleting games/tekken 7/ztlnpnf2fkky
+deleting games/tekken 7/zt9l48ggy3va.1
+deleting games/tekken 7/zt9l48ggy3va
+deleting games/tekken 7/zsdc9414kpye.1
+deleting games/tekken 7/zsdc9414kpye
+deleting games/tekken 7/yypanif3tnoe.1
+deleting games/tekken 7/yypanif3tnoe
+deleting games/tekken 7/yriaw4d2yo2p
+deleting games/tekken 7/xghkw1aihmfn.1
+deleting games/tekken 7/xghkw1aihmfn
+deleting games/tekken 7/xfbnm0vlp3ph.1
+deleting games/tekken 7/xfbnm0vlp3ph
+deleting games/tekken 7/xb0mvex6yu2s.1
+deleting games/tekken 7/xb0mvex6yu2s
+deleting games/tekken 7/x7tagdubwbgy.1
+deleting games/tekken 7/x7tagdubwbgy
+deleting games/tekken 7/x3y7sygvg7y5.1
+deleting games/tekken 7/x3y7sygvg7y5
+deleting games/tekken 7/x1tdjl3wkt2a.1
+deleting games/tekken 7/x1tdjl3wkt2a
+deleting games/tekken 7/wgeb2d10c8m5.1
+deleting games/tekken 7/wgeb2d10c8m5
+deleting games/tekken 7/w5zc65xa5fu5.1
+deleting games/tekken 7/w5zc65xa5fu5
+deleting games/tekken 7/vrh9vtqim332
+deleting games/tekken 7/u5in7rhhpbvs.1
+deleting games/tekken 7/u5in7rhhpbvs
+deleting games/tekken 7/u3jn4pybimjz.1
+deleting games/tekken 7/u3jn4pybimjz
+deleting games/tekken 7/t1q3std0bw5v.1
+deleting games/tekken 7/t1q3std0bw5v
+deleting games/tekken 7/sy2x313zix1z.1
+deleting games/tekken 7/sy2x313zix1z
+deleting games/tekken 7/stahx7dszquv
+deleting games/tekken 7/rzum4qz0gucl.1
+deleting games/tekken 7/rzum4qz0gucl
+deleting games/tekken 7/rdsfpxlqc0q4.1
+deleting games/tekken 7/rdsfpxlqc0q4
+deleting games/tekken 7/qxxuliig7jf8.1
+deleting games/tekken 7/qxxuliig7jf8
+deleting games/tekken 7/qi7sjd3nbexe.1
+deleting games/tekken 7/qi7sjd3nbexe
+deleting games/tekken 7/qe7k2vk0p0w6.1
+deleting games/tekken 7/qe7k2vk0p0w6
+deleting games/tekken 7/q542mnmpyzsy.1
+deleting games/tekken 7/q542mnmpyzsy
+deleting games/tekken 7/q0ldbg3w1jty
+deleting games/tekken 7/ojgdzqgjo6of.1
+deleting games/tekken 7/ojgdzqgjo6of
+deleting games/tekken 7/na81dsuxnrhf
+deleting games/tekken 7/n9fzaf0hlk6z.1
+deleting games/tekken 7/n9fzaf0hlk6z
+deleting games/tekken 7/mv5f3b2bja24.1
+deleting games/tekken 7/mv5f3b2bja24
+deleting games/tekken 7/mmy3lkb17xfg.1
+deleting games/tekken 7/mmy3lkb17xfg
+deleting games/tekken 7/m8ndh3whmkem.1
+deleting games/tekken 7/m8ndh3whmkem
+deleting games/tekken 7/lq0qny4sco9z
+deleting games/tekken 7/l9vnwjift3ge.1
+deleting games/tekken 7/l9vnwjift3ge
+deleting games/tekken 7/l79n9kf0extr.1
+deleting games/tekken 7/l79n9kf0extr
+deleting games/tekken 7/kd0wh7jcktra.1
+deleting games/tekken 7/kd0wh7jcktra
+deleting games/tekken 7/k1vtrpg1ay21.1
+deleting games/tekken 7/k1vtrpg1ay21
+deleting games/tekken 7/jve0kcua33nb.1
+deleting games/tekken 7/jve0kcua33nb
+deleting games/tekken 7/j2ak0www926c.1
+deleting games/tekken 7/j2ak0www926c
+deleting games/tekken 7/j134ju2ilmjy.1
+deleting games/tekken 7/j134ju2ilmjy
+deleting games/tekken 7/ivih5952d9bl.1
+deleting games/tekken 7/ivih5952d9bl
+deleting games/tekken 7/huz4rkgs3esc.1
+deleting games/tekken 7/huz4rkgs3esc
+deleting games/tekken 7/hgfh8waerc62.1
+deleting games/tekken 7/hgfh8waerc62
+deleting games/tekken 7/gjwwh37c76l0.1
+deleting games/tekken 7/gjwwh37c76l0
+deleting games/tekken 7/g9tfkai1kiu1.1
+deleting games/tekken 7/g9tfkai1kiu1
+deleting games/tekken 7/g7a178etq3ig
+deleting games/tekken 7/g73ip0mu70iu
+deleting games/tekken 7/g2129mycyn98.1
+deleting games/tekken 7/g2129mycyn98
+deleting games/tekken 7/fgt9hb818bnf
+deleting games/tekken 7/ffrv2yqulxak
+deleting games/tekken 7/ey4e33wb6kyl.1
+deleting games/tekken 7/ey4e33wb6kyl
+deleting games/tekken 7/epbqxj7dc6ex.1
+deleting games/tekken 7/epbqxj7dc6ex
+deleting games/tekken 7/ejj3x03vy7ag
+deleting games/tekken 7/download.99
+deleting games/tekken 7/download.98
+deleting games/tekken 7/download.97
+deleting games/tekken 7/download.96
+deleting games/tekken 7/download.95
+deleting games/tekken 7/download.94
+deleting games/tekken 7/download.93
+deleting games/tekken 7/download.92
+deleting games/tekken 7/download.91
+deleting games/tekken 7/download.90
+deleting games/tekken 7/download.9
+deleting games/tekken 7/download.89
+deleting games/tekken 7/download.88
+deleting games/tekken 7/download.87
+deleting games/tekken 7/download.86
+deleting games/tekken 7/download.85
+deleting games/tekken 7/download.84
+deleting games/tekken 7/download.83
+deleting games/tekken 7/download.82
+deleting games/tekken 7/download.81
+deleting games/tekken 7/download.80
+deleting games/tekken 7/download.8
+deleting games/tekken 7/download.79
+deleting games/tekken 7/download.78
+deleting games/tekken 7/download.77
+deleting games/tekken 7/download.76
+deleting games/tekken 7/download.75
+deleting games/tekken 7/download.74
+deleting games/tekken 7/download.73
+deleting games/tekken 7/download.72
+deleting games/tekken 7/download.71
+deleting games/tekken 7/download.70
+deleting games/tekken 7/download.7
+deleting games/tekken 7/download.69
+deleting games/tekken 7/download.68
+deleting games/tekken 7/download.67
+deleting games/tekken 7/download.66
+deleting games/tekken 7/download.65
+deleting games/tekken 7/download.64
+deleting games/tekken 7/download.63
+deleting games/tekken 7/download.62
+deleting games/tekken 7/download.61
+deleting games/tekken 7/download.60
+deleting games/tekken 7/download.6
+deleting games/tekken 7/download.59
+deleting games/tekken 7/download.58
+deleting games/tekken 7/download.57
+deleting games/tekken 7/download.56
+deleting games/tekken 7/download.55
+deleting games/tekken 7/download.54
+deleting games/tekken 7/download.53
+deleting games/tekken 7/download.52
+deleting games/tekken 7/download.51
+deleting games/tekken 7/download.50
+deleting games/tekken 7/download.5
+deleting games/tekken 7/download.49
+deleting games/tekken 7/download.48
+deleting games/tekken 7/download.47
+deleting games/tekken 7/download.46
+deleting games/tekken 7/download.45
+deleting games/tekken 7/download.44
+deleting games/tekken 7/download.43
+deleting games/tekken 7/download.42
+deleting games/tekken 7/download.41
+deleting games/tekken 7/download.40
+deleting games/tekken 7/download.4
+deleting games/tekken 7/download.39
+deleting games/tekken 7/download.38
+deleting games/tekken 7/download.37
+deleting games/tekken 7/download.36
+deleting games/tekken 7/download.35
+deleting games/tekken 7/download.34
+deleting games/tekken 7/download.33
+deleting games/tekken 7/download.32
+deleting games/tekken 7/download.31
+deleting games/tekken 7/download.30
+deleting games/tekken 7/download.3
+deleting games/tekken 7/download.29
+deleting games/tekken 7/download.28
+deleting games/tekken 7/download.27
+deleting games/tekken 7/download.26
+deleting games/tekken 7/download.25
+deleting games/tekken 7/download.24
+deleting games/tekken 7/download.23
+deleting games/tekken 7/download.22
+deleting games/tekken 7/download.21
+deleting games/tekken 7/download.20
+deleting games/tekken 7/download.2
+deleting games/tekken 7/download.19
+deleting games/tekken 7/download.18
+deleting games/tekken 7/download.17
+deleting games/tekken 7/download.165
+deleting games/tekken 7/download.164
+deleting games/tekken 7/download.163
+deleting games/tekken 7/download.162
+deleting games/tekken 7/download.161
+deleting games/tekken 7/download.160
+deleting games/tekken 7/download.16
+deleting games/tekken 7/download.159
+deleting games/tekken 7/download.158
+deleting games/tekken 7/download.157
+deleting games/tekken 7/download.156
+deleting games/tekken 7/download.155
+deleting games/tekken 7/download.154
+deleting games/tekken 7/download.153
+deleting games/tekken 7/download.152
+deleting games/tekken 7/download.151
+deleting games/tekken 7/download.150
+deleting games/tekken 7/download.15
+deleting games/tekken 7/download.149
+deleting games/tekken 7/download.148
+deleting games/tekken 7/download.147
+deleting games/tekken 7/download.146
+deleting games/tekken 7/download.145
+deleting games/tekken 7/download.144
+deleting games/tekken 7/download.143
+deleting games/tekken 7/download.142
+deleting games/tekken 7/download.141
+deleting games/tekken 7/download.140
+deleting games/tekken 7/download.14
+deleting games/tekken 7/download.139
+deleting games/tekken 7/download.138
+deleting games/tekken 7/download.137
+deleting games/tekken 7/download.136
+deleting games/tekken 7/download.135
+deleting games/tekken 7/download.134
+deleting games/tekken 7/download.133
+deleting games/tekken 7/download.132
+deleting games/tekken 7/download.131
+deleting games/tekken 7/download.130
+deleting games/tekken 7/download.13
+deleting games/tekken 7/download.129
+deleting games/tekken 7/download.128
+deleting games/tekken 7/download.127
+deleting games/tekken 7/download.126
+deleting games/tekken 7/download.125
+deleting games/tekken 7/download.124
+deleting games/tekken 7/download.123
+deleting games/tekken 7/download.122
+deleting games/tekken 7/download.121
+deleting games/tekken 7/download.120
+deleting games/tekken 7/download.12
+deleting games/tekken 7/download.119
+deleting games/tekken 7/download.118
+deleting games/tekken 7/download.117
+deleting games/tekken 7/download.116
+deleting games/tekken 7/download.115
+deleting games/tekken 7/download.114
+deleting games/tekken 7/download.113
+deleting games/tekken 7/download.112
+deleting games/tekken 7/download.111
+deleting games/tekken 7/download.110
+deleting games/tekken 7/download.11
+deleting games/tekken 7/download.109
+deleting games/tekken 7/download.108
+deleting games/tekken 7/download.107
+deleting games/tekken 7/download.106
+deleting games/tekken 7/download.105
+deleting games/tekken 7/download.104
+deleting games/tekken 7/download.103
+deleting games/tekken 7/download.102
+deleting games/tekken 7/download.101
+deleting games/tekken 7/download.100
+deleting games/tekken 7/download.10
+deleting games/tekken 7/download.1
+deleting games/tekken 7/download
+deleting games/tekken 7/dlgklazsz6rd.1
+deleting games/tekken 7/dlgklazsz6rd
+deleting games/tekken 7/dc2hh8vh85hw.1
+deleting games/tekken 7/dc2hh8vh85hw
+deleting games/tekken 7/cvebh4m5gwl2.1
+deleting games/tekken 7/cvebh4m5gwl2
+deleting games/tekken 7/cl9gqui9aj6v.1
+deleting games/tekken 7/cl9gqui9aj6v
+deleting games/tekken 7/btuheuhlgj4x.1
+deleting games/tekken 7/btuheuhlgj4x
+deleting games/tekken 7/b90zp3imknfl.1
+deleting games/tekken 7/b90zp3imknfl
+deleting games/tekken 7/a9dd4rw393a1.1
+deleting games/tekken 7/a9dd4rw393a1
+deleting games/tekken 7/a8qfcg05wkm1.1
+deleting games/tekken 7/a8qfcg05wkm1
+deleting games/tekken 7/9zs0p53yhsfl.1
+deleting games/tekken 7/9zs0p53yhsfl
+deleting games/tekken 7/9jil1ykk5gn0.1
+deleting games/tekken 7/9jil1ykk5gn0
+deleting games/tekken 7/8kx7oio24oox
+deleting games/tekken 7/7wvy2djqksg3.1
+deleting games/tekken 7/7wvy2djqksg3
+deleting games/tekken 7/78xnxhgibjed.1
+deleting games/tekken 7/78xnxhgibjed
+deleting games/tekken 7/6u00o0w3l6kf.1
+deleting games/tekken 7/6u00o0w3l6kf
+deleting games/tekken 7/69kgnhizoo8e.1
+deleting games/tekken 7/69kgnhizoo8e
+deleting games/tekken 7/4xmh50tzmx91.1
+deleting games/tekken 7/4xmh50tzmx91
+deleting games/tekken 7/4eby7h8qpc4u
+deleting games/tekken 7/4anhimvhppwy.1
+deleting games/tekken 7/4anhimvhppwy
+deleting games/tekken 7/40v0hhb3hq1h.1
+deleting games/tekken 7/40v0hhb3hq1h
+deleting games/tekken 7/3pf587qv26ky.1
+deleting games/tekken 7/3pf587qv26ky
+deleting games/tekken 7/39ppmcxg0rbg.1
+deleting games/tekken 7/39ppmcxg0rbg
+deleting games/tekken 7/2qt62ddfwr54
+deleting games/tekken 7/2ivlhr8y5w2h.1
+deleting games/tekken 7/2ivlhr8y5w2h
+deleting games/tekken 7/2h03u2ugge4a.1
+deleting games/tekken 7/2h03u2ugge4a
+deleting games/tekken 7/27apj9hy8tte.1
+deleting games/tekken 7/27apj9hy8tte
+deleting games/tekken 7/207hqljqdk3x.1
+deleting games/tekken 7/207hqljqdk3x
+deleting games/tekken 7/1x7d26ugnqbv.1
+deleting games/tekken 7/1x7d26ugnqbv
+deleting games/tekken 7/1w7yyhv8o8z5.1
+deleting games/tekken 7/1w7yyhv8o8z5
+deleting games/tekken 7/0vaqusbj7jxa.1
+deleting games/tekken 7/0vaqusbj7jxa
+deleting games/tekken 7/0a8vj1n300xe
+deleting games/tekken 7/
+deleting games/
+deleting zt9l48ggy3va
+deleting Motrix_1.8.19_amd64.deb
 ./
-Ulaa-Browser-v2.35.4-amd64.deb
+Assignment_Full stack developer.pdf
+JDownloader2Setup_windows-amd64_v21_0_7.exe
+Untitled design.png
+Untitled_design-removebg-preview.png
+ble-nightly/cache.d/
+ble-nightly/run/
 firacode/
 
-sent 144,258,054 bytes  received 115 bytes  96,172,112.67 bytes/sec
-total size is 486,224,087  speedup is 3.37
+sent 75,316,734 bytes  received 11,061 bytes  150,655,590.00 bytes/sec
+total size is 121,641,883  speedup is 1.61
 /media/prashant/PM Store/rsync_backup/prashant/.local/share/applications/
 sending incremental file list
 ./
@@ -749,8 +848,14 @@ sent 165 bytes  received 28 bytes  386.00 bytes/sec
 total size is 454  speedup is 2.35
 /media/prashant/PM Store/rsync_backup/prashant/Pictures/
 sending incremental file list
+./
+eerie-teal-forest-foggy-pine-trees-dark-woods-desktop-wallpaper.jpg
+misty-mountains-lush-green-horizon-desktop-wallpaper-4k_1.jpg
+spring-sunrise-mountains-green-hills-desktop-wallpaper-4k.jpg
 Screenshots/
 sway-screentshot/
+sway-screentshot/2025-10-21-200205_sway-screenshot.png
+sway-screentshot/2025-10-28-122111_sway-screenshot.png
 
-sent 1,159 bytes  received 75 bytes  2,468.00 bytes/sec
-total size is 11,405,978  speedup is 9,243.09
+sent 3,681,445 bytes  received 186 bytes  7,363,262.00 bytes/sec
+total size is 23,624,361  speedup is 6.42

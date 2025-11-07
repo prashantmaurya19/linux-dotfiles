@@ -5,6 +5,8 @@ return {
     config = function()
       local conform = require("conform")
       conform.setup({
+        timeout_ms = 4000,
+        async = false,
         -- format_on_save = {
         --   enabled = false,
         -- },
@@ -22,7 +24,7 @@ return {
           xml = { "xmlformatter" },
           java = { "google-java-format" },
           sh = { "shfmt" },
-	  sql = {"sqlfmt"}
+          sql = { "sqlfmt" },
         },
         formatters = {
           stylua = {
