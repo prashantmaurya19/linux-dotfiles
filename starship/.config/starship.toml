@@ -1,7 +1,7 @@
 add_newline = false
 
 format = '''
-$character$directory$conda$git_branch$cmd_duration'''
+$character$directory$python$conda$git_branch$cmd_duration'''
 
 [cmd_duration]
 min_time = 500
@@ -33,7 +33,7 @@ symbol = ' '
 style = "purple"
 
 [python]
-format = '[python:](green)[\(](white)[$virtualenv]($style)[\)](white) '
+format = '[${symbol}](green)[\(](white)[$virtualenv]($style)[\)](white) '
 python_binary = ['python3']
 symbol = '󰌠 '
 style = "purple"

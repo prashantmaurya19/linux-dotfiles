@@ -178,6 +178,8 @@ IGNORED_DIRS=(
   "node_modules"
   "Trash"
   "share"
+  "venv"
+  ".java"
 )
 
 IGNORED_PATH_DIRS=(
@@ -201,17 +203,7 @@ IGNORED_PATH_DIRS=(
   "$HOME/.ssh"
   "$HOME/.sts4"
   "$HOME/Apps"
-  "$HOME/.config/google-chrome"
-  "$HOME/.config/Zoho"
-  "$HOME/.config/ibus"
-  "$HOME/.config/BraveSoftware"
-  "$HOME/.config/Postman"
-  "$HOME/.config/Code"
-  "$HOME/.config/dconf"
-  "$HOME/.config/enchant"
-  "$HOME/.config/eog"
-  "$HOME/.config/evolution"
-  "$HOME/.config/GIMP"
+  "$HOME/.config"
 )
 
 # 2. Build the string by joining the array elements with ' -o -name '
