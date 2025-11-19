@@ -3,7 +3,7 @@ local act = wezterm.action
 local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
 local SOLID_RIGHT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
 local config = wezterm.config_builder()
-local init_time = os.time()
+-- local init_time = os.time()
 config.front_end = "WebGpu"
 config.webgpu_power_preference = "HighPerformance"
 config.window_padding = {
@@ -251,14 +251,14 @@ wezterm.on("update-status", function(window, pane)
     { Text = " " .. wezterm.nerdfonts.fa_code .. " " .. cmd .. " " },
     { Foreground = { Color = theme.background } },
     { Background = { Color = "#e0af68" } },
-    { Text = SOLID_RIGHT_ARROW },
+    -- { Text = SOLID_RIGHT_ARROW },
     -- Timer section
-    { Background = { Color = theme.background } },
-    { Foreground = { Color = "#00ff77" } },
-    { Text = SOLID_RIGHT_ARROW },
-    { Background = { Color = "#00ff77" } },
-    { Foreground = { Color = theme.background } },
-    { Text = " " .. wezterm.nerdfonts.fa_clock_o .. " " .. format_duration(os.time() - init_time) .. " " },
+    -- { Background = { Color = theme.background } },
+    -- { Foreground = { Color = "#00ff77" } },
+    -- { Text = SOLID_RIGHT_ARROW },
+    -- { Background = { Color = "#00ff77" } },
+    -- { Foreground = { Color = theme.background } },
+    -- { Text = " " .. wezterm.nerdfonts.fa_clock_o .. " " .. format_duration(os.time() - init_time) .. " " },
   }))
 
   window:set_left_status(wezterm.format({

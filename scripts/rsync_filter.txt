@@ -23,5 +23,6 @@
 - Trash/
 - snap/
 - target/
+- venv/
 - node_modules/
 
