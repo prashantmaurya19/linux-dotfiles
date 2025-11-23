@@ -73,7 +73,7 @@ config.keys = {
   { key = "j", mods = mod_key, action = act.ActivatePaneDirection("Down") },
   { key = "k", mods = mod_key, action = act.ActivatePaneDirection("Up") },
   { key = "l", mods = mod_key, action = act.ActivatePaneDirection("Right") },
-  { key = "q", mods = mod_key, action = act.CloseCurrentPane({ confirm = true }) },
+  { key = "w", mods = "ALT", action = act.CloseCurrentPane({ confirm = true }) },
   { key = "z", mods = "ALT", action = act.TogglePaneZoomState },
   { key = "o", mods = mod_key, action = act.RotatePanes("Clockwise") },
   { key = "+", mods = mod_key, action = act.IncreaseFontSize },
