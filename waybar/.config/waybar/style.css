@@ -1,4 +1,5 @@
-@import url("../../.cache/wal/colors-waybar.css");
+/* @import url("../../.cache/wal/colors-waybar.css"); */
+
 * {
   font-family: "FiraCode Nerd Font", Roboto, Helvetica, Arial, sans-serif;
   font-size: 15px;
@@ -10,6 +11,7 @@
 @define-color bg black;
 @define-color module-bg transparent;
 @define-color primary white;
+@define-color active #00d4ff;
 @define-color danger #f53c3c;
 
 #mode {
@@ -57,11 +59,8 @@
   margin-right: 7px;
 }
 
-/* When Bluetooth is turned off */
-#bluetooth.off,
-#bluetooth.disabled {
-  background: transparent; /* Red Background */
-  color: @danger; /* Dark Text for contrast */
+#bluetooth.connected {
+  color: @active;
 }
 
 #network {
@@ -76,10 +75,12 @@
   color: @primary;
 }
 
+#bluetooth.off,
+#bluetooth.disabled ,
 #network.disconnected,
 #network.disabled {
   background: transparent;
-  color: @wifi-disconnect;
+  color: @danger;
 }
 
 #keyboard-state {

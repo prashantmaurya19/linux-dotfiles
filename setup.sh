@@ -17,14 +17,14 @@ pipx install waypaper
 curl -sS https://starship.rs/install.sh | sh
 
 python3 -m venv ~/.venv
-source ~/.venv/bin/activate
-pip install pywal
-deactivate
 
 bash ./scripts/install_font.sh
 bash ./scripts/install_sway_screenshot.sh
-bash ./scripts/update_wallpaper_link.sh ~/Pictures/mountain-landscape-5120x2880-24317.jpg
+bash ./scripts/change_wallpaper.sh ~/Pictures/mountain-landscape-5120x2880-24317.jpg
+bash ./stowup.sh
+bash ./scripts/resolve-config-template.sh
 
 # instalation location of third-party apps => ~/Apps/
 # fc-list | grep "Fira Mono Nerd Font"
 # install wezterm
+# install pywall

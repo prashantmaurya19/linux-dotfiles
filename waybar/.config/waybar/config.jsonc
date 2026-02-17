@@ -60,7 +60,8 @@
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-    "on-click": "/home/prashant/Documents/dotfiles/scripts/bluetooth-power-toggle.sh",
+    "on-click": "/home/prashant/Documents/dotfiles/scripts/power-toggle.sh bluetooth",
+    // "on-click": "rfkill toggle bluetooth",
   },
   "battery": {
     "states": {
@@ -106,12 +107,13 @@
     //"interface": "wlp2*", // (Optional) To force the use of this interface
     "format-wifi": "{icon}",
     "format-ethernet": "Connected  ",
-    "tooltip-format": "{ifname}: {gwaddr}",
+    "tooltip-format": "{ifname} {essid}: {gwaddr}",
     "format-linked": "{ifname} (No IP)",
-    "format-disconnected": "󰤮 Disconnted",
-    "format-disabled": "󰤮 Off",
-    "format-alt": "{icon} {essid}",
-    "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
+    "format-disconnected": "󰤫",
+    "format-disabled": "󰤮",
+    // "format-alt": "{icon} {essid}",
+    "on-click": "/home/prashant/Documents/dotfiles/scripts/power-toggle.sh wifi",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
   },
 
   "backlight": {
